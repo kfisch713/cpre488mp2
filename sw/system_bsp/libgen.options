@@ -1,0 +1,3 @@
+PROCESSOR=ps7_cortexa9_0
+REPOSITORIES=-lp /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/repository/ProcessorIPLib
+HWSPEC=../system_hw_platform/system.xml

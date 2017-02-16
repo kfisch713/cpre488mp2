@@ -1,0 +1,64 @@
+Release 14.6 - libgen Xilinx EDK 14.6 Build EDK_P.68d
+ (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+/remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/repository/ProcessorIPLib
+-pe ps7_cortexa9_0 -log libgen.log system.mss 
+
+WARNING:EDK:411 - iic -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 27 - deprecated driver!
+WARNING:EDK:411 - iic -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 33 - deprecated driver!
+WARNING:EDK:411 - devcfg -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 51 - deprecated driver!
+WARNING:EDK:411 - dmaps -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 57 - deprecated driver!
+WARNING:EDK:411 - dmaps -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 63 - deprecated driver!
+WARNING:EDK:411 - emacps -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 69 - deprecated driver!
+WARNING:EDK:411 - qspips -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 87 - deprecated driver!
+WARNING:EDK:411 - scugic -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 111 - deprecated driver!
+WARNING:EDK:411 - scutimer -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 117 - deprecated driver!
+WARNING:EDK:411 - scuwdt -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 123 - deprecated driver!
+WARNING:EDK:411 - uartps -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 147 - deprecated driver!
+WARNING:EDK:411 - usbps -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 153 - deprecated driver!
+WARNING:EDK:411 - standalone -
+   /remote/rs/zambreno/dev/cpre488-admin/Assignments/MP-2/sw/system_bsp/system.m
+   ss line 5 - deprecated os!
+
+Staging source files.
+Running DRCs.
+Running generate.
+Handling DEVICE_ID
+Handling C_BASEADDR
+Handling DEVICE_ID
+Handling C_BASEADDR
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'gmake -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Running execs_generate.
