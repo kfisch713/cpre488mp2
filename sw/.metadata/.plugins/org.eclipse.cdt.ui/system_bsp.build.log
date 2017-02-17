@@ -1,4 +1,4 @@
-18:42:36 **** Build of project system_bsp ****
+13:10:18 **** Build of project system_bsp ****
 make -k all 
 libgen -hw ../system_hw_platform/system.xml\
 	       -lp //my.files.iastate.edu/Users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib\
@@ -101,5 +101,5 @@ fmc_imageon_vita_receiver.c:683:5: note: expected 'Xuint16 (*)[3]' but argument 
 Running execs_generate.
 'Finished building libraries'
 
-18:42:52 Build Finished (took 15s.775ms)
+13:10:36 Build Finished (took 17s.610ms)
 

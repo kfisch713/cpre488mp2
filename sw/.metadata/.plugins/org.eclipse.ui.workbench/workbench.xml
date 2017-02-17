@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="2789" y="-12">
+<window height="768" maximized="true" width="1024" x="2037" y="-8">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -22,7 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -31,26 +31,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" partName="camera_app.c" path="C:/temp/cpre488mp2/sw/camera_app/src/camera_app.c" title="camera_app.c" tooltip="camera_app/src/camera_app.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camera_app/src/camera_app.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3414" selectionTopPixel="1197"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_utils.c" partName="fmc_imageon_utils.c" path="C:/temp/cpre488mp2/sw/camera_app/src/fmc_imageon_utils.c" title="fmc_imageon_utils.c" tooltip="camera_app/src/fmc_imageon_utils.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camera_app/src/fmc_imageon_utils.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9419" selectionTopPixel="3135"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.h" partName="camera_app.h" path="C:/temp/cpre488mp2/sw/camera_app/src/camera_app.h" title="camera_app.h" tooltip="camera_app/src/camera_app.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camera_app/src/camera_app.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2081" selectionTopPixel="9"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -66,9 +50,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (2 items)"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Infos"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="442" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -86,7 +69,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -175,7 +158,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@397129d9" ratio="0.63050485" ratioLeft="587" ratioRight="344" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@397129d9" ratio="0.85714287" ratioLeft="798" ratioRight="133" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -196,167 +179,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/fmc_imageon_utils.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/xtpg_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/system_bsp/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/fmc_imageon_utils.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.h"/>
-</editors>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="846" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="847" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="3560" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="2857" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="3768" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="2857" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="2819" y="6"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="767" y="15"/>
-</item>
-<item historyLabel="camera_app.h" index="2">
-<position info="not_deleted" x="2228" y="47"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="3234" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="3768" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="852" y="18"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="901" y="6"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="747" y="18"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5480" y="6"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="9441" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="924" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5427" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="889" y="18"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5427" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="775" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="868" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="889" y="18"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="3328" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5468" y="22"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="8274" y="11"/>
-</item>
-<item historyLabel="xtpg_app.c" index="3">
-<position info="not_deleted" x="31675" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="8274" y="11"/>
-</item>
-<item historyLabel="camera_app.c" index="4">
-<position info="not_deleted" x="889" y="18"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5130" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5546" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="1">
-<position info="not_deleted" x="5493" y="0"/>
-</item>
-<item historyLabel="camera_app.h" index="5">
-<position info="not_deleted" x="831" y="0"/>
-</item>
-<item historyLabel="system.mss" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="7">
-<position info="not_deleted" x="889" y="18"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="5491" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="4982" y="105"/>
-</item>
-<item historyLabel="camera_app.h" index="9">
-<position info="not_deleted" x="2081" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="5393" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="7">
-<position info="not_deleted" x="4318" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="5491" y="0"/>
-</item>
-<item historyLabel="camera_app.h" index="9">
-<position info="not_deleted" x="2081" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="7">
-<position info="not_deleted" x="969" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="5669" y="23"/>
-</item>
-<item historyLabel="fmc_imageon_utils.c" index="8">
-<position info="not_deleted" x="9419" y="0"/>
-</item>
-<item active="true" historyLabel="camera_app.c" index="7">
-<position info="not_deleted" x="969" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -373,11 +196,11 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
-<persistable path="/system_bsp/system.mss"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.h" tooltip="camera_app/src/camera_app.h">
 <persistable path="/camera_app/src/camera_app.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
+<persistable path="/system_bsp/system.mss"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xtpg_app.c" tooltip="camera_app/src/xtpg_app.c">
 <persistable path="/camera_app/src/xtpg_app.c"/>

@@ -135,7 +135,7 @@ int fmc_imageon_enable( camera_config_t *config )
 
 
    // Initialize the Video Sources
-   fmc_imageon_enable_tpg(config);
+//   fmc_imageon_enable_tpg(config);
    int vita_enabled;
    int vita_enable_attempt=1;
    do {

@@ -116,3 +116,110 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 18:56:11.392 INFO  - Processor reset is completed for ps7_cortexa9_0 
 18:57:51.419 INFO  - Processor reset is completed for ps7_cortexa9_0 
 18:59:47.679 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:05:53.254 INFO  - Processing command line option -hwspec C:\temp\cpre488mp2\system\SDK\SDK_Export\hw\system.xml. 
+11:07:06.617 INFO  - FPGA configured successfully with bitstream "C:/temp/cpre488mp2/sw/system_hw_platform/system.bit" 
+11:07:32.580 ERROR - No such port: COM6 
+11:07:32.960 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:07:33.070 INFO  - PS initialization will be done as it is not done before. 
+11:07:33.070 INFO  - Running PS initialization.... 
+11:07:33.510 INFO  - ps7_init is completed. 
+11:07:33.610 INFO  - ps7_post_config is completed. 
+11:07:33.720 INFO  - PS Initialization is complete. 
+11:08:16.862 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:08:18.769 ERROR - No such port: COM6 
+11:08:19.169 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:08:44.459 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:08:45.533 ERROR - No such port: COM6 
+11:08:45.943 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:09:51.474 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:09:52.844 ERROR - No such port: COM6 
+11:09:53.264 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:10:49.063 ERROR - No such port: COM6 
+11:10:49.473 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:11:03.277 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:11:04.537 ERROR - No such port: COM6 
+11:11:04.947 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:11:39.978 ERROR - No such port: COM6 
+11:11:40.398 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:08:34.643 ERROR - No such port: COM6 
+12:08:35.063 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:08:35.163 INFO  - PS initialization will be done as it is not done before. 
+12:08:35.163 INFO  - Running PS initialization.... 
+12:08:35.613 INFO  - ps7_init is completed. 
+12:08:35.723 INFO  - ps7_post_config is completed. 
+12:08:35.833 INFO  - PS Initialization is complete. 
+12:08:38.842 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Invalid Target ID
+    Target '64' Does NOT exist in the Current System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.removeAllBreakpoints(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+12:08:51.448 INFO  - FPGA configured successfully with bitstream "C:/temp/cpre488mp2/sw/system_hw_platform/system.bit" 
+12:09:20.821 ERROR - No such port: COM6 
+12:09:21.225 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:09:50.313 ERROR - No such port: COM6 
+12:09:50.733 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:10:19.881 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:10:21.893 ERROR - No such port: COM6 
+12:10:22.303 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:11:15.590 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:11:17.622 ERROR - No such port: COM6 
+12:11:18.052 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:51:13.086 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:51:15.951 ERROR - No such port: COM6 
+12:51:16.261 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:51:43.455 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:51:45.686 ERROR - No such port: COM6 
+12:51:46.096 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:52:16.523 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:52:17.892 ERROR - No such port: COM6 
+12:52:18.302 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:52:30.203 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:52:31.472 ERROR - No such port: COM6 
+12:52:31.892 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:54:36.975 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:54:38.271 ERROR - No such port: COM6 
+12:54:38.673 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:54:49.238 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:54:52.858 ERROR - No such port: COM6 
+12:54:53.248 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:55:23.615 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:55:24.850 ERROR - No such port: COM6 
+12:55:25.230 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:59:07.985 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:59:09.370 ERROR - No such port: COM6 
+12:59:09.670 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:59:56.508 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:59:57.798 ERROR - No such port: COM6 
+12:59:58.208 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:01:43.980 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:01:45.199 ERROR - No such port: COM6 
+13:01:45.599 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:02:09.872 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:02:11.561 ERROR - No such port: COM6 
+13:02:11.971 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:02:29.828 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:02:31.103 ERROR - No such port: COM6 
+13:02:31.514 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:02:45.982 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:02:47.285 ERROR - No such port: COM6 
+13:02:47.625 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:03:19.351 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:03:20.407 ERROR - No such port: COM6 
+13:03:20.817 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:03:56.136 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:03:57.599 ERROR - No such port: COM6 
+13:03:57.999 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:04:13.674 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:04:15.915 ERROR - No such port: COM6 
+13:04:16.314 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:04:32.531 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:04:34.125 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:05:31.492 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:05:33.368 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:07:04.044 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:07:05.844 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:07:30.438 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:07:32.666 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:14:12.217 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -17,9 +17,24 @@
  *****************************************************************************/
 
 #include "camera_app.h"
+#include <stdint.h>
 
-
+static uint16_t average_vert(int i, volatile Xuint16 * mem);
+static uint16_t average_hor(int i, volatile Xuint16 * mem);
+static uint16_t average_x(int i, volatile Xuint16 * mem);
+static uint8_t *color_lut;
+static void fill_color_lut();
 camera_config_t camera_config;
+
+enum color {
+	RED,
+	GREEN,
+	BLUE
+};
+
+int HEIGHT;
+int WIDTH;
+int FRAME_LEN;
 
 // Main function. Initializes the devices and configures VDMA
 int main() {
@@ -57,7 +72,13 @@ void camera_config_init(camera_config_t *config) {
 
 // Main (SW) processing loop. Recommended to have an explicit exit condition
 void camera_loop(camera_config_t *config) {
-
+	WIDTH =  config->hdmio_width;
+	HEIGHT = config->hdmio_height;
+	FRAME_LEN = WIDTH * HEIGHT;
+	color_lut = malloc(FRAME_LEN * sizeof(*color_lut));
+	if (color_lut == NULL)
+		xil_printf("\n\n\n\n\n\nYOU DON F'ED UP!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\n\n\n");
+	fill_color_lut();
 	Xuint32 parkptr;
 	Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
 	int i, j;
@@ -73,25 +94,63 @@ void camera_loop(camera_config_t *config) {
 	parkptr |= 0x1;
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET, parkptr);
 
-
 	// Grab the DMA Control Registers, and clear circular park mode.
 	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 
-
 	// Pointers to the S2MM memory frame and M2SS memory frame
 	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
 	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
 
+	uint16_t R, G, B;
+	uint16_t Y, CB, CR;
+
 
 	// Run for 1000 frames before going back to HW mode
 	for (j = 0; j < 1000; j++) {
-		for (i = 0; i < 1920*1080; i++) {
+		for (i = 0 ; i < WIDTH*HEIGHT; i++) {
 			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1] % 255; // made it all very green!
 			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i+j-1]; // makes the image slowly shift to the right and wrap around.
-			pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1];
+//			pMM2S_Mem[i] = pS2MM_Mem[i];
+
+//			switch (color_lut[i]) {
+//				case RED:
+//					R = pS2MM_Mem[i];
+//					G = average_vert(i, pS2MM_Mem);
+//					B = average_x(i, pS2MM_Mem);
+//					break;
+//				case GREEN:
+//					G = pS2MM_Mem[i];
+//					if ( (i+1 < FRAME_LEN) && (color_lut[i+1] == RED)) {
+//						R = average_hor(i, pS2MM_Mem);
+//						B = average_vert(i, pS2MM_Mem);
+//					} else if ( (i-1 > 0) && (color_lut[i-1] == BLUE)){
+//						R = average_vert(i, pS2MM_Mem);
+//						B = average_hor(i, pS2MM_Mem);
+//					}
+//					break;
+//				case BLUE:
+//					R = average_x(i, pS2MM_Mem);
+//					G = average_vert(i, pS2MM_Mem);
+//					B = pS2MM_Mem[i];
+//					break;
+//			}
+			R = 0;
+			G = 255;
+			B = 0;
+
+			Y  = ( 0.183 * R + 0.614 * G + 0.062 * B) + 16;
+			CB = (-0.101 * R - 0.338 * G + 0.439 * B) + 128;
+			CR = ( 0.439 * R - 0.399 * G - 0.040 * B) + 128;
+
+			Y = Y & 0xFF00;
+			CB = CB & 0xF000;
+			CR = CR & 0xF000;
+
+//			pMM2S_Mem[i] = pS2MM_Mem[i];
+			pMM2S_Mem[i] =  0xDEADBEEF;//Y | (CB >> 8) | (CR >> 12);
 		}
 	}
 
@@ -109,3 +168,82 @@ void camera_loop(camera_config_t *config) {
 	return;
 }
 
+static uint16_t average_vert(int i, volatile Xuint16 * mem) {
+	int average = 0;
+	int count = 0;
+	// Not on the top bound
+	if (i > WIDTH){
+		count++;
+		average += mem[i - WIDTH];
+	}
+	// Not on the bottom bound
+	if (i < FRAME_LEN - WIDTH) {
+		count++;
+		average += mem[i + WIDTH];
+	}
+
+	average /= count;
+	return average;
+}
+
+static uint16_t average_hor(int i, volatile Xuint16 * mem) {
+	int average = 0;
+	int count = 0;
+	// Not on the left bound
+	if (i % WIDTH != 0) {
+		count++;
+		average += mem[i - 1];
+	}
+	//Not on the right bound
+	if ((i % WIDTH) != (WIDTH-1)) {
+		count++;
+		average += mem[i + 1];
+	}
+
+	average /= count;
+	return average;
+}
+
+static uint16_t average_x(int i, volatile Xuint16 * mem) {
+	int average = 0;
+	int count = 0;
+
+	// Top Left
+	if (i > WIDTH && ((i % WIDTH) != 0)) {
+		count++;
+		average += mem[i - WIDTH -1];
+	}
+	// Top Right
+	if (i > WIDTH && ((i % WIDTH) != (WIDTH-1))) {
+		count++;
+		average += mem[i - WIDTH +1];
+	}
+	// Bottom Left
+	if (i < FRAME_LEN && ((i % WIDTH) != 0)) {
+		count++;
+		average += mem[i + WIDTH -1];
+	}
+	// Bottom Right
+	if (i < FRAME_LEN && ((i % WIDTH) != (WIDTH-1))) {
+		count++;
+		average += mem[i + WIDTH +1];
+	}
+
+	average /= count;
+	return average;
+}
+
+static void fill_color_lut() {
+	uint32_t y, x;
+	for (y = 0; y < HEIGHT; y++) {
+		for(x = 0; x < WIDTH; x = x+2) {
+			if (y %2) {
+				color_lut[y*HEIGHT + x] = BLUE;
+				color_lut[y*HEIGHT + x+1] = GREEN;
+			} else {
+				color_lut[y*HEIGHT + x] = GREEN;
+				color_lut[y*HEIGHT + x+1] = RED;
+			}
+		}
+	}
+}

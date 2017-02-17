@@ -1,6 +1,28 @@
-18:57:50 **** Incremental Build of configuration Debug for project camera_app ****
+13:11:30 **** Auto Build of configuration Debug for project camera_app ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_loop':
+../src/camera_app.c:153:4: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+../src/camera_app.c:104:20: warning: unused variable 'pS2MM_Mem' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:171:17: warning: 'average_vert' defined but not used [-Wunused-function]
+../src/camera_app.c:189:17: warning: 'average_hor' defined but not used [-Wunused-function]
+../src/camera_app.c:207:17: warning: 'average_x' defined but not used [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95990	   4064	  33264	 133318	  208c6	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
 
-18:57:50 Build Finished (took 131ms)
+13:11:31 Build Finished (took 470ms)
 
