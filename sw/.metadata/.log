@@ -1,0 +1,27 @@
+!SESSION 2017-02-16 14:54:01.237 -----------------------------------------------
+eclipse.buildId=Release 14.7 Build SDK_P.20131013
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-16 14:58:12.864
+!MESSAGE Indexed 'system_bsp' (133 sources, 163 headers) in 5.76 sec: 8,029 declarations; 33,216 references; 98 unresolved inclusions; 17 syntax errors; 184 unresolved names (0.44%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-16 14:58:13.824
+!MESSAGE Indexed 'camera_app' (7 sources, 52 headers) in 0.95 sec: 2,654 declarations; 5,259 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2017-02-16 15:51:08.266 -----------------------------------------------
+eclipse.buildId=Release 14.7 Build SDK_P.20131013
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-16 15:54:02.161
+!MESSAGE Indexed 'system_bsp' (133 sources, 163 headers) in 5.38 sec: 8,029 declarations; 33,216 references; 98 unresolved inclusions; 17 syntax errors; 184 unresolved names (0.44%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-16 16:16:20.471
+!MESSAGE Indexed 'system_bsp' (133 sources, 163 headers) in 4.76 sec: 8,029 declarations; 33,216 references; 98 unresolved inclusions; 17 syntax errors; 184 unresolved names (0.44%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-02-16 16:16:31.887
+!MESSAGE Indexed 'camera_app' (7 sources, 53 headers) in 0.97 sec: 2,673 declarations; 5,261 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)

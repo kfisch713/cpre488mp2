@@ -1,0 +1,11 @@
+-p
+xc7z020clg484-1
+-lang
+vhdl
+-intstyle
+default
+-lp
+C:/temp/cpre488mp2/repository/
+-msg
+__xps/ise/xmsgprops.lst
+system.mhs

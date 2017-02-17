@@ -46,7 +46,96 @@
 # GPIO
  PORT BTNs_5Bits_GPIO = BTNs_5Bits_GPIO_IO, DIR = IO, VEC = [4:0]
  PORT SWs_8Bits_GPIO = SWs_8Bits_GPIO_IO, DIR = IO, VEC = [7:0]
+ PORT fmc_imageon_vita_receiver_0_io_vita_clk_pll_pin = fmc_imageon_vita_receiver_0_io_vita_clk_pll, DIR = O
+ PORT fmc_imageon_vita_receiver_0_io_vita_reset_n_pin = fmc_imageon_vita_receiver_0_io_vita_reset_n, DIR = O
+ PORT fmc_imageon_vita_receiver_0_io_vita_trigger_pin = fmc_imageon_vita_receiver_0_io_vita_trigger, DIR = O, VEC = [2:0]
+ PORT fmc_imageon_vita_receiver_0_io_vita_monitor_pin = fmc_imageon_vita_receiver_0_io_vita_monitor, DIR = I, VEC = [1:0]
+ PORT fmc_imageon_vita_receiver_0_io_vita_spi_sclk_pin = fmc_imageon_vita_receiver_0_io_vita_spi_sclk, DIR = O
+ PORT fmc_imageon_vita_receiver_0_io_vita_spi_ssel_n_pin = fmc_imageon_vita_receiver_0_io_vita_spi_ssel_n, DIR = O
+ PORT fmc_imageon_vita_receiver_0_io_vita_spi_mosi_pin = fmc_imageon_vita_receiver_0_io_vita_spi_mosi, DIR = O
+ PORT fmc_imageon_vita_receiver_0_io_vita_spi_miso_pin = fmc_imageon_vita_receiver_0_io_vita_spi_miso, DIR = I
+ PORT fmc_imageon_vita_receiver_0_io_vita_clk_out_p_pin = fmc_imageon_vita_receiver_0_io_vita_clk_out_p, DIR = I
+ PORT fmc_imageon_vita_receiver_0_io_vita_clk_out_n_pin = fmc_imageon_vita_receiver_0_io_vita_clk_out_n, DIR = I
+ PORT fmc_imageon_vita_receiver_0_io_vita_sync_p_pin = fmc_imageon_vita_receiver_0_io_vita_sync_p, DIR = I
+ PORT fmc_imageon_vita_receiver_0_io_vita_sync_n_pin = fmc_imageon_vita_receiver_0_io_vita_sync_n, DIR = I
+ PORT fmc_imageon_vita_receiver_0_io_vita_data_p_pin = fmc_imageon_vita_receiver_0_io_vita_data_p, DIR = I, VEC = [7:0]
+ PORT fmc_imageon_vita_receiver_0_io_vita_data_n_pin = fmc_imageon_vita_receiver_0_io_vita_data_n, DIR = I, VEC = [7:0]
 
+
+# Video In
+BEGIN v_vid_in_axi4s
+ PARAMETER INSTANCE = v_vid_in_axi4s_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_M_AXIS_VIDEO_FORMAT = 12
+ PARAMETER C_M_AXIS_VIDEO_DATA_WIDTH = 16
+ BUS_INTERFACE M_AXIS_VIDEO = v_vid_in_axi4s_0_M_AXIS_VIDEO
+ BUS_INTERFACE VTIMING_OUT = v_vid_in_axi4s_0_VTIMING_OUT
+ PORT vid_in_clk = vid_out_clk
+ PORT aclk = vid_out_clk
+ PORT aclken = net_vcc
+ PORT aresetn = net_vcc
+ PORT vid_vsync = fmc_imageon_vita_receiver_0_xsvi_vsync_o
+ PORT vid_vblank = fmc_imageon_vita_receiver_0_xsvi_vblank_o
+ PORT vid_hblank = fmc_imageon_vita_receiver_0_xsvi_hblank_o
+ PORT vid_hsync = fmc_imageon_vita_receiver_0_xsvi_hsync_o
+ PORT vid_data = 0b10000000 & fmc_imageon_vita_receiver_0_xsvi_video_data_o
+ PORT vid_de = fmc_imageon_vita_receiver_0_xsvi_active_video_o
+END
+
+# Video Timing Generator
+BEGIN v_tc
+ PARAMETER INSTANCE = v_tc_1
+ PARAMETER HW_VER = 5.00.a
+ PARAMETER C_GENERATE_EN = 1
+ PARAMETER C_NUM_FSYNCS = 1
+ PARAMETER C_DETECT_EN = 0
+ PARAMETER C_BASEADDR = 0x51100000
+ PARAMETER C_HIGHADDR = 0x5110ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT active_video_out = v_tc_1_VTIMING_OUT_active_video
+ PORT vblank_out = v_tc_1_VTIMING_OUT_vblank
+ PORT hblank_out = v_tc_1_VTIMING_OUT_hblank
+ PORT vsync_out = v_tc_1_VTIMING_OUT_vsync
+ PORT hsync_out = v_tc_1_VTIMING_OUT_hsync
+ PORT S_AXI_ACLK = axi4lite_0_clk
+ PORT clk = vid_out_clk
+END
+
+# Timing Detector and Generator
+BEGIN v_tc
+ PARAMETER INSTANCE = v_tc_0
+ PARAMETER HW_VER = 5.00.a
+ PARAMETER C_GENERATE_EN = 1
+ PARAMETER C_NUM_FSYNCS = 1
+ PARAMETER C_DETECT_EN = 1
+ PARAMETER C_BASEADDR = 0x52200000
+ PARAMETER C_HIGHADDR = 0x5220ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ BUS_INTERFACE VTIMING_IN = v_vid_in_axi4s_0_VTIMING_OUT
+ BUS_INTERFACE VTIMING_OUT = v_tc_0_VTIMING_OUT
+ PORT S_AXI_ACLK = axi4lite_0_clk
+ PORT clk = vid_out_clk
+ PORT gen_clken = vtc_gen_clken
+END
+
+# Video out
+BEGIN v_axi4s_vid_out
+ PARAMETER INSTANCE = v_axi4s_vid_out_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_S_AXIS_VIDEO_FORMAT = 0
+ PARAMETER VTG_MASTER_SLAVE = 0
+ BUS_INTERFACE S_AXIS_VIDEO = axi_vdma_0_M_AXIS_MM2S
+ BUS_INTERFACE VTIMING_IN = v_tc_0_VTIMING_OUT
+ PORT video_out_clk = vid_out_clk
+ PORT aclk = vid_out_clk
+ PORT vtg_ce = vtc_gen_clken
+ PORT video_de = vid_out_de
+ PORT video_vsync = vid_out_vsync
+ PORT video_vblank = vid_out_vblank
+ PORT video_hblank = vid_out_hblank
+ PORT video_data = vid_out_data
+ PORT locked = vid_out_locked
+END
 
 BEGIN processing_system7
  PARAMETER INSTANCE = processing_system7_0
@@ -104,7 +193,7 @@ BEGIN processing_system7
  PARAMETER C_EN_GPIO = 1
  PARAMETER C_FCLK_CLK0_FREQ = 50000000
  PARAMETER C_FCLK_CLK1_FREQ = 200000000
- PARAMETER C_FCLK_CLK2_FREQ = 50000000
+ PARAMETER C_FCLK_CLK2_FREQ = 37037037
  PARAMETER C_FCLK_CLK3_FREQ = 142857132
  PARAMETER C_USE_CR_FABRIC = 1
  PARAMETER C_USE_S_AXI_HP0 = 1
@@ -142,24 +231,92 @@ BEGIN processing_system7
  PORT S_AXI_HP0_ACLK = processing_system7_0_FCLK_CLK3
  PORT FCLK_RESET3_N = processing_system7_0_FCLK_RESET3_N_0
  PORT FCLK_CLK1 = clk_200mhz
+ PORT FCLK_CLK2 = processing_system7_0_FCLK_CLK2
 END
 
-# AXI GP0 bus
-BEGIN axi_interconnect
- PARAMETER INSTANCE = axi4lite_0
- PARAMETER HW_VER = 1.06.a
- PARAMETER C_INTERCONNECT_CONNECTIVITY_MODE = 0
- PORT INTERCONNECT_ACLK = axi4lite_0_clk
- PORT INTERCONNECT_ARESETN = axi4lite_0_reset_n
+BEGIN fmc_imageon_vita_receiver
+ PARAMETER INSTANCE = fmc_imageon_vita_receiver_0
+ PARAMETER HW_VER = 1.13.a
+ PARAMETER C_BASEADDR = 0x52100000
+ PARAMETER C_HIGHADDR = 0x5210ffff
+ PARAMETER C_XSVI_DATA_WIDTH = 8
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = axi4lite_0_clk
+ PORT io_vita_clk_pll = fmc_imageon_vita_receiver_0_io_vita_clk_pll
+ PORT io_vita_reset_n = fmc_imageon_vita_receiver_0_io_vita_reset_n
+ PORT io_vita_trigger = fmc_imageon_vita_receiver_0_io_vita_trigger
+ PORT io_vita_monitor = fmc_imageon_vita_receiver_0_io_vita_monitor
+ PORT io_vita_spi_sclk = fmc_imageon_vita_receiver_0_io_vita_spi_sclk
+ PORT io_vita_spi_ssel_n = fmc_imageon_vita_receiver_0_io_vita_spi_ssel_n
+ PORT io_vita_spi_mosi = fmc_imageon_vita_receiver_0_io_vita_spi_mosi
+ PORT io_vita_spi_miso = fmc_imageon_vita_receiver_0_io_vita_spi_miso
+ PORT io_vita_clk_out_p = fmc_imageon_vita_receiver_0_io_vita_clk_out_p
+ PORT io_vita_clk_out_n = fmc_imageon_vita_receiver_0_io_vita_clk_out_n
+ PORT io_vita_sync_p = fmc_imageon_vita_receiver_0_io_vita_sync_p
+ PORT io_vita_sync_n = fmc_imageon_vita_receiver_0_io_vita_sync_n
+ PORT io_vita_data_p = fmc_imageon_vita_receiver_0_io_vita_data_p
+ PORT io_vita_data_n = fmc_imageon_vita_receiver_0_io_vita_data_n
+ PORT clk200 = clk_200mhz
+ PORT clk = vita_clk_ref
+ PORT clk4x = vid_out_clk
+ PORT trigger1 = net_gnd
+ PORT reset = net_gnd
+ PORT debug_crc_o = fmc_imageon_vita_receiver_0_debug_crc_o
+ PORT xsvi_vsync_o = fmc_imageon_vita_receiver_0_xsvi_vsync_o
+ PORT xsvi_hsync_o = fmc_imageon_vita_receiver_0_xsvi_hsync_o
+ PORT xsvi_vblank_o = fmc_imageon_vita_receiver_0_xsvi_vblank_o
+ PORT xsvi_hblank_o = fmc_imageon_vita_receiver_0_xsvi_hblank_o
+ PORT xsvi_active_video_o = fmc_imageon_vita_receiver_0_xsvi_active_video_o
+ PORT xsvi_video_data_o = fmc_imageon_vita_receiver_0_xsvi_video_data_o
+ PORT oe = fmc_enable
 END
 
-# AXI HP0 bus
-BEGIN axi_interconnect
- PARAMETER INSTANCE = axi_interconnect_1
- PARAMETER HW_VER = 1.06.a
- PARAMETER C_INTERCONNECT_CONNECTIVITY_MODE = 1
- PORT INTERCONNECT_ACLK = processing_system7_0_FCLK_CLK3
- PORT INTERCONNECT_ARESETN = processing_system7_0_FCLK_RESET3_N_0
+# FMC-IMAGEON I2C Controller
+BEGIN axi_iic
+ PARAMETER INSTANCE = fmc_imageon_iic_0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_SCL_INERTIAL_DELAY = 0
+ PARAMETER C_SDA_INERTIAL_DELAY = 0
+ PARAMETER C_GPO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x50100000
+ PARAMETER C_HIGHADDR = 0x5010ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = axi4lite_0_clk
+ PORT Gpo = 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & fmc_imageon_iic_0_Rst
+ PORT Sda = fmc_imageon_iic_0_Sda
+ PORT Scl = fmc_imageon_iic_0_Scl
+END
+
+# FMC-IMAGEON HDMI Output
+BEGIN fmc_imageon_hdmi_out
+ PARAMETER INSTANCE = fmc_imageon_hdmi_out_0
+ PARAMETER HW_VER = 1.05.a
+# BUS_INTERFACE XSVI_VIDEO_IN = fmc_imageon_hdmi_in_0_XSVI_VIDEO_OUT
+ PORT xsvi_vblank_i = vid_out_vblank
+ PORT xsvi_hblank_i = vid_out_hblank
+ PORT xsvi_active_video_i = vid_out_de
+ PORT xsvi_video_data_i = vid_out_data
+ PORT audio_spdif = fmc_imageon_hdmi_in_0_io_hdmii_spdif
+ PORT clk = vid_out_clk
+ PORT reset = net_gnd
+ PORT oe = net_vcc
+ PORT embed_syncs = net_vcc
+ PORT io_hdmio_spdif = fmc_imageon_hdmi_out_0_io_hdmio_spdif
+ PORT io_hdmio_video = fmc_imageon_hdmi_out_0_io_hdmio_video
+ PORT io_hdmio_clk = fmc_imageon_hdmi_out_0_io_hdmio_clk
+END
+
+# Video Clock Sources
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_1
+ PARAMETER HW_VER = 4.03.a
+ PARAMETER C_CLKIN_FREQ = 148500000
+ PARAMETER C_CLKOUT0_FREQ = 148500000
+ PARAMETER C_CLKOUT1_FREQ = 37125000
+ PORT CLKIN = fmc_imageon_video_clk1
+ PORT RST = vid_dcm_rst
+ PORT CLKOUT0 = vid_out_clk
+ PORT CLKOUT1 = vita_clk_ref
 END
 
 # VDMA
@@ -190,71 +347,6 @@ BEGIN axi_vdma
  PORT s_axis_s2mm_aclk = vid_out_clk
 END
 
-# ZedBoard FMC I2C Controller
-BEGIN axi_iic
- PARAMETER INSTANCE = IIC_FMC
- PARAMETER HW_VER = 1.02.a
- PARAMETER C_IIC_FREQ = 100000
- PARAMETER C_TEN_BIT_ADR = 0
- PARAMETER C_GPO_WIDTH = 8
- PARAMETER C_BASEADDR = 0x40100000
- PARAMETER C_HIGHADDR = 0x4010ffff
- BUS_INTERFACE S_AXI = axi4lite_0
- PORT S_AXI_ACLK = axi4lite_0_clk
- PORT Sda = IIC_FMC_SDA
- PORT Scl = IIC_FMC_SCL
-# PORT Gpo = 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & vid_dcm_rst & 0b0 & fmc_enable
- PORT Gpo = 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & vid_dcm_rst & 0b0 & 0b0
-END
-
-# FMC-IMAGEON I2C Controller
-BEGIN axi_iic
- PARAMETER INSTANCE = fmc_imageon_iic_0
- PARAMETER HW_VER = 1.02.a
- PARAMETER C_SCL_INERTIAL_DELAY = 0
- PARAMETER C_SDA_INERTIAL_DELAY = 0
- PARAMETER C_GPO_WIDTH = 8
- PARAMETER C_BASEADDR = 0x50100000
- PARAMETER C_HIGHADDR = 0x5010ffff
- BUS_INTERFACE S_AXI = axi4lite_0
- PORT S_AXI_ACLK = axi4lite_0_clk
- PORT Gpo = 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & fmc_imageon_iic_0_Rst
- PORT Sda = fmc_imageon_iic_0_Sda
- PORT Scl = fmc_imageon_iic_0_Scl
-END
-
-# Video Clock Sources
-BEGIN clock_generator
- PARAMETER INSTANCE = clock_generator_1
- PARAMETER HW_VER = 4.03.a
- PARAMETER C_CLKIN_FREQ = 148500000
- PARAMETER C_CLKOUT0_FREQ = 148500000
- PARAMETER C_CLKOUT1_FREQ = 37125000
- PORT CLKIN = fmc_imageon_video_clk1
- PORT RST = vid_dcm_rst
- PORT CLKOUT0 = vid_out_clk
- PORT CLKOUT1 = vita_clk_ref
-END
-
-# Video Timing Generator
-BEGIN v_tc
- PARAMETER INSTANCE = v_tc_1
- PARAMETER HW_VER = 5.00.a
- PARAMETER C_GENERATE_EN = 1
- PARAMETER C_NUM_FSYNCS = 1
- PARAMETER C_DETECT_EN = 0
- PARAMETER C_BASEADDR = 0x51100000
- PARAMETER C_HIGHADDR = 0x5110ffff
- BUS_INTERFACE S_AXI = axi4lite_0
- PORT active_video_out = v_tc_1_VTIMING_OUT_active_video
- PORT vblank_out = v_tc_1_VTIMING_OUT_vblank
- PORT hblank_out = v_tc_1_VTIMING_OUT_hblank
- PORT vsync_out = v_tc_1_VTIMING_OUT_vsync
- PORT hsync_out = v_tc_1_VTIMING_OUT_hsync
- PORT S_AXI_ACLK = axi4lite_0_clk
- PORT clk = vid_out_clk
-END
-
 # Test Pattern Generator
 BEGIN axi_tpg
  PARAMETER INSTANCE = axi_tpg_0
@@ -274,97 +366,28 @@ BEGIN axi_tpg
  PORT vsync_out = tpg_0_vsync_out
  PORT hblank_out = tpg_0_hblank_out
  PORT vblank_out = tpg_0_vblank_out
- PORT active_video_out = tpg_0_active_video_out
  PORT video_data_out = tpg_0_video_data_out
  PORT TPG_debug = axi_tpg_0_TPG_debug
+ PORT ZP_debug = axi_tpg_0_ZP_debug
+ PORT active_video_out = axi_tpg_0_active_video_out
 END
 
-# Video In
-BEGIN v_vid_in_axi4s
- PARAMETER INSTANCE = v_vid_in_axi4s_0
- PARAMETER HW_VER = 2.00.a
- PARAMETER C_M_AXIS_VIDEO_FORMAT = 12
- PARAMETER C_M_AXIS_VIDEO_DATA_WIDTH = 16
- BUS_INTERFACE M_AXIS_VIDEO = v_vid_in_axi4s_0_M_AXIS_VIDEO
- BUS_INTERFACE VTIMING_OUT = v_vid_in_axi4s_0_VTIMING_OUT
- PORT vid_in_clk = vid_out_clk
- PORT vid_de = tpg_0_active_video_out
- PORT vid_data = tpg_0_video_data_out
- PORT vid_vblank = tpg_0_vblank_out
- PORT vid_hblank = tpg_0_hblank_out
- PORT vid_vsync = tpg_0_vsync_out
- PORT vid_hsync = tpg_0_hsync_out
- PORT aclk = vid_out_clk
- PORT aclken = net_vcc
- PORT aresetn = net_vcc
+# AXI HP0 bus
+BEGIN axi_interconnect
+ PARAMETER INSTANCE = axi_interconnect_1
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_INTERCONNECT_CONNECTIVITY_MODE = 1
+ PORT INTERCONNECT_ACLK = processing_system7_0_FCLK_CLK3
+ PORT INTERCONNECT_ARESETN = processing_system7_0_FCLK_RESET3_N_0
 END
 
-# Timing Detector and Generator
-BEGIN v_tc
- PARAMETER INSTANCE = v_tc_0
- PARAMETER HW_VER = 5.00.a
- PARAMETER C_GENERATE_EN = 1
- PARAMETER C_NUM_FSYNCS = 1
- PARAMETER C_DETECT_EN = 1
- PARAMETER C_BASEADDR = 0x52200000
- PARAMETER C_HIGHADDR = 0x5220ffff
- BUS_INTERFACE S_AXI = axi4lite_0
- BUS_INTERFACE VTIMING_IN = v_vid_in_axi4s_0_VTIMING_OUT
- BUS_INTERFACE VTIMING_OUT = v_tc_0_VTIMING_OUT
- PORT S_AXI_ACLK = axi4lite_0_clk
- PORT clk = vid_out_clk
- PORT gen_clken = vtc_gen_clken
-END
-
-# Video out
-BEGIN v_axi4s_vid_out
- PARAMETER INSTANCE = v_axi4s_vid_out_0
- PARAMETER HW_VER = 2.00.a
- PARAMETER C_S_AXIS_VIDEO_FORMAT = 0
- PARAMETER VTG_MASTER_SLAVE = 0
- BUS_INTERFACE S_AXIS_VIDEO = axi_vdma_0_M_AXIS_MM2S
- BUS_INTERFACE VTIMING_IN = v_tc_0_VTIMING_OUT
- PORT video_out_clk = vid_out_clk
- PORT aclk = vid_out_clk
- PORT vtg_ce = vtc_gen_clken
- PORT video_de = vid_out_de
- PORT video_vsync = vid_out_vsync
- PORT video_hsync = vid_out_hsync
- PORT video_vblank = vid_out_vblank
- PORT video_hblank = vid_out_hblank
- PORT video_data = vid_out_data
- PORT locked = vid_out_locked
-END
-
-# FMC-IMAGEON HDMI Output
-BEGIN fmc_imageon_hdmi_out
- PARAMETER INSTANCE = fmc_imageon_hdmi_out_0
- PARAMETER HW_VER = 1.05.a
-# BUS_INTERFACE XSVI_VIDEO_IN = fmc_imageon_hdmi_in_0_XSVI_VIDEO_OUT
- PORT xsvi_vblank_i = vid_out_vblank
- PORT xsvi_hblank_i = vid_out_hblank
- PORT xsvi_active_video_i = vid_out_de
- PORT xsvi_video_data_i = vid_out_data
- PORT audio_spdif = fmc_imageon_hdmi_in_0_io_hdmii_spdif
- PORT clk = vid_out_clk
- PORT reset = net_gnd
- PORT oe = net_vcc
- PORT embed_syncs = net_vcc
- PORT io_hdmio_spdif = fmc_imageon_hdmi_out_0_io_hdmio_spdif
- PORT io_hdmio_video = fmc_imageon_hdmi_out_0_io_hdmio_video
- PORT io_hdmio_clk = fmc_imageon_hdmi_out_0_io_hdmio_clk
-END
-
-BEGIN axi_gpio
- PARAMETER INSTANCE = BTNs_5Bits
- PARAMETER HW_VER = 1.01.b
- PARAMETER C_GPIO_WIDTH = 5
- PARAMETER C_ALL_INPUTS = 1
- PARAMETER C_BASEADDR = 0x41200000
- PARAMETER C_HIGHADDR = 0x4120ffff
- BUS_INTERFACE S_AXI = axi4lite_0
- PORT S_AXI_ACLK = axi4lite_0_clk
- PORT GPIO_IO = BTNs_5Bits_GPIO_IO
+# AXI GP0 bus
+BEGIN axi_interconnect
+ PARAMETER INSTANCE = axi4lite_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_INTERCONNECT_CONNECTIVITY_MODE = 0
+ PORT INTERCONNECT_ACLK = axi4lite_0_clk
+ PORT INTERCONNECT_ARESETN = axi4lite_0_reset_n
 END
 
 BEGIN axi_gpio
@@ -377,5 +400,34 @@ BEGIN axi_gpio
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = axi4lite_0_clk
  PORT GPIO_IO = SWs_8Bits_GPIO_IO
+END
+
+# ZedBoard FMC I2C Controller
+BEGIN axi_iic
+ PARAMETER INSTANCE = IIC_FMC
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_IIC_FREQ = 100000
+ PARAMETER C_TEN_BIT_ADR = 0
+ PARAMETER C_GPO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x40100000
+ PARAMETER C_HIGHADDR = 0x4010ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = axi4lite_0_clk
+ PORT Sda = IIC_FMC_SDA
+ PORT Scl = IIC_FMC_SCL
+ PORT Gpo = 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & vid_dcm_rst & 0b0 & fmc_enable
+END
+
+# PORT Gpo = 0b0 & 0b0 & 0b0 & 0b0 & 0b0 & vid_dcm_rst & 0b0 & 0b0
+BEGIN axi_gpio
+ PARAMETER INSTANCE = BTNs_5Bits
+ PARAMETER HW_VER = 1.01.b
+ PARAMETER C_GPIO_WIDTH = 5
+ PARAMETER C_ALL_INPUTS = 1
+ PARAMETER C_BASEADDR = 0x41200000
+ PARAMETER C_HIGHADDR = 0x4120ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = axi4lite_0_clk
+ PORT GPIO_IO = BTNs_5Bits_GPIO_IO
 END
 

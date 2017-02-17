@@ -1,0 +1,200 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc7z020,clg484,C,-1 (PRODUCTION 1.08 2013-10-13)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: PATH "TS_axi_vdma_0_cdc_tig_v_path" TIG;
+
+ 2147 paths analyzed, 813 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi_vdma_0_cdc_from_2_cdc_to_path" TIG;
+
+ 37 paths analyzed, 37 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi_interconnect_1_reset_resync_path" TIG;
+
+ 16 paths analyzed, 16 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_axi_interconnect_1_async_clock_conv = MAXDELAY FROM 
+TIMEGRP "RAMS" TO         TIMEGRP "axi_interconnect_1_async_clock_conv_FFDEST" 
+7 ns         DATAPATHONLY;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 258 paths analyzed, 258 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.657ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_fpga_1 = PERIOD TIMEGRP "clk_fpga_1" 200 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.761ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 50 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.500ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_fpga_3 = PERIOD TIMEGRP "clk_fpga_3" 142.857 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 18845 paths analyzed, 6127 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.834ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_vout_clk = PERIOD TIMEGRP "vout_clk" 148.5 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.944ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_vclk_clk = PERIOD TIMEGRP "vclk_clk" 148.5 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_CLK_IN = PERIOD TIMEGRP "CLK_50MHz" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 339659 paths analyzed, 15398 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  16.325ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_1_clock_generator_1_SIG_MMCM1_CLKOUT1 = 
+PERIOD TIMEGRP         "clock_generator_1_clock_generator_1_SIG_MMCM1_CLKOUT1" 
+TS_vclk_clk *         0.25 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 66050 paths analyzed, 12897 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  15.520ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_1_clock_generator_1_SIG_MMCM1_CLKOUT0 = 
+PERIOD TIMEGRP         "clock_generator_1_clock_generator_1_SIG_MMCM1_CLKOUT0" 
+TS_vclk_clk         HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 241201 paths analyzed, 38792 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.727ns.
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_vclk_clk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_vclk_clk                    |      6.734ns|      4.000ns|      6.727ns|            0|            0|            0|       307251|
+| TS_clock_generator_1_clock_gen|     26.936ns|     15.520ns|          N/A|            0|            0|        66050|            0|
+| erator_1_SIG_MMCM1_CLKOUT1    |             |             |             |             |             |             |             |
+| TS_clock_generator_1_clock_gen|      6.734ns|      6.727ns|          N/A|            0|            0|       241201|            0|
+| erator_1_SIG_MMCM1_CLKOUT0    |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock fmc_imageon_video_clk1
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+fmc_imageon_video_clk1|   10.941|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 668215 paths, 0 nets, and 85786 connections
+
+Design statistics:
+   Minimum period:  16.325ns   (Maximum frequency:  61.256MHz)
+   Maximum path delay from/to any node:   3.657ns
+
+
+Analysis completed Thu Feb 16 18:36:43 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 975 MB
+
+
+

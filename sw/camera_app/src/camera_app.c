@@ -24,6 +24,7 @@ camera_config_t camera_config;
 // Main function. Initializes the devices and configures VDMA
 int main() {
 
+	printf("made it\n");
 
 	camera_config_init(&camera_config);
 	fmc_imageon_enable(&camera_config);
@@ -38,7 +39,7 @@ void camera_config_init(camera_config_t *config) {
 
     config->uBaseAddr_IIC_FmcIpmi = XPAR_IIC_FMC_BASEADDR;
     config->uBaseAddr_IIC_FmcImageon = XPAR_FMC_IMAGEON_IIC_0_BASEADDR;
-//    config->uBaseAddr_VITA_Receiver = XPAR_FMC_IMAGEON_VITA_RECEIVER_0_BASEADDR;
+    config->uBaseAddr_VITA_Receiver = XPAR_FMC_IMAGEON_VITA_RECEIVER_0_BASEADDR;
 //    config->uBaseAddr_CFA = XPAR_CFA_0_BASEADDR;
 //    config->uBaseAddr_CRES = XPAR_CRESAMPLE_0_BASEADDR;
 //    config->uBaseAddr_RGBYCC = XPAR_RGB2YCRCB_0_BASEADDR;
@@ -88,6 +89,8 @@ void camera_loop(camera_config_t *config) {
 	// Run for 1000 frames before going back to HW mode
 	for (j = 0; j < 1000; j++) {
 		for (i = 0; i < 1920*1080; i++) {
+			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1] % 255; // made it all very green!
+			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i+j-1]; // makes the image slowly shift to the right and wrap around.
 			pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1];
 		}
 	}

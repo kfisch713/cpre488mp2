@@ -27,7 +27,7 @@
 #include "fmc_iic.h"
 #include "fmc_ipmi.h"
 #include "fmc_imageon.h"
-//#include "fmc_imageon_vita_receiver.h"
+#include "fmc_imageon_vita_receiver.h"
 //#include "cfa.h"
 //#include "rgb2ycrcb.h"
 //#include "cresample.h"
@@ -76,9 +76,9 @@ struct struct_camera_config_t {
 	fmc_iic_t fmc_imageon_iic;
 
 	fmc_imageon_t fmc_imageon;
-//	fmc_imageon_vita_receiver_t vita_receiver;
-//	fmc_imageon_vita_status_t vita_status_t1;
-//	fmc_imageon_vita_status_t vita_status_t2;
+	fmc_imageon_vita_receiver_t vita_receiver;
+	fmc_imageon_vita_status_t vita_status_t1;
+	fmc_imageon_vita_status_t vita_status_t2;
 
 	XVtc vtc_ipipe;
 	XVtc vtc_tpg;

@@ -1,0 +1,105 @@
+18:42:36 **** Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp //my.files.iastate.edu/Users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+//my.files.iastate.edu/Users/burneykb/Documents/cpre488mp2/repository/ProcessorI
+PLib -pe ps7_cortexa9_0 -log libgen.log system.mss 
+
+WARNING:EDK:411 - iic - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 27 -
+   deprecated driver!
+WARNING:EDK:411 - iic - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 33 -
+   deprecated driver!
+WARNING:EDK:411 - devcfg - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 51 -
+   deprecated driver!
+WARNING:EDK:411 - dmaps - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 57 -
+   deprecated driver!
+WARNING:EDK:411 - dmaps - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 63 -
+   deprecated driver!
+WARNING:EDK:411 - emacps - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 69 -
+   deprecated driver!
+WARNING:EDK:411 - gpiops - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 75 -
+   deprecated driver!
+WARNING:EDK:411 - qspips - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 87 -
+   deprecated driver!
+WARNING:EDK:411 - scugic - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 111
+   - deprecated driver!
+WARNING:EDK:411 - scutimer - C:\temp\cpre488mp2\sw\system_bsp\system.mss line
+   117 - deprecated driver!
+WARNING:EDK:411 - scuwdt - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 123
+   - deprecated driver!
+WARNING:EDK:411 - uartps - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 147
+   - deprecated driver!
+WARNING:EDK:411 - usbps - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 153 -
+   deprecated driver!
+WARNING:EDK:411 - axivdma - C:\temp\cpre488mp2\sw\system_bsp\system.mss line 171
+   - deprecated driver!
+WARNING:EDK:411 - standalone - C:\temp\cpre488mp2\sw\system_bsp\system.mss line
+   5 - deprecated os!
+
+Staging source files.
+Running DRCs.
+Running generate.
+Handling DEVICE_ID
+
+Handling C_BASEADDR
+
+Handling DEVICE_ID
+
+Handling C_BASEADDR
+
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling xadc"
+"Compiling standalone"
+"Compiling fmc_iic_sw"
+"Compiling fmc_imageon_sw"
+"Compiling fmc_ipmi_sw"
+"Compiling axivdma"
+"Compiling iic"
+"Compiling fmc_imageon_vita_receiver"
+fmc_imageon_vita_receiver.c: In function 'fmc_imageon_vita_receiver_set_analog_gain':
+fmc_imageon_vita_receiver.c:1430:12: warning: assignment from incompatible pointer type [enabled by default]
+fmc_imageon_vita_receiver.c:1436:7: warning: passing argument 2 of 'fmc_imageon_vita_receiver_spi_display_sequence' from incompatible pointer type [enabled by default]
+fmc_imageon_vita_receiver.c:730:5: note: expected 'Xuint16 (*)[3]' but argument is of type 'Xuint16 **'
+fmc_imageon_vita_receiver.c:1438:4: warning: passing argument 2 of 'fmc_imageon_vita_receiver_spi_write_sequence' from incompatible pointer type [enabled by default]
+fmc_imageon_vita_receiver.c:683:5: note: expected 'Xuint16 (*)[3]' but argument is of type 'Xuint16 **'
+fmc_imageon_vita_receiver.c: In function 'fmc_imageon_vita_receiver_set_digital_gain':
+fmc_imageon_vita_receiver.c:1467:12: warning: assignment from incompatible pointer type [enabled by default]
+fmc_imageon_vita_receiver.c:1473:4: warning: passing argument 2 of 'fmc_imageon_vita_receiver_spi_display_sequence' from incompatible pointer type [enabled by default]
+fmc_imageon_vita_receiver.c:730:5: note: expected 'Xuint16 (*)[3]' but argument is of type 'Xuint16 **'
+fmc_imageon_vita_receiver.c:1475:4: warning: passing argument 2 of 'fmc_imageon_vita_receiver_spi_write_sequence' from incompatible pointer type [enabled by default]
+fmc_imageon_vita_receiver.c:683:5: note: expected 'Xuint16 (*)[3]' but argument is of type 'Xuint16 **'
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling video timing controller"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+
+18:42:52 Build Finished (took 15s.775ms)
+

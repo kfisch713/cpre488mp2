@@ -1,0 +1,7 @@
+ The following files will be modified:
+  system.mhs
+--------------------------------------
+ The following changes will be made:
+ Core processing_system7 4.01.a will be replaced by 4.03.a
+ Core v_vid_in_axi4s 2.00.a will be replaced by 2.01.a
+ Core v_axi4s_vid_out 2.00.a will be replaced by 2.01.a

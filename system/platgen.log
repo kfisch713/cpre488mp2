@@ -1,0 +1,338 @@
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc7z020clg484-1 -lang vhdl -intstyle default -lp
+C:/temp/cpre488mp2/repository/ -msg __xps/ise/xmsgprops.lst system.mhs 
+
+WARNING:EDK - INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable
+   is not set.
+   INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+   '1717@io.ece.iastate.edu;27008@io.ece.iastate.edu;
+   27006@io.ece.iastate.edu;27003@io.ece.iastate.edu'.
+   INFO:Security:71 - If a license for part 'xc7z020' is available, it will be
+   possible to use 'XPS_TDP' instead of 'XPS'.
+   WARNING:Security:43 - No license file was found in the standard Xilinx
+   license directory.
+   WARNING:Security:44 - Since no license file was found,
+          please run the Xilinx License Configuration Manager
+          (xlcm or "Manage Xilinx Licenses")
+          to assist in obtaining a license.
+   WARNING:Security:42 - Your software subscription period has lapsed. Your
+   current version of Xilinx tools will continue to function, but you no longer
+   qualify for Xilinx software updates or new releases.
+
+
+Parse C:/temp/cpre488mp2/system/system.mhs ...
+
+Read MPD definitions ...
+WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 66 
+WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
+   verified on hardware for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 86 
+WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
+   verified on hardware for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 105 
+WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 122 
+WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 140 
+WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 310 
+WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 66 
+WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
+   verified on hardware for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 86 
+WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
+   verified on hardware for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 105 
+WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 122 
+WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 140 
+WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 310 
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: v_vid_in_axi4s, INSTANCE:v_vid_in_axi4s_0 - tcl is
+   overriding PARAMETER VID_IN_DATA_WIDTH value to 16 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\v_vid_in_axi4s_v2_00
+   _a\data\v_vid_in_axi4s_v2_1_0.mpd line 78 
+INFO:EDK:4130 - IPNAME: v_vid_in_axi4s, INSTANCE:v_vid_in_axi4s_0 - tcl is
+   overriding PARAMETER C_M_AXIS_VIDEO_TDATA_WIDTH value to 16 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\v_vid_in_axi4s_v2_00
+   _a\data\v_vid_in_axi4s_v2_1_0.mpd line 79 
+INFO:EDK:4130 - IPNAME: v_axi4s_vid_out, INSTANCE:v_axi4s_vid_out_0 - tcl is
+   overriding PARAMETER VID_OUT_DATA_WIDTH value to 16 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\v_axi4s_vid_out_v2_0
+   0_a\data\v_axi4s_vid_out_v2_1_0.mpd line 78 
+INFO:EDK:4130 - IPNAME: v_axi4s_vid_out, INSTANCE:v_axi4s_vid_out_0 - tcl is
+   overriding PARAMETER C_S_AXIS_VIDEO_TDATA_WIDTH value to 16 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\v_axi4s_vid_out_v2_0
+   0_a\data\v_axi4s_vid_out_v2_1_0.mpd line 79 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_NUM_F2P_INTR_INPUTS value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_01_a\data\processing_system7_v2_1_0.mpd line 314 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+
+Computing clock values...
+INFO:EDK:1432 - Frequency for Top-Level Input Clock
+   'processing_system7_0_PS_CLK' is not specified. Clock DRCs will not be
+   performed for IPs connected to that clock port, unless they are connected
+   through the clock generator IP. 
+
+INFO:EDK:3716 - IPNAME: axi_vdma, INSTANCE: axi_vdma_0 - Tools are updating the
+   value of the parameter C_INTERCONNECT_M_AXI_MM2S_IS_ACLK_ASYNC to '1'. 
+INFO:EDK:3716 - IPNAME: axi_vdma, INSTANCE: axi_vdma_0 - Tools are updating the
+   value of the parameter C_INTERCONNECT_M_AXI_S2MM_IS_ACLK_ASYNC to '1'. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor processing_system7_0
+  (0x40100000-0x4010ffff) IIC_FMC	axi4lite_0
+  (0x41200000-0x4120ffff) BTNs_5Bits	axi4lite_0
+  (0x41240000-0x4124ffff) SWs_8Bits	axi4lite_0
+  (0x43000000-0x4300ffff) axi_vdma_0	axi4lite_0
+  (0x50100000-0x5010ffff) fmc_imageon_iic_0	axi4lite_0
+  (0x51100000-0x5110ffff) v_tc_1	axi4lite_0
+  (0x51200000-0x5120ffff) axi_tpg_0	axi4lite_0
+  (0x52100000-0x5210ffff) fmc_imageon_vita_receiver_0	axi4lite_0
+  (0x52200000-0x5220ffff) v_tc_0	axi4lite_0
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 2 master(s) : 1
+slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 9 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4180 - PORT: active_chroma_in, CONNECTOR:
+   v_vid_in_axi4s_0_VTIMING_OUT_active_chroma - No driver found. Port will be
+   driven to GND -
+   C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2
+   _1_0.mpd line 134 
+WARNING:EDK:4180 - PORT: resetn, CONNECTOR: v_vid_in_axi4s_0_VTIMING_OUT_net_vcc
+   - No driver found. Port will be driven to VCC -
+   C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2
+   _1_0.mpd line 143 
+WARNING:EDK:4180 - PORT: det_clken, CONNECTOR:
+   v_vid_in_axi4s_0_VTIMING_OUT_net_vcc - No driver found. Port will be driven
+   to VCC -
+   C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2
+   _1_0.mpd line 145 
+WARNING:EDK:4180 - PORT: s_axis_s2mm_tkeep, CONNECTOR:
+   v_vid_in_axi4s_0_M_AXIS_VIDEO_TKEEP - No driver found. Port will be driven to
+   VCC -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_vdma_v5_04_a\dat
+   a\axi_vdma_v2_1_0.mpd line 231 
+WARNING:EDK:4181 - PORT: active_chroma_out, CONNECTOR:
+   v_tc_0_VTIMING_OUT_active_chroma - floating connection -
+   C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2
+   _1_0.mpd line 140 
+WARNING:EDK:4181 - PORT: video_vsync, CONNECTOR: vid_out_vsync - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 133 
+WARNING:EDK:4181 - PORT: locked, CONNECTOR: vid_out_locked - floating connection
+   - C:\temp\cpre488mp2\system\system.mhs line 137 
+WARNING:EDK:4181 - PORT: FCLK_CLK2, CONNECTOR: processing_system7_0_FCLK_CLK2 -
+   floating connection - C:\temp\cpre488mp2\system\system.mhs line 234 
+WARNING:EDK:4181 - PORT: debug_crc_o, CONNECTOR:
+   fmc_imageon_vita_receiver_0_debug_crc_o - floating connection -
+   C:\temp\cpre488mp2\system\system.mhs line 264 
+WARNING:EDK:4181 - PORT: m_axis_mm2s_tkeep, CONNECTOR:
+   axi_vdma_0_M_AXIS_MM2S_TKEEP - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_vdma_v5_04_a\dat
+   a\axi_vdma_v2_1_0.mpd line 208 
+WARNING:EDK:4181 - PORT: hsync_out, CONNECTOR: tpg_0_hsync_out - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 365 
+WARNING:EDK:4181 - PORT: vsync_out, CONNECTOR: tpg_0_vsync_out - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 366 
+WARNING:EDK:4181 - PORT: hblank_out, CONNECTOR: tpg_0_hblank_out - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 367 
+WARNING:EDK:4181 - PORT: vblank_out, CONNECTOR: tpg_0_vblank_out - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 368 
+WARNING:EDK:4181 - PORT: active_video_out, CONNECTOR: axi_tpg_0_active_video_out
+   - floating connection - C:\temp\cpre488mp2\system\system.mhs line 372 
+WARNING:EDK:4181 - PORT: video_data_out, CONNECTOR: tpg_0_video_data_out -
+   floating connection - C:\temp\cpre488mp2\system\system.mhs line 369 
+WARNING:EDK:4181 - PORT: ZP_debug, CONNECTOR: axi_tpg_0_ZP_debug - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 371 
+WARNING:EDK:4181 - PORT: TPG_debug, CONNECTOR: axi_tpg_0_TPG_debug - floating
+   connection - C:\temp\cpre488mp2\system\system.mhs line 370 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK2_BUF value to FALSE -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_01_a\data\processing_system7_v2_1_0.mpd line 346 
+
+INFO: Setting C_RANGE_CHECK = OFF for axi_interconnect axi_interconnect_1; no
+DECERR checking will be performed.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi4lite_0.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi4lite_0 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+INFO:coreutil - Full license for component <v_tc> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: Generating core-level timing constraints for asynchronous clock
+conversions in axi_interconnect axi_interconnect_1.
+INFO: No asynchronous clock conversions in axi_interconnect axi4lite_0.
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+IPNAME:v_tc INSTANCE:v_tc_1 - C:\temp\cpre488mp2\system\system.mhs line 86 -
+processing license
+IPNAME:v_tc INSTANCE:v_tc_0 - C:\temp\cpre488mp2\system\system.mhs line 105 -
+processing license
+Completion time: 10.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+IPNAME:fmc_imageon_vita_receiver INSTANCE:fmc_imageon_vita_receiver_0 -
+C:\temp\cpre488mp2\system\system.mhs line 237 - Copying (BBD-specified) netlist
+files.
+
+Managing cache ...
+IPNAME:v_vid_in_axi4s INSTANCE:v_vid_in_axi4s_0 -
+C:\temp\cpre488mp2\system\system.mhs line 66 - Copying cache implementation
+netlist
+IPNAME:v_tc INSTANCE:v_tc_1 - C:\temp\cpre488mp2\system\system.mhs line 86 -
+Copying cache implementation netlist
+IPNAME:v_tc INSTANCE:v_tc_0 - C:\temp\cpre488mp2\system\system.mhs line 105 -
+Copying cache implementation netlist
+IPNAME:v_axi4s_vid_out INSTANCE:v_axi4s_vid_out_0 -
+C:\temp\cpre488mp2\system\system.mhs line 122 - Copying cache implementation
+netlist
+IPNAME:processing_system7 INSTANCE:processing_system7_0 -
+C:\temp\cpre488mp2\system\system.mhs line 140 - Copying cache implementation
+netlist
+IPNAME:axi_iic INSTANCE:fmc_imageon_iic_0 - C:\temp\cpre488mp2\system\system.mhs
+line 275 - Copying cache implementation netlist
+IPNAME:fmc_imageon_hdmi_out INSTANCE:fmc_imageon_hdmi_out_0 -
+C:\temp\cpre488mp2\system\system.mhs line 291 - Copying cache implementation
+netlist
+IPNAME:axi_vdma INSTANCE:axi_vdma_0 - C:\temp\cpre488mp2\system\system.mhs line
+323 - Copying cache implementation netlist
+IPNAME:axi_tpg INSTANCE:axi_tpg_0 - C:\temp\cpre488mp2\system\system.mhs line
+351 - Copying cache implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
+C:\temp\cpre488mp2\system\system.mhs line 376 - Copying cache implementation
+netlist
+IPNAME:axi_interconnect INSTANCE:axi4lite_0 -
+C:\temp\cpre488mp2\system\system.mhs line 385 - Copying cache implementation
+netlist
+IPNAME:axi_gpio INSTANCE:sws_8bits - C:\temp\cpre488mp2\system\system.mhs line
+393 - Copying cache implementation netlist
+IPNAME:axi_iic INSTANCE:iic_fmc - C:\temp\cpre488mp2\system\system.mhs line 406
+- Copying cache implementation netlist
+IPNAME:axi_gpio INSTANCE:btns_5bits - C:\temp\cpre488mp2\system\system.mhs line
+422 - Copying cache implementation netlist
+
+Elaborating instances ...
+IPNAME:clock_generator INSTANCE:clock_generator_1 -
+C:\temp\cpre488mp2\system\system.mhs line 310 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+WARNING:EDK:4059 - INSTANCE: v_tc_0, Overriding connection of PORT: gen_clken,
+   VALUE: vtc_gen_clken - which is part of the connected BUSIF: VTIMING_OUT -
+   C:\temp\cpre488mp2\system\system.mhs line 105
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:fmc_imageon_vita_receiver_0 - C:\temp\cpre488mp2\system\system.mhs line
+237 - Running XST synthesis
+INSTANCE:clock_generator_1 - C:\temp\cpre488mp2\system\system.mhs line 310 -
+Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:system_fmc_imageon_vita_receiver_0_wrapper
+INSTANCE:fmc_imageon_vita_receiver_0 - C:\temp\cpre488mp2\system\system.mhs line
+237 - Running NGCBUILD
+IPNAME:system_clock_generator_1_wrapper INSTANCE:clock_generator_1 -
+C:\temp\cpre488mp2\system\system.mhs line 310 - Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 83.00 seconds
