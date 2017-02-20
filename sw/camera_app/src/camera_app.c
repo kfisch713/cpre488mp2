@@ -118,7 +118,7 @@ void camera_loop(camera_config_t *config) {
 			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i+j-1]; // makes the image slowly shift to the right and wrap around.
 			//pMM2S_Mem[i] = pS2MM_Mem[i];
 
-
+			/* YCbYCr, little endian */
 			//This is the software bayer filter. It isn't working. Can't get any color to display. Try setting a constant color. -Kyle
 			/*
 			switch (color_lut[i]) {
