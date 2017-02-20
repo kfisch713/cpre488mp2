@@ -698,30 +698,30 @@ void xTPG_main (int width, int height, int TPG_BASEADDR)
  * @return  None.
  * @note    None.
  */
-//void XTPG_EnableInterrupt(void * baseaddr_p)
-//{
-//  Xuint32 baseaddr;
-//  baseaddr = (Xuint32) baseaddr_p;
-//
-//  /*
-//   * Enable all interrupt source from user logic.
-//   */
-//  XTPG_mWriteReg(baseaddr, XTPG_INTR_IPIER_OFFSET, 0x0000000F);
-//
-//  /*
-//   * Enable all possible interrupt sources from device.
-//   */
-//  XTPG_mWriteReg(baseaddr, XTPG_INTR_DIER_OFFSET,
-//    INTR_TERR_MASK
-//    | INTR_DPTO_MASK
-//    | INTR_IPIR_MASK
-//    );
-//
-//  /*
-//   * Set global interrupt enable.
-//   */
-//  XTPG_mWriteReg(baseaddr, XTPG_INTR_DGIER_OFFSET, INTR_GIE_MASK);
-//}
+void XTPG_EnableInterrupt(void * baseaddr_p)
+{
+  Xuint32 baseaddr;
+  baseaddr = (Xuint32) baseaddr_p;
+
+  /*
+   * Enable all interrupt source from user logic.
+   */
+  XTPG_mWriteReg(baseaddr, XTPG_INTR_IPIER_OFFSET, 0x0000000F);
+
+  /*
+   * Enable all possible interrupt sources from device.
+   */
+  XTPG_mWriteReg(baseaddr, XTPG_INTR_DIER_OFFSET,
+    INTR_TERR_MASK
+    | INTR_DPTO_MASK
+    | INTR_IPIR_MASK
+    );
+
+  /*
+   * Set global interrupt enable.
+   */
+  XTPG_mWriteReg(baseaddr, XTPG_INTR_DGIER_OFFSET, INTR_GIE_MASK);
+}
 
 void ZPlate_config(width, height, TPG_BASEADDR)
 {

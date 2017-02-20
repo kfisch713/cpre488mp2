@@ -51,6 +51,7 @@ int main() {
 
 // Initialize the camera configuration data structure
 void camera_config_init(camera_config_t *config) {
+	printf("Made it camera_config_init\r\n");
 
     config->uBaseAddr_IIC_FmcIpmi = XPAR_IIC_FMC_BASEADDR;
     config->uBaseAddr_IIC_FmcImageon = XPAR_FMC_IMAGEON_IIC_0_BASEADDR;
@@ -72,6 +73,7 @@ void camera_config_init(camera_config_t *config) {
 
 // Main (SW) processing loop. Recommended to have an explicit exit condition
 void camera_loop(camera_config_t *config) {
+	printf("Made it camera_loop\r\n");
 	WIDTH =  config->hdmio_width;
 	HEIGHT = config->hdmio_height;
 	FRAME_LEN = WIDTH * HEIGHT;
@@ -107,50 +109,59 @@ void camera_loop(camera_config_t *config) {
 	uint16_t R, G, B;
 	uint16_t Y, CB, CR;
 
+	printf("Made it before loop\r\n");
 
 	// Run for 1000 frames before going back to HW mode
 	for (j = 0; j < 1000; j++) {
 		for (i = 0 ; i < WIDTH*HEIGHT; i++) {
 			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1] % 255; // made it all very green!
 			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i+j-1]; // makes the image slowly shift to the right and wrap around.
-//			pMM2S_Mem[i] = pS2MM_Mem[i];
+			//pMM2S_Mem[i] = pS2MM_Mem[i];
 
-//			switch (color_lut[i]) {
-//				case RED:
-//					R = pS2MM_Mem[i];
-//					G = average_vert(i, pS2MM_Mem);
-//					B = average_x(i, pS2MM_Mem);
-//					break;
-//				case GREEN:
-//					G = pS2MM_Mem[i];
-//					if ( (i+1 < FRAME_LEN) && (color_lut[i+1] == RED)) {
-//						R = average_hor(i, pS2MM_Mem);
-//						B = average_vert(i, pS2MM_Mem);
-//					} else if ( (i-1 > 0) && (color_lut[i-1] == BLUE)){
-//						R = average_vert(i, pS2MM_Mem);
-//						B = average_hor(i, pS2MM_Mem);
-//					}
-//					break;
-//				case BLUE:
-//					R = average_x(i, pS2MM_Mem);
-//					G = average_vert(i, pS2MM_Mem);
-//					B = pS2MM_Mem[i];
-//					break;
-//			}
-			R = 0;
-			G = 255;
-			B = 0;
+
+			//This is the software bayer filter. It isn't working. Can't get any color to display. Try setting a constant color. -Kyle
+			/*
+			switch (color_lut[i]) {
+				case RED:
+					R = pS2MM_Mem[i];
+					G = average_vert(i, pS2MM_Mem);
+					B = average_x(i, pS2MM_Mem);
+					break;
+				case GREEN:
+					G = pS2MM_Mem[i];
+					if ( (i+1 < FRAME_LEN) && (color_lut[i+1] == RED)) {
+						R = average_hor(i, pS2MM_Mem);
+						B = average_vert(i, pS2MM_Mem);
+					} else if ( (i-1 > 0) && (color_lut[i-1] == BLUE)){
+						R = average_vert(i, pS2MM_Mem);
+						B = average_hor(i, pS2MM_Mem);
+					}
+					break;
+				case BLUE:
+					R = average_x(i, pS2MM_Mem);
+					G = average_vert(i, pS2MM_Mem);
+					B = pS2MM_Mem[i];
+					break;
+			}
+//			R = 0;
+//			G = 0;
+//			B = 255;
+
+			//printf("R: %d, G: %d, B: %d\r\n", R, G, B);
 
 			Y  = ( 0.183 * R + 0.614 * G + 0.062 * B) + 16;
 			CB = (-0.101 * R - 0.338 * G + 0.439 * B) + 128;
 			CR = ( 0.439 * R - 0.399 * G - 0.040 * B) + 128;
+
+			//printf("Y: %d, Cb: %d, Cr: %d\r\n", Y, CB, CR);
 
 			Y = Y & 0xFF00;
 			CB = CB & 0xF000;
 			CR = CR & 0xF000;
 
 //			pMM2S_Mem[i] = pS2MM_Mem[i];
-			pMM2S_Mem[i] =  0xDEADBEEF;//Y | (CB >> 8) | (CR >> 12);
+			pMM2S_Mem[i] = 0b0100000011111000;// Y | (CB >> 8) | (CR >> 12);
+			*/
 		}
 	}
 

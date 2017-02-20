@@ -14,35 +14,35 @@
       <VARIABLE COL_INDEX="6" IS_VISIBLE="FALSE" VIEWDISP="Type" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
-    <SET ID="axi_vdma_0" IS_EXPANDED="TRUE"/>
-    <SET ID="IIC_FMC" IS_EXPANDED="TRUE"/>
-    <SET ID="fmc_imageon_iic_0" IS_EXPANDED="TRUE"/>
-    <SET ID="v_tc_1" IS_EXPANDED="TRUE"/>
-    <SET ID="axi_tpg_0" IS_EXPANDED="TRUE"/>
     <SET ID="v_vid_in_axi4s_0" IS_EXPANDED="TRUE"/>
+    <SET ID="v_tc_1" IS_EXPANDED="TRUE"/>
     <SET ID="v_tc_0" IS_EXPANDED="TRUE"/>
     <SET ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE"/>
+    <SET ID="fmc_imageon_iic_0" IS_EXPANDED="TRUE"/>
     <SET ID="fmc_imageon_hdmi_out_0" IS_EXPANDED="TRUE"/>
+    <SET ID="axi_vdma_0" IS_EXPANDED="TRUE"/>
+    <SET ID="axi_tpg_0" IS_EXPANDED="TRUE"/>
+    <SET ID="IIC_FMC" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
-      <VARIABLE ID="axi4lite_0" ROW_INDEX="0"/>
-      <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
-      <VARIABLE ID="axi_vdma_0" IS_EXPANDED="TRUE" ROW_INDEX="8"/>
-      <VARIABLE ID="IIC_FMC" IS_EXPANDED="TRUE" ROW_INDEX="5"/>
-      <VARIABLE ID="fmc_imageon_iic_0" IS_EXPANDED="TRUE" ROW_INDEX="6"/>
-      <VARIABLE ID="clock_generator_1" ROW_INDEX="15"/>
-      <VARIABLE ID="v_tc_1" IS_EXPANDED="TRUE" ROW_INDEX="13"/>
-      <VARIABLE ID="axi_tpg_0" IS_EXPANDED="TRUE" ROW_INDEX="7"/>
       <VARIABLE ID="v_vid_in_axi4s_0" IS_EXPANDED="TRUE" ROW_INDEX="14"/>
+      <VARIABLE ID="v_tc_1" IS_EXPANDED="TRUE" ROW_INDEX="13"/>
       <VARIABLE ID="v_tc_0" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
       <VARIABLE ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
-      <VARIABLE ID="fmc_imageon_hdmi_out_0" IS_EXPANDED="TRUE" ROW_INDEX="9"/>
-      <VARIABLE ID="BTNs_5Bits" ROW_INDEX="3"/>
-      <VARIABLE ID="SWs_8Bits" ROW_INDEX="4"/>
+      <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
       <VARIABLE ID="fmc_imageon_vita_receiver_0" ROW_INDEX="10"/>
+      <VARIABLE ID="fmc_imageon_iic_0" IS_EXPANDED="TRUE" ROW_INDEX="6"/>
+      <VARIABLE ID="fmc_imageon_hdmi_out_0" IS_EXPANDED="TRUE" ROW_INDEX="9"/>
+      <VARIABLE ID="clock_generator_1" ROW_INDEX="15"/>
+      <VARIABLE ID="axi_vdma_0" IS_EXPANDED="TRUE" ROW_INDEX="8"/>
+      <VARIABLE ID="axi_tpg_0" IS_EXPANDED="TRUE" ROW_INDEX="7"/>
+      <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
+      <VARIABLE ID="axi4lite_0" ROW_INDEX="0"/>
+      <VARIABLE ID="SWs_8Bits" ROW_INDEX="4"/>
+      <VARIABLE ID="IIC_FMC" IS_EXPANDED="TRUE" ROW_INDEX="5"/>
+      <VARIABLE ID="BTNs_5Bits" ROW_INDEX="3"/>
     </SEQUENCES>
   </SET>
 
@@ -89,7 +89,7 @@
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
     <HEADERS HSCROLL="0" VSCROLL="0">
-      <VARIABLE COL_INDEX="0" COL_WIDTH="262" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="0" COL_WIDTH="451" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="497" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" COL_WIDTH="306" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="3" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Direction" VIEWTYPE="HEADER"/>
@@ -106,7 +106,7 @@
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="v_tc_0"/>
+        <VARIABLE ID="ExternalPorts"/>
       </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="FALSE">

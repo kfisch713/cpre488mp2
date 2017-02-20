@@ -5,16 +5,16 @@ xflow.exe -wd implementation -p xc7z020clg484-1 -implement xflow.opt system.ngc
 PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/zynq/data/zynq.acd>
 with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
 
-Using Flow File: C:/temp/cpre488mp2/system/implementation/fpga.flw 
+Using Flow File: C:/cpre488mp2/system/implementation/fpga.flw 
 Using Option File(s): 
- C:/temp/cpre488mp2/system/implementation/xflow.opt 
+ C:/cpre488mp2/system/implementation/xflow.opt 
 
 Creating Script File ... 
 
 #----------------------------------------------#
 # Starting program ngdbuild
 # ngdbuild -p xc7z020clg484-1 -nt timestamp -bm system.bmm
-"C:/temp/cpre488mp2/system/implementation/system.ngc" -uc system.ucf system.ngd 
+"C:/cpre488mp2/system/implementation/system.ngc" -uc system.ucf system.ngd 
 #----------------------------------------------#
 Release 14.7 - ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -23,60 +23,54 @@ with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
 xc7z020clg484-1 -nt timestamp -bm system.bmm
-C:/temp/cpre488mp2/system/implementation/system.ngc -uc system.ucf system.ngd
+C:/cpre488mp2/system/implementation/system.ngc -uc system.ucf system.ngd
 
-Reading NGO file "C:/temp/cpre488mp2/system/implementation/system.ngc" ...
+Reading NGO file "C:/cpre488mp2/system/implementation/system.ngc" ...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_fmc_imageon_vita_receiver_0_wra
-pper.ngc"...
-Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_processing_system7_0_wrapper.ng
-c"...
-Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_fmc_imageon_hdmi_out_0_wrapper.
+"C:/cpre488mp2/system/implementation/system_fmc_imageon_vita_receiver_0_wrapper.
 ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_clock_generator_1_wrapper.ngc".
+"C:/cpre488mp2/system/implementation/system_processing_system7_0_wrapper.ngc"...
+Loading design module
+"C:/cpre488mp2/system/implementation/system_fmc_imageon_hdmi_out_0_wrapper.ngc".
 ..
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_v_vid_in_axi4s_0_wrapper.ngc"..
-.
+"C:/cpre488mp2/system/implementation/system_clock_generator_1_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_axi4lite_0_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_v_vid_in_axi4s_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ngc"
-...
+"C:/cpre488mp2/system/implementation/system_axi4lite_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_v_tc_1_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_v_tc_0_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_v_tc_1_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_v_axi4s_vid_out_0_wrapper.ngc".
-..
+"C:/cpre488mp2/system/implementation/system_v_tc_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_axi_vdma_0_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_v_axi4s_vid_out_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_axi_tpg_0_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_axi_vdma_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_fmc_imageon_iic_0_wrapper.ngc".
-..
+"C:/cpre488mp2/system/implementation/system_axi_tpg_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_sws_8bits_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_fmc_imageon_iic_0_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_iic_fmc_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_sws_8bits_wrapper.ngc"...
 Loading design module
-"C:/temp/cpre488mp2/system/implementation/system_btns_5bits_wrapper.ngc"...
+"C:/cpre488mp2/system/implementation/system_iic_fmc_wrapper.ngc"...
+Loading design module
+"C:/cpre488mp2/system/implementation/system_btns_5bits_wrapper.ngc"...
 Applying constraints in
-"C:/temp/cpre488mp2/system/implementation/system_processing_system7_0_wrapper.nc
-f" to module "processing_system7_0"...
+"C:/cpre488mp2/system/implementation/system_processing_system7_0_wrapper.ncf" to
+module "processing_system7_0"...
 Checking Constraint Associations...
 Applying constraints in
-"C:/temp/cpre488mp2/system/implementation/system_axi4lite_0_wrapper.ncf" to
-module "axi4lite_0"...
+"C:/cpre488mp2/system/implementation/system_axi4lite_0_wrapper.ncf" to module
+"axi4lite_0"...
 Checking Constraint Associations...
 Applying constraints in
-"C:/temp/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ncf"
-to module "axi_interconnect_1"...
+"C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ncf" to
+module "axi_interconnect_1"...
 WARNING:ConstraintSystem:194 - The TNM
    'axi_interconnect_1_async_clock_conv_FFDEST', does not directly or indirectly
    drive any flip-flops, latches and/or RAMs and is not actively used by any
@@ -93,18 +87,18 @@ INFO:NgdBuild:981 - Could not find any associations for the following
        '<INST
    "axi_interconnect_1/*_converter_bank/*clock_conv_inst/*asyncfifo_*/*mem/*dout
    _i_???" TNM = "axi_interconnect_1_async_clock_conv_FFDEST";>
-   [C:/temp/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.n
-   cf(6)]'
+   [C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ncf(6)
+   ]'
 INFO:NgdBuild:981 - Could not find any associations for the following
    constraint:
        '<INST
    "axi_interconnect_1/*_converter_bank/*clock_conv_inst/*asyncfifo_*/*mem/*dout
    _i_????" TNM = "axi_interconnect_1_async_clock_conv_FFDEST";>
-   [C:/temp/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.n
-   cf(7)]'
+   [C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ncf(7)
+   ]'
 Applying constraints in
-"C:/temp/cpre488mp2/system/implementation/system_axi_vdma_0_wrapper.ncf" to
-module "axi_vdma_0"...
+"C:/cpre488mp2/system/implementation/system_axi_vdma_0_wrapper.ncf" to module
+"axi_vdma_0"...
 Checking Constraint Associations...
 Gathering constraint information from source properties...
 Done.
@@ -1524,17 +1518,17 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 48 secs 
-Total CPU  time at the beginning of Placer: 48 secs 
+Total REAL time at the beginning of Placer: 56 secs 
+Total CPU  time at the beginning of Placer: 54 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:14d22d98) REAL time: 52 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:14d22d98) REAL time: 1 mins 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:14d22d98) REAL time: 53 secs 
+Phase 2.7  Design Feasibility Check (Checksum:14d22d98) REAL time: 1 mins 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:a395bf31) REAL time: 53 secs 
+Phase 3.31  Local Placement Optimization (Checksum:a395bf31) REAL time: 1 mins 3 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
@@ -1636,38 +1630,38 @@ AREA_GROUP
 _c" RANGE = CLOCKREGION_X1Y1;
 
 
-Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:77f0f4f7) REAL time: 1 mins 7 secs 
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:77f0f4f7) REAL time: 1 mins 20 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:77f0f4f7) REAL time: 1 mins 7 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:77f0f4f7) REAL time: 1 mins 20 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:77f0f4f7) REAL time: 1 mins 7 secs 
+Phase 6.3  Local Placement Optimization (Checksum:77f0f4f7) REAL time: 1 mins 20 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:77f0f4f7) REAL time: 1 mins 7 secs 
+Phase 7.5  Local Placement Optimization (Checksum:77f0f4f7) REAL time: 1 mins 20 secs 
 
 Phase 8.8  Global Placement
 ......................................
 ......................................................................................................
 .....................................................................................................................................
 ................................................................................................................................................................
-Phase 8.8  Global Placement (Checksum:c89aae78) REAL time: 3 mins 35 secs 
+Phase 8.8  Global Placement (Checksum:c89aae78) REAL time: 4 mins 1 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:c89aae78) REAL time: 3 mins 36 secs 
+Phase 9.5  Local Placement Optimization (Checksum:c89aae78) REAL time: 4 mins 2 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:e226a091) REAL time: 4 mins 2 secs 
+Phase 10.18  Placement Optimization (Checksum:e226a091) REAL time: 4 mins 28 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:e226a091) REAL time: 4 mins 3 secs 
+Phase 11.5  Local Placement Optimization (Checksum:e226a091) REAL time: 4 mins 28 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:e226a091) REAL time: 4 mins 3 secs 
+Phase 12.34  Placement Validation (Checksum:e226a091) REAL time: 4 mins 28 secs 
 
-Total REAL time to Placer completion: 4 mins 5 secs 
-Total CPU  time to Placer completion: 4 mins 3 secs 
+Total REAL time to Placer completion: 4 mins 30 secs 
+Total CPU  time to Placer completion: 4 mins 26 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -1771,9 +1765,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                4.03
 
-Peak Memory Usage:  1319 MB
-Total REAL time to MAP completion:  4 mins 17 secs 
-Total CPU time to MAP completion:   4 mins 16 secs 
+Peak Memory Usage:  1322 MB
+Total REAL time to MAP completion:  4 mins 42 secs 
+Total CPU time to MAP completion:   4 mins 38 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.
@@ -1855,8 +1849,8 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 25 secs 
-Finished initial Timing Analysis.  REAL time: 25 secs 
+Starting initial Timing Analysis.  REAL time: 24 secs 
+Finished initial Timing Analysis.  REAL time: 24 secs 
 
 WARNING:Par:288 - The signal
    fmc_imageon_vita_receiver_0/fmc_imageon_vita_receiver_0/USER_LOGIC_I/VITA_CORE_I/vita_iserdes_v5.vita_iserdes/generate_datagen.datagen[2]
@@ -2115,27 +2109,27 @@ WARNING:Par:288 - The signal
 Starting Router
 
 
-Phase  1  : 99773 unrouted;      REAL time: 37 secs 
+Phase  1  : 99773 unrouted;      REAL time: 35 secs 
 
-Phase  2  : 83330 unrouted;      REAL time: 40 secs 
+Phase  2  : 83330 unrouted;      REAL time: 37 secs 
 
-Phase  3  : 30332 unrouted;      REAL time: 57 secs 
+Phase  3  : 30332 unrouted;      REAL time: 53 secs 
 
-Phase  4  : 30198 unrouted; (Setup:0, Hold:142324, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+Phase  4  : 30198 unrouted; (Setup:0, Hold:142324, Component Switching Limit:0)     REAL time: 1 mins 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 25 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 25 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 25 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:122707, Component Switching Limit:0)     REAL time: 1 mins 25 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 38 secs 
-Total REAL time to Router completion: 1 mins 38 secs 
-Total CPU time to Router completion: 1 mins 33 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Total REAL time to Router completion: 1 mins 31 secs 
+Total CPU time to Router completion: 1 mins 27 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -2284,10 +2278,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 69 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 44 secs 
-Total CPU time to PAR completion: 1 mins 37 secs 
+Total REAL time to PAR completion: 1 mins 36 secs 
+Total CPU time to PAR completion: 1 mins 31 secs 
 
-Peak Memory Usage:  1202 MB
+Peak Memory Usage:  1193 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
@@ -2354,13 +2348,13 @@ Design statistics:
    Maximum path delay from/to any node:   3.657ns
 
 
-Analysis completed Thu Feb 16 18:36:43 2017
+Analysis completed Mon Feb 20 11:12:24 2017
 --------------------------------------------------------------------------------
 
 Generating Report ...
 
 Number of warnings: 0
 Number of info messages: 4
-Total time: 30 secs 
+Total time: 28 secs 
 
 

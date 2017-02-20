@@ -1,3 +1,3 @@
 PROCESSOR=ps7_cortexa9_0
-REPOSITORIES=-lp //my.files.iastate.edu/Users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib
+REPOSITORIES=-lp C:/cpre488mp2/repository/ProcessorIPLib -lp //my.files.iastate.edu/Users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib
 HWSPEC=../system_hw_platform/system.xml

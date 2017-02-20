@@ -1,10 +1,10 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\temp\cpre488mp2\system\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\cpre488mp2\system\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 TABLE OF CONTENTS
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_fmc_imageon_vita_receiver_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\temp\cpre488mp2\system\pcores\" "C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\cpre488mp2\system\pcores\" "C:\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc7z020clg484-1
@@ -62,17 +62,17 @@ Cores Search Directories           : {../implementation}
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" into library fmc_imageon_vita_receiver_v1_13_a
+Analyzing Verilog file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing module <phsaligner>.
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 128. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 129. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 130. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 131. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 132. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 133. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 134. parameter declaration becomes local in phsaligner with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 164. parameter declaration becomes local in phsaligner with formal parameter declaration list
-Analyzing Verilog file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/serdes_1_to_5_diff_data.v" into library fmc_imageon_vita_receiver_v1_13_a
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 128. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 129. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 130. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 131. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 132. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 133. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 134. parameter declaration becomes local in phsaligner with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v" Line 164. parameter declaration becomes local in phsaligner with formal parameter declaration list
+Analyzing Verilog file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/serdes_1_to_5_diff_data.v" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing module <serdes_1_to_5_diff_data>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
 Parsing package <family>.
@@ -439,97 +439,97 @@ Parsing architecture <imp> of entity <slave_attachment>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
 Parsing entity <axi_lite_ipif>.
 Parsing architecture <imp> of entity <axi_lite_ipif>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <spi_lowlevel>.
 Parsing architecture <rtl> of entity <spi_lowlevel>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <spi_seq>.
 Parsing architecture <behaviour> of entity <spi_seq>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_top.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_top.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <spi_top>.
 Parsing architecture <structure> of entity <spi_top>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <afifo_32>.
 Parsing architecture <rtl> of entity <afifo_32>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_mux.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_mux.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_mux>.
 Parsing architecture <rtl> of entity <iserdes_mux>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_sync>.
 Parsing architecture <rtl> of entity <iserdes_sync>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_clocks>.
 Parsing architecture <rtl> of entity <iserdes_clocks>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_compare>.
 Parsing architecture <rtl> of entity <iserdes_compare>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_control>.
 Parsing architecture <rtl> of entity <iserdes_control>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_core>.
 Parsing architecture <rtl> of entity <iserdes_core>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_datadeser>.
 Parsing architecture <structure> of entity <iserdes_datadeser>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser_s6.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser_s6.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_datadeser_s6>.
 Parsing architecture <rtl> of entity <iserdes_datadeser_s6>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_idelayctrl.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_idelayctrl.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_idelayctrl>.
 Parsing architecture <syn> of entity <iserdes_idelayctrl>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_interface>.
 Parsing architecture <structure> of entity <iserdes_interface>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface_s6.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface_s6.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <iserdes_interface_s6>.
 Parsing architecture <rtl> of entity <iserdes_interface_s6>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pck_crc8_d8.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pck_crc8_d8.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing package <PCK_CRC8_D8>.
 Parsing package body <PCK_CRC8_D8>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pck_crc10_d10.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pck_crc10_d10.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing package <PCK_CRC10_D10>.
 Parsing package body <PCK_CRC10_D10>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <crc_calc>.
 Parsing architecture <rtl> of entity <crc_calc>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <crc_comp>.
 Parsing architecture <rtl> of entity <crc_comp>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <crc_checker>.
 Parsing architecture <rtl> of entity <crc_checker>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <syncchanneldecoder>.
 Parsing architecture <rtl> of entity <syncchanneldecoder>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/remapper.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/remapper.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <remapper>.
 Parsing architecture <rtl> of entity <remapper>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <triggergenerator>.
 Parsing architecture <rtl> of entity <triggergenerator>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <VideoSyncGen>.
 Parsing architecture <Rtl> of entity <videosyncgen>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <afifo_64i_16o>.
 Parsing architecture <rtl> of entity <afifo_64i_16o>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <pulse_regen>.
 Parsing architecture <rtl> of entity <pulse_regen>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <correct_column_fpn_prnu_dsp48e>.
 Parsing architecture <rtl> of entity <correct_column_fpn_prnu_dsp48e>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <fmc_imageon_vita_core>.
 Parsing architecture <rtl> of entity <fmc_imageon_vita_core>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <user_logic>.
 Parsing architecture <IMP> of entity <user_logic>.
-Parsing VHDL file "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_receiver.vhd" into library fmc_imageon_vita_receiver_v1_13_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_receiver.vhd" into library fmc_imageon_vita_receiver_v1_13_a
 Parsing entity <fmc_imageon_vita_receiver>.
 Parsing architecture <IMP> of entity <fmc_imageon_vita_receiver>.
-Parsing VHDL file "C:\temp\cpre488mp2\system\hdl\system_fmc_imageon_vita_receiver_0_wrapper.vhd" into library work
+Parsing VHDL file "C:\cpre488mp2\system\hdl\system_fmc_imageon_vita_receiver_0_wrapper.vhd" into library work
 Parsing entity <system_fmc_imageon_vita_receiver_0_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_fmc_imageon_vita_receiver_0_wrapper>.
 
@@ -677,148 +677,148 @@ Elaborating entity <pselect_f> (architecture <imp>) with generics from library <
 INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" Line 417. Case statement is complete. others clause is never selected
 
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:1127 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 647: Assignment to slv_reg3 ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1021: host_spi_rxfifo_empty should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1022: host_spi_txfifo_full should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1023: host_spi_status_error should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1024: host_spi_reset should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1034: host_spi_rxfifo_dout should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1035: slv_reg4_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1045: slv_reg14_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1046: slv_reg15_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1047: slv_reg16_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1048: slv_reg17_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1049: slv_reg18_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1050: slv_reg19_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1051: slv_reg20_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1052: slv_reg21_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1053: slv_reg22_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1060: slv_reg29_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1072: slv_reg48_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1073: slv_reg49_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1074: slv_reg50_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1075: slv_reg51_r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1077: slv_reg55 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1078: slv_reg56 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1079: slv_reg57 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1080: slv_reg58 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1081: slv_reg59 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1082: slv_reg60 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1083: slv_reg61 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1084: slv_reg62 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1085: slv_reg63 should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 647: Assignment to slv_reg3 ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1021: host_spi_rxfifo_empty should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1022: host_spi_txfifo_full should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1023: host_spi_status_error should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1024: host_spi_reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1034: host_spi_rxfifo_dout should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1035: slv_reg4_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1045: slv_reg14_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1046: slv_reg15_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1047: slv_reg16_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1048: slv_reg17_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1049: slv_reg18_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1050: slv_reg19_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1051: slv_reg20_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1052: slv_reg21_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1053: slv_reg22_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1060: slv_reg29_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1072: slv_reg48_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1073: slv_reg49_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1074: slv_reg50_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1075: slv_reg51_r1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1077: slv_reg55 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1078: slv_reg56 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1079: slv_reg57 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1080: slv_reg58 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1081: slv_reg59 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1082: slv_reg60 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1083: slv_reg61 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1084: slv_reg62 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd" Line 1085: slv_reg63 should be on the sensitivity list of the process
 
 Elaborating entity <fmc_imageon_vita_core> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <spi_top> (architecture <structure>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <spi_seq> (architecture <behaviour>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd" Line 213. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd" Line 274. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd" Line 213. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd" Line 274. Case statement is complete. others clause is never selected
 
 Elaborating entity <spi_lowlevel> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd" Line 266. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd" Line 266. Case statement is complete. others clause is never selected
 
 Elaborating entity <afifo_32> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 86: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 103: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 120: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:89 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 66: <afifo_32_k7> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1138: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1179: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 86: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 103: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 120: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:89 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd" Line 66: <afifo_32_k7> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1138: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1179: Comparison between arrays of unequal length always returns FALSE.
 
 Elaborating entity <iserdes_interface> (architecture <structure>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <iserdes_idelayctrl> (architecture <syn>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <iserdes_compare> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd" Line 149. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd" Line 149. Case statement is complete. others clause is never selected
 
 Elaborating entity <iserdes_clocks> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd" Line 1453. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd" Line 1453. Case statement is complete. others clause is never selected
 
 Elaborating entity <iserdes_datadeser> (architecture <structure>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <iserdes_control> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 274. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 346. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 788. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 352: Assignment to done_align_i ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 274. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 346. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 788. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd" Line 352: Assignment to done_align_i ignored, since the identifier is never used
 
 Elaborating entity <iserdes_sync> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd" Line 233. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd" Line 233. Case statement is complete. others clause is never selected
 
 Elaborating entity <iserdes_mux> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <iserdes_core> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 198: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 235: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 276: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 322: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 361: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 415: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 475: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 511: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 547: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 586: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 640: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 198: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 235: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 276: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 322: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 361: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 415: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 475: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 511: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 547: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 586: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd" Line 640: Comparison between arrays of unequal length always returns FALSE.
 
 Elaborating entity <syncchanneldecoder> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:1127 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 267: Assignment to syncvalid ignored, since the identifier is never used
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 423. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 362: Assignment to datavalid ignored, since the identifier is never used
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 703. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 267: Assignment to syncvalid ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 423. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 362: Assignment to datavalid ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd" Line 703. Case statement is complete. others clause is never selected
 
 Elaborating entity <crc_checker> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <crc_calc> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:1127 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd" Line 110: Assignment to tmparray ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd" Line 110: Assignment to tmparray ignored, since the identifier is never used
 
 Elaborating entity <crc_comp> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd" Line 165. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd" Line 230. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd" Line 165. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd" Line 230. Case statement is complete. others clause is never selected
 
 Elaborating entity <remapper> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
 
 Elaborating entity <correct_column_fpn_prnu_dsp48e> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd" Line 238: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd" Line 290: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd" Line 238: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd" Line 290: Comparison between arrays of unequal length always returns FALSE.
 
 Elaborating entity <triggergenerator> (architecture <rtl>) from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd" Line 242. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd" Line 242. Case statement is complete. others clause is never selected
 
 Elaborating entity <pulse_regen> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 84: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 102: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 120: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:89 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 64: <pulse_regen_k7> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 84: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 102: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 120: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:89 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" Line 64: <pulse_regen_k7> remains a black-box since it has no binding entity.
 
 Elaborating entity <VideoSyncGen> (architecture <Rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" Line 245. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" Line 355. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" Line 269: Assignment to vsyncstated1_s ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" Line 245. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" Line 355. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd" Line 269: Assignment to vsyncstated1_s ignored, since the identifier is never used
 
 Elaborating entity <afifo_64i_16o> (architecture <rtl>) with generics from library <fmc_imageon_vita_receiver_v1_13_a>.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 85: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 102: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 119: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:89 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 66: <afifo_64i_16o_k7> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1892: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1926: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:634 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 535: Net <TIMEOUTONACK[4]> does not have a driver.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 85: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 102: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 119: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:89 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd" Line 66: <afifo_64i_16o_k7> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1892: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 1926: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:634 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" Line 535: Net <TIMEOUTONACK[4]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system_fmc_imageon_vita_receiver_0_wrapper>.
-    Related source file is "C:\temp\cpre488mp2\system\hdl\system_fmc_imageon_vita_receiver_0_wrapper.vhd".
+    Related source file is "C:\cpre488mp2\system\hdl\system_fmc_imageon_vita_receiver_0_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_fmc_imageon_vita_receiver_0_wrapper> synthesized.
 
 Synthesizing Unit <fmc_imageon_vita_receiver>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_receiver.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_receiver.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
         C_XSVI_DATA_WIDTH = 8
@@ -1622,7 +1622,7 @@ Synthesizing Unit <pselect_f_64>.
 Unit <pselect_f_64> synthesized.
 
 Synthesizing Unit <user_logic>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
         C_XSVI_DATA_WIDTH = 8
@@ -1745,7 +1745,7 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
 Unit <user_logic> synthesized.
 
 Synthesizing Unit <fmc_imageon_vita_core>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd".
         C_XSVI_DATA_WIDTH = 8
         C_XSVI_DIRECT_OUTPUT = 0
         C_XSVI_USE_SYNCGEN = 1
@@ -1753,21 +1753,21 @@ Synthesizing Unit <fmc_imageon_vita_core>.
 WARNING:Xst:647 - Input <io_vita_data_p<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <io_vita_data_n<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <host_crc_reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1020: Output port <EN> of the instance <vita_spi> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <LS_OUT_CLK> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <LS_OUT_CLKb> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <HS_OUT_CLK> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <HS_OUT_CLKb> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <NROF_RETRIES> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <TIMEOUTONACK> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1384: Output port <VIDEO_SYNC_OUT> of the instance <vita_crc_checker> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_NEXT_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_FRAME_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_LINE_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_WINDOW_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1626: Output port <ov_HCount_p> of the instance <syncgen_l> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1626: Output port <ov_VCount_p> of the instance <syncgen_l> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1626: Output port <o_PixelRequest_p> of the instance <syncgen_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1020: Output port <EN> of the instance <vita_spi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <LS_OUT_CLK> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <LS_OUT_CLKb> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <HS_OUT_CLK> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <HS_OUT_CLKb> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <NROF_RETRIES> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1180: Output port <TIMEOUTONACK> of the instance <vita_iserdes_v5.vita_iserdes> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1384: Output port <VIDEO_SYNC_OUT> of the instance <vita_crc_checker> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_NEXT_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_FRAME_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_LINE_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1479: Output port <WR_WINDOW_out> of the instance <vita_blc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1626: Output port <ov_HCount_p> of the instance <syncgen_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1626: Output port <ov_VCount_p> of the instance <syncgen_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd" line 1626: Output port <o_PixelRequest_p> of the instance <syncgen_l> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <TIMEOUTONACK> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 16-bit register for signal <framestart_cnt>.
     Found 1-bit register for signal <framestart_active>.
@@ -1799,7 +1799,7 @@ WARNING:Xst:653 - Signal <TIMEOUTONACK> is used but never assigned. This sourcel
 Unit <fmc_imageon_vita_core> synthesized.
 
 Synthesizing Unit <spi_top>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_top.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_top.vhd".
         gSIMULATION = 0
         gSysClkSpeed = 50
         gSpiClkSpeed = 1000
@@ -1821,7 +1821,7 @@ Synthesizing Unit <spi_top>.
 Unit <spi_top> synthesized.
 
 Synthesizing Unit <spi_seq>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd".
         gSIMULATION = 0
         gSysClkSpeed = 50
         gDATA_WIDTH = 26
@@ -1862,7 +1862,7 @@ WARNING:Xst:647 - Input <APP_RDFIFO_DATA_OUT<27:25>> is never used. This port wi
 Unit <spi_seq> synthesized.
 
 Synthesizing Unit <spi_lowlevel>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd".
         gSIMULATION = 0
         gSysClkSpeed = 50
         gSpiClkSpeed = 1000
@@ -1917,14 +1917,14 @@ Synthesizing Unit <spi_lowlevel>.
 Unit <spi_lowlevel> synthesized.
 
 Synthesizing Unit <afifo_32>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd".
         C_FAMILY = "zynq"
     Summary:
 	no macro.
 Unit <afifo_32> synthesized.
 
 Synthesizing Unit <iserdes_interface>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd".
         SIMULATION = 0
         NROF_CONN = 5
         NROF_CONTR_CONN = 5
@@ -1958,20 +1958,20 @@ Synthesizing Unit <iserdes_interface>.
         USE_DIFF_HS_CLK_OUT = true
         USE_DIFF_LS_CLK_OUT = false
         USE_DATAPATH = true
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 445: Output port <idelay_ctrl_rdy> of the instance <generate_idelay.serdesidelayrefclk> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 462: Output port <SKEW_ERROR> of the instance <serdesclockgen[0].co> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[0].db> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[1].db> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[2].db> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[3].db> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[4].db> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 445: Output port <idelay_ctrl_rdy> of the instance <generate_idelay.serdesidelayrefclk> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 462: Output port <SKEW_ERROR> of the instance <serdesclockgen[0].co> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[0].db> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[1].db> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[2].db> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[3].db> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd" line 547: Output port <ALIGNED> of the instance <generate_datagen.datagen[4].db> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <CLK_RDY>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <iserdes_interface> synthesized.
 
 Synthesizing Unit <iserdes_idelayctrl>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_idelayctrl.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_idelayctrl.vhd".
         NROF_DELAYCTRLS = 1
         IDELAYCLK_MULT = 3
         IDELAYCLK_DIV = 1
@@ -1982,7 +1982,7 @@ WARNING:Xst:647 - Input <CLOCK> is never used. This port will be preserved and l
 Unit <iserdes_idelayctrl> synthesized.
 
 Synthesizing Unit <iserdes_compare>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd".
         NROF_CONN = 5
     Found 1-bit register for signal <DELAY_WREN_r>.
     Found 1-bit register for signal <DELAY_WREN_r2>.
@@ -1997,7 +1997,7 @@ Synthesizing Unit <iserdes_compare>.
 Unit <iserdes_compare> synthesized.
 
 Synthesizing Unit <iserdes_clocks>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd".
         SIMULATION = 0
         DATAWIDTH = 10
         DATA_RATE = "DDR"
@@ -2059,7 +2059,7 @@ INFO:Xst:1799 - State checklocked1 is never reached in FSM <lockedmonitorstate>.
 Unit <iserdes_clocks> synthesized.
 
 Synthesizing Unit <iserdes_datadeser>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd".
         NROF_CONN = 1
         DATAWIDTH = 10
         RETRY_MAX = 32767
@@ -2072,13 +2072,13 @@ Synthesizing Unit <iserdes_datadeser>.
         INVERT_OUTPUT = false
         INVERSE_BITORDER = false
         C_FAMILY = "zynq"
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd" line 381: Output port <BIT_WIDTH> of the instance <cb> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd" line 381: Output port <BIT_WIDTH> of the instance <cb> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <iserdes_datadeser> synthesized.
 
 Synthesizing Unit <iserdes_control>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd".
         NROF_CONN = 1
         DATAWIDTH = 10
         RETRY_MAX = 32767
@@ -2214,7 +2214,7 @@ Synthesizing Unit <iserdes_control>.
 Unit <iserdes_control> synthesized.
 
 Synthesizing Unit <iserdes_sync>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd".
         DATAWIDTH = 10
         NROF_CONN = 1
 WARNING:Xst:647 - Input <CTRL_SAMPLEINLASTBIT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2277,7 +2277,7 @@ INFO:Xst:1799 - State waitdatavalid is never reached in FSM <syncdatastate>.
 Unit <iserdes_sync> synthesized.
 
 Synthesizing Unit <iserdes_mux>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_mux.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_mux.vhd".
         DATAWIDTH = 10
         NROF_CONN = 1
 WARNING:Xst:647 - Input <SEL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2292,7 +2292,7 @@ WARNING:Xst:647 - Input <CLOCK> is never used. This port will be preserved and l
 Unit <iserdes_mux> synthesized.
 
 Synthesizing Unit <iserdes_core>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd".
         DATAWIDTH = 10
         DATA_RATE = "DDR"
         DIFF_TERM = true
@@ -2311,7 +2311,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <iserdes_core> synthesized.
 
 Synthesizing Unit <syncchanneldecoder>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd".
         NROF_CONN = 5
         DATAWIDTH = 10
         NROF_WINDOWS = 8
@@ -2428,7 +2428,7 @@ WARNING:Xst:647 - Input <TR_value> is never used. This port will be preserved an
 Unit <syncchanneldecoder> synthesized.
 
 Synthesizing Unit <crc_checker>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd".
         NROF_DATACONN = 4
         DATAWIDTH = 10
         NROF_WINDOWS = 8
@@ -2461,7 +2461,7 @@ Synthesizing Unit <crc_checker>.
 Unit <crc_checker> synthesized.
 
 Synthesizing Unit <crc_calc>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd".
         DATAWIDTH = 10
         POLYNOMIAL = "11001001111"
         USE_CRC_TOOL = true
@@ -2472,7 +2472,7 @@ Synthesizing Unit <crc_calc>.
 Unit <crc_calc> synthesized.
 
 Synthesizing Unit <crc_comp>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd".
         DATAWIDTH = 10
     Found 1-bit register for signal <STATUS>.
     Found 2-bit register for signal <CompareState>.
@@ -2499,7 +2499,7 @@ Synthesizing Unit <crc_comp>.
 Unit <crc_comp> synthesized.
 
 Synthesizing Unit <remapper>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/remapper.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/remapper.vhd".
         NROF_DATACONN = 4
         DATAWIDTH = 10
         NROF_WINDOWS = 8
@@ -2585,7 +2585,7 @@ WARNING:Xst:647 - Input <PAR_DATA_CRCVALID> is never used. This port will be pre
 Unit <remapper> synthesized.
 
 Synthesizing Unit <correct_column_fpn_prnu_dsp48e>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd".
         NROF_DATACONN = 4
         DATAWIDTH = 10
         ENABLECORRECT = true
@@ -2664,7 +2664,7 @@ Synthesizing Unit <correct_column_fpn_prnu_dsp48e>.
 Unit <correct_column_fpn_prnu_dsp48e> synthesized.
 
 Synthesizing Unit <triggergenerator>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd".
     Found 33-bit register for signal <FPScounter>.
     Found 33-bit register for signal <TriggerCntr>.
     Found 33-bit register for signal <DebCntr>.
@@ -2701,17 +2701,17 @@ Synthesizing Unit <triggergenerator>.
 Unit <triggergenerator> synthesized.
 
 Synthesizing Unit <pulse_regen>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd".
         C_FAMILY = "zynq"
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" line 121: Output port <dout> of the instance <K7_GEN.pulse_regen_k7_l> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" line 121: Output port <empty> of the instance <K7_GEN.pulse_regen_k7_l> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" line 121: Output port <full> of the instance <K7_GEN.pulse_regen_k7_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" line 121: Output port <dout> of the instance <K7_GEN.pulse_regen_k7_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" line 121: Output port <empty> of the instance <K7_GEN.pulse_regen_k7_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd" line 121: Output port <full> of the instance <K7_GEN.pulse_regen_k7_l> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <pulse_regen> synthesized.
 
 Synthesizing Unit <VideoSyncGen>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd".
         HWidth_g = 16
         VWidth_g = 16
     Set property "fsm_encoding = sequential" for signal <HSyncState_s>.
@@ -2795,7 +2795,7 @@ WARNING:Xst:647 - Input <iv16_VidVBPorch_p> is never used. This port will be pre
 Unit <VideoSyncGen> synthesized.
 
 Synthesizing Unit <afifo_64i_16o>.
-    Related source file is "C:/temp/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd".
         C_FAMILY = "zynq"
     Summary:
 	no macro.
@@ -4902,11 +4902,11 @@ io_vita_clk_out_p|    1.629|         |         |         |
 
 
 Total REAL time to Xst completion: 49.00 secs
-Total CPU time to Xst completion: 48.56 secs
+Total CPU time to Xst completion: 49.16 secs
  
 --> 
 
-Total memory usage is 635976 kilobytes
+Total memory usage is 635400 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  873 (   0 filtered)

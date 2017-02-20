@@ -6,7 +6,7 @@
 @REM #
 @REM # Command line for ngdbuild
 @REM #
-ngdbuild -p xc7z020clg484-1 -nt timestamp -bm system.bmm "C:/temp/cpre488mp2/system/implementation/system.ngc" -uc system.ucf system.ngd 
+ngdbuild -p xc7z020clg484-1 -nt timestamp -bm system.bmm "C:/cpre488mp2/system/implementation/system.ngc" -uc system.ucf system.ngd 
 
 @REM #
 @REM # Command line for map
