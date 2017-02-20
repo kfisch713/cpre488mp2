@@ -16213,3 +16213,161 @@ Done writing filter settings to:
 	C:\cpre488mp2\system\etc\system.filters
 Done writing Tab View settings to:
 	C:\cpre488mp2\system\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+Assigned Driver cfa 5.00.a for instance v_cfa_0
+v_cfa_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Assigned Driver rgb2ycrcb 5.01.a for instance v_rgb2ycrcb_0
+v_rgb2ycrcb_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_rgb2ycrcb, INSTANCE: v_rgb2ycrcb_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_rgb2ycrcb, INSTANCE: v_rgb2ycrcb_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral v_rgb2ycrcb_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:3759 - AddresGen MHS Error Invalid value for C_BASEADDR of v_cfa_0Base address is larger than high address.
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK - Generate address failed during auto bus connection
+Assigned Driver cresample 2.00.a for instance v_cresample_0
+v_cresample_0 has been added to the project
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cresample, INSTANCE: v_cresample_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cresample, INSTANCE: v_cresample_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cresample, INSTANCE: v_cresample_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral v_cresample_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:3759 - AddresGen MHS Error Invalid value for C_BASEADDR of v_cfa_0Base address is larger than high address.
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cresample, INSTANCE: v_cresample_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: v_cresample, INSTANCE: v_cresample_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK - Generate address failed during auto bus connection
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+ERROR:EDK:4125 - IPNAME: v_cfa, INSTANCE: v_cfa_0, PORT: aclk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:2137 - Peripheral v_cfa_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+Assigned Driver generic 1.00.a for instance axi_interconnect_0
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:3712 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - Frequency of the interconnect's clock port could not be determined. All IPs in the design will be considered to be asynchronous with respect to the interconnect. This will lead to more resource usage. You can avoid this by specifying the clock frequency on the port that the interconnect's clock is connected to.
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+ERROR:EDK:4125 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0, PORT: INTERCONNECT_ARESETN - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+axi_interconnect_0 has been deleted from the project
+WARNING:EDK:3967 - v_cfa (v_cfa_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 409 
+WARNING:EDK:3967 - v_rgb2ycrcb (v_rgb2ycrcb_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 416 
+WARNING:EDK:3967 - v_cresample (v_cresample_0) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - C:\cpre488mp2\system\system.mhs line 425 
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+Writing filter settings....
+Done writing filter settings to:
+	C:\cpre488mp2\system\etc\system.filters
+Done writing Tab View settings to:
+	C:\cpre488mp2\system\etc\system.gui

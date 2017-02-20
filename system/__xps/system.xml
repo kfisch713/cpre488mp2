@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Mon Feb 20 11:01:41 2017">
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Mon Feb 20 13:30:11 2017">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="C:/cpre488mp2/system/system.xmp" SPEEDGRADE="-1"/>
 
@@ -11,10 +11,10 @@
         <DOCUMENT SOURCE="C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/v_vid_in_axi4s_v2_00_a/doc/pg043_v_vid_in_axi4s.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="0" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="0" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="1" NAME="C_M_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="12"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="VID_IN_DATA_WIDTH" TYPE="INTEGER" VALUE="16"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="VID_IN_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="4" NAME="PADDING_BITS" TYPE="INTEGER" VALUE="0"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="5" NAME="RAM_ADDR_BITS" TYPE="INTEGER" VALUE="10"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="6" NAME="HYSTERESIS_LEVEL" TYPE="INTEGER" VALUE="12"/>
@@ -61,7 +61,7 @@
             <CONNECTION BUSINTERFACE="[XSVI_VIDEO_OUT]" INSTANCE="fmc_imageon_vita_receiver_0" PORT="xsvi_hsync_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="15" LSB="0" MHS_INDEX="8" MPD_INDEX="7" MSB="15" NAME="vid_data" RIGHT="0" SIGNAME="0b10000000 &amp; fmc_imageon_vita_receiver_0_xsvi_video_data_o" VECFORMULA="[(VID_IN_DATA_WIDTH-1):0]">
+        <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="7" LSB="0" MHS_INDEX="8" MPD_INDEX="7" MSB="7" NAME="vid_data" RIGHT="0" SIGNAME="0b10000000 &amp; fmc_imageon_vita_receiver_0_xsvi_video_data_o" VECFORMULA="[(VID_IN_DATA_WIDTH-1):0]">
           <SIGNALS>
             <SIGNAL NAME="0b10000000"/>
             <SIGNAL NAME="fmc_imageon_vita_receiver_0_xsvi_video_data_o"/>
@@ -78,29 +78,29 @@
         <PORT DIR="I" MPD_INDEX="1" NAME="rst" SIGIS="RST" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tdata" DIR="O" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="11" MSB="15" NAME="m_axis_video_tdata" RIGHT="0" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_M_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tdata" DIR="O" ENDIAN="LITTLE" LEFT="7" LSB="0" MPD_INDEX="11" MSB="7" NAME="m_axis_video_tdata" RIGHT="0" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_M_AXIS_VIDEO_TDATA_WIDTH-1):0]">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_S2MM]" INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tdata"/>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="s_axis_video_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tvalid" DIR="O" MPD_INDEX="12" NAME="m_axis_video_tvalid" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tvalid">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_S2MM]" INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="s_axis_video_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tready" DIR="I" MPD_INDEX="13" NAME="m_axis_video_tready" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tready">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_S2MM]" INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tready"/>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="s_axis_video_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tuser">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_S2MM]" INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="s_axis_video_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tlast" DIR="O" MPD_INDEX="15" NAME="m_axis_video_tlast" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tlast">
           <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_S2MM]" INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tlast"/>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="s_axis_video_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="VTIMING_OUT" DEF_SIGNAME="v_vid_in_axi4s_0_VTIMING_OUT_active_video" DIR="O" MPD_INDEX="16" NAME="vtd_active_video" SIGNAME="v_vid_in_axi4s_0_VTIMING_OUT_active_video">
@@ -623,32 +623,22 @@
         <PORT BUS="VTIMING_IN:XSVI_IN" DEF_SIGNAME="v_vid_in_axi4s_0_VTIMING_OUT_active_chroma" DIR="I" MPD_INDEX="26" NAME="active_chroma_in" SIGNAME="v_vid_in_axi4s_0_VTIMING_OUT_active_chroma">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_vblank" DIR="O" MPD_INDEX="27" NAME="vblank_out" SIGNAME="v_tc_0_VTIMING_OUT_vblank">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_IN]" INSTANCE="v_axi4s_vid_out_0" PORT="vtg_vblank"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_vblank" DIR="O" MPD_INDEX="27" NAME="vblank_out" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_vsync" DIR="O" MPD_INDEX="28" NAME="vsync_out" SIGNAME="v_tc_0_VTIMING_OUT_vsync">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_IN]" INSTANCE="v_axi4s_vid_out_0" PORT="vtg_vsync"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_vsync" DIR="O" MPD_INDEX="28" NAME="vsync_out" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_hblank" DIR="O" MPD_INDEX="29" NAME="hblank_out" SIGNAME="v_tc_0_VTIMING_OUT_hblank">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_IN]" INSTANCE="v_axi4s_vid_out_0" PORT="vtg_hblank"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_hblank" DIR="O" MPD_INDEX="29" NAME="hblank_out" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_hsync" DIR="O" MPD_INDEX="30" NAME="hsync_out" SIGNAME="v_tc_0_VTIMING_OUT_hsync">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_IN]" INSTANCE="v_axi4s_vid_out_0" PORT="vtg_hsync"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_hsync" DIR="O" MPD_INDEX="30" NAME="hsync_out" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_active_video" DIR="O" MPD_INDEX="31" NAME="active_video_out" SIGNAME="v_tc_0_VTIMING_OUT_active_video">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_IN]" INSTANCE="v_axi4s_vid_out_0" PORT="vtg_act_vid"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_active_video" DIR="O" MPD_INDEX="31" NAME="active_video_out" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_active_chroma" DIR="O" MPD_INDEX="32" NAME="active_chroma_out" SIGNAME="v_tc_0_VTIMING_OUT_active_chroma">
+        <PORT BUS="VTIMING_OUT:XSVI_OUT" DEF_SIGNAME="v_tc_0_VTIMING_OUT_active_chroma" DIR="O" MPD_INDEX="32" NAME="active_chroma_out" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
         <PORT DIR="O" MPD_INDEX="33" NAME="fsync_out" SIGNAME="__NOC__" VECFORMULA="[C_NUM_FSYNCS-1:0]">
@@ -721,7 +711,7 @@
             <PORTMAP DIR="I" PHYSICAL="det_clken"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="v_tc_0_VTIMING_OUT" BUSSTD="USER" BUSSTD_PSF="VTIMING" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="4" NAME="VTIMING_OUT" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="USER" BUSSTD_PSF="VTIMING" MPD_INDEX="4" NAME="VTIMING_OUT" TYPE="INITIATOR">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="clk"/>
             <PORTMAP DIR="I" PHYSICAL="gen_clken"/>
@@ -757,7 +747,7 @@
       </MEMORYMAP>
       <LICENSEINFO EXPIRESON="Does not expire" ICON_NAME="ps_pay_core_2" STATE="VALID" TYPE="Bought"/>
     </MODULE>
-    <MODULE HWVERSION="2.00.a" INSTANCE="v_axi4s_vid_out_0" IPTYPE="PERIPHERAL" MHS_INDEX="3" MODCLASS="PERIPHERAL" MODTYPE="v_axi4s_vid_out">
+    <MODULE HWVERSION="2.00.a" INSTANCE="v_axi4s_vid_out_0" IPTYPE="PERIPHERAL" MHS_INDEX="6" MODCLASS="PERIPHERAL" MODTYPE="v_axi4s_vid_out">
       <DESCRIPTION TYPE="SHORT">AXI4-Stream to Video Out</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Interfaces from Video over AXI-4 Stream input to Video outputs (Pixel Data;Syncs;Blanks;Data Enable)</DESCRIPTION>
       <DOCUMENTATION>
@@ -825,58 +815,38 @@
         <PORT DIR="I" MPD_INDEX="3" NAME="aresetn" SIGIS="RST" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tdata" DIR="I" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="4" MSB="15" NAME="s_axis_video_tdata" RIGHT="0" SIGNAME="axi_vdma_0_M_AXIS_MM2S_tdata" VECFORMULA="[(C_S_AXIS_VIDEO_TDATA_WIDTH-1):0]">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_MM2S]" INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_tdata"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tdata" DIR="I" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="4" MSB="15" NAME="s_axis_video_tdata" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_S_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tvalid" DIR="I" MPD_INDEX="5" NAME="s_axis_video_tvalid" SIGNAME="axi_vdma_0_M_AXIS_MM2S_tvalid">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_MM2S]" INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_tvalid"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tvalid" DIR="I" MPD_INDEX="5" NAME="s_axis_video_tvalid" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tready" DIR="O" MPD_INDEX="6" NAME="s_axis_video_tready" SIGNAME="axi_vdma_0_M_AXIS_MM2S_tready">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_MM2S]" INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_tready"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tready" DIR="O" MPD_INDEX="6" NAME="s_axis_video_tready" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tuser" DIR="I" MPD_INDEX="7" NAME="s_axis_video_tuser" SIGNAME="axi_vdma_0_M_AXIS_MM2S_tuser">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_MM2S]" INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_tuser"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tuser" DIR="I" MPD_INDEX="7" NAME="s_axis_video_tuser" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tlast" DIR="I" MPD_INDEX="8" NAME="s_axis_video_tlast" SIGNAME="axi_vdma_0_M_AXIS_MM2S_tlast">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_MM2S]" INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_tlast"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_tlast" DIR="I" MPD_INDEX="8" NAME="s_axis_video_tlast" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
         <PORT DIR="O" MPD_INDEX="12" NAME="video_hsync" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_IN" DEF_SIGNAME="v_tc_0_VTIMING_OUT_vsync" DIR="I" MPD_INDEX="16" NAME="vtg_vsync" SIGNAME="v_tc_0_VTIMING_OUT_vsync">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_OUT]" INSTANCE="v_tc_0" PORT="vsync_out"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_IN" DEF_SIGNAME="fmc_imageon_vita_receiver_0_XSVI_VIDEO_OUT_vsync" DIR="I" MPD_INDEX="16" NAME="vtg_vsync" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_IN" DEF_SIGNAME="v_tc_0_VTIMING_OUT_hsync" DIR="I" MPD_INDEX="17" NAME="vtg_hsync" SIGNAME="v_tc_0_VTIMING_OUT_hsync">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_OUT]" INSTANCE="v_tc_0" PORT="hsync_out"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_IN" DEF_SIGNAME="fmc_imageon_vita_receiver_0_XSVI_VIDEO_OUT_hsync" DIR="I" MPD_INDEX="17" NAME="vtg_hsync" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_IN" DEF_SIGNAME="v_tc_0_VTIMING_OUT_vblank" DIR="I" MPD_INDEX="18" NAME="vtg_vblank" SIGNAME="v_tc_0_VTIMING_OUT_vblank">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_OUT]" INSTANCE="v_tc_0" PORT="vblank_out"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_IN" DEF_SIGNAME="fmc_imageon_vita_receiver_0_XSVI_VIDEO_OUT_vblank" DIR="I" MPD_INDEX="18" NAME="vtg_vblank" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_IN" DEF_SIGNAME="v_tc_0_VTIMING_OUT_hblank" DIR="I" MPD_INDEX="19" NAME="vtg_hblank" SIGNAME="v_tc_0_VTIMING_OUT_hblank">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_OUT]" INSTANCE="v_tc_0" PORT="hblank_out"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_IN" DEF_SIGNAME="fmc_imageon_vita_receiver_0_XSVI_VIDEO_OUT_hblank" DIR="I" MPD_INDEX="19" NAME="vtg_hblank" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="VTIMING_IN" DEF_SIGNAME="v_tc_0_VTIMING_OUT_active_video" DIR="I" MPD_INDEX="20" NAME="vtg_act_vid" SIGNAME="v_tc_0_VTIMING_OUT_active_video">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[VTIMING_OUT]" INSTANCE="v_tc_0" PORT="active_video_out"/>
-          </CONNECTIONS>
+        <PORT BUS="VTIMING_IN" DEF_SIGNAME="fmc_imageon_vita_receiver_0_XSVI_VIDEO_OUT_active_video" DIR="I" MPD_INDEX="20" NAME="vtg_act_vid" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
         <PORT DIR="O" MPD_INDEX="22" NAME="vtg_fsync" SIGNAME="__NOC__">
           <CONNECTIONS/>
@@ -889,7 +859,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="axi_vdma_0_M_AXIS_MM2S" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="AXIS" BUSSTD_PSF="AXIS" MPD_INDEX="0" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="aclk"/>
             <PORTMAP DIR="I" PHYSICAL="s_axis_video_tdata"/>
@@ -899,7 +869,7 @@
             <PORTMAP DIR="I" PHYSICAL="s_axis_video_tlast"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="v_tc_0_VTIMING_OUT" BUSSTD="USER" BUSSTD_PSF="VTIMING" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="1" NAME="VTIMING_IN" TYPE="TARGET">
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="USER" BUSSTD_PSF="VTIMING" MPD_INDEX="1" NAME="VTIMING_IN" TYPE="TARGET">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="vtg_vsync"/>
             <PORTMAP DIR="I" PHYSICAL="vtg_hsync"/>
@@ -911,7 +881,7 @@
       </BUSINTERFACES>
       <LICENSEINFO ICON_NAME="ps_core_deprecated"/>
     </MODULE>
-    <MODULE HWVERSION="4.01.a" INSTANCE="processing_system7_0" IPTYPE="PROCESSOR" MHS_INDEX="4" MODCLASS="PROCESSOR" MODTYPE="processing_system7" PROCTYPE="ARM">
+    <MODULE HWVERSION="4.01.a" INSTANCE="processing_system7_0" IPTYPE="PROCESSOR" MHS_INDEX="7" MODCLASS="PROCESSOR" MODTYPE="processing_system7" PROCTYPE="ARM">
       <DESCRIPTION TYPE="SHORT">Processing System</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Processing System wrapper for Series 7</DESCRIPTION>
       <DOCUMENTATION>
@@ -1145,7 +1115,7 @@
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="224" NAME="C_FCLK_CLK1_BUF" TYPE="STRING" VALUE="TRUE"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="225" NAME="C_FCLK_CLK2_BUF" TYPE="STRING" VALUE="TRUE"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="226" NAME="C_FCLK_CLK3_BUF" TYPE="STRING" VALUE="TRUE"/>
-        <PARAMETER IS_INSTANTIATED="TRUE" MHS_INDEX="59" NAME="C_INTERCONNECT_S_AXI_HP0_MASTERS" VALUE="axi_vdma_0.M_AXI_MM2S &amp; axi_vdma_0.M_AXI_S2MM"/>
+        <PARAMETER CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="59" NAME="C_INTERCONNECT_S_AXI_HP0_MASTERS" VALUE="axi_vdma_0.M_AXI_MM2S"/>
       </PARAMETERS>
       <PORTS>
         <PORT DIR="IO" ENDIAN="LITTLE" IOS="PS_REQUIRED_EXTERNAL_IO" IS_INSTANTIATED="TRUE" IS_THREE_STATE="FALSE" LEFT="53" LSB="0" MHS_INDEX="0" MPD_INDEX="623" MSB="53" NAME="MIO" RIGHT="0" SIGNAME="processing_system7_0_MIO" VECFORMULA="[53:0]">
@@ -1266,6 +1236,8 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_ACLK"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_ACLK"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_ACLK"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_aclk"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="22" MPD_INDEX="611" NAME="FCLK_RESET0_N" SIGIS="RST" SIGNAME="axi4lite_0_reset_n">
@@ -2982,7 +2954,6 @@
           </PORTMAPS>
           <MASTERS>
             <MASTER BUSINTERFACE="M_AXI_MM2S" INSTANCE="axi_vdma_0"/>
-            <MASTER BUSINTERFACE="M_AXI_S2MM" INSTANCE="axi_vdma_0"/>
           </MASTERS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="AXI" BUSSTD_PSF="AXI" IS_INSTRUCTION="TRUE" IS_VALID="FALSE" MPD_INDEX="1" NAME="M_AXI_GP1" PROTOCOL="AXI3" TYPE="MASTER">
@@ -3842,10 +3813,13 @@
         <PERIPHERAL INSTANCE="SWs_8Bits"/>
         <PERIPHERAL INSTANCE="IIC_FMC"/>
         <PERIPHERAL INSTANCE="BTNs_5Bits"/>
+        <PERIPHERAL INSTANCE="v_cfa_0"/>
+        <PERIPHERAL INSTANCE="v_rgb2ycrcb_0"/>
+        <PERIPHERAL INSTANCE="v_cresample_0"/>
       </PERIPHERALS>
       <LICENSEINFO ICON_NAME="ps_core_deprecated"/>
     </MODULE>
-    <MODULE HWVERSION="1.13.a" INSTANCE="fmc_imageon_vita_receiver_0" IPTYPE="PERIPHERAL" MHS_INDEX="5" MODCLASS="PERIPHERAL" MODTYPE="fmc_imageon_vita_receiver">
+    <MODULE HWVERSION="1.13.a" INSTANCE="fmc_imageon_vita_receiver_0" IPTYPE="PERIPHERAL" MHS_INDEX="8" MODCLASS="PERIPHERAL" MODTYPE="fmc_imageon_vita_receiver">
       <DESCRIPTION TYPE="SHORT">FMC_IMAGEON_VITA_RECEIVER</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">VITA Receiver</DESCRIPTION>
       <PARAMETERS>
@@ -4181,7 +4155,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_development"/>
     </MODULE>
-    <MODULE HWVERSION="1.02.a" INSTANCE="fmc_imageon_iic_0" IPTYPE="PERIPHERAL" MHS_INDEX="6" MODCLASS="PERIPHERAL" MODTYPE="axi_iic">
+    <MODULE HWVERSION="1.02.a" INSTANCE="fmc_imageon_iic_0" IPTYPE="PERIPHERAL" MHS_INDEX="9" MODCLASS="PERIPHERAL" MODTYPE="axi_iic">
       <DESCRIPTION TYPE="SHORT">AXI IIC Interface</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">AXI interface to Philips I2C bus v2.1</DESCRIPTION>
       <DOCUMENTATION>
@@ -4398,7 +4372,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE HWVERSION="1.05.a" INSTANCE="fmc_imageon_hdmi_out_0" IPTYPE="PERIPHERAL" MHS_INDEX="7" MODCLASS="PERIPHERAL" MODTYPE="fmc_imageon_hdmi_out">
+    <MODULE HWVERSION="1.05.a" INSTANCE="fmc_imageon_hdmi_out_0" IPTYPE="PERIPHERAL" MHS_INDEX="10" MODCLASS="PERIPHERAL" MODTYPE="fmc_imageon_hdmi_out">
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_FAMILY" TYPE="STRING" VALUE="zynq"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="1" NAME="C_DATA_WIDTH" TYPE="INTEGER" VALUE="16"/>
@@ -4489,7 +4463,7 @@
       </IOINTERFACES>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE HWVERSION="4.03.a" INSTANCE="clock_generator_1" IPTYPE="PERIPHERAL" MHS_INDEX="8" MODCLASS="IP" MODTYPE="clock_generator">
+    <MODULE HWVERSION="4.03.a" INSTANCE="clock_generator_1" IPTYPE="PERIPHERAL" MHS_INDEX="11" MODCLASS="IP" MODTYPE="clock_generator">
       <DESCRIPTION TYPE="SHORT">Clock Generator</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Clock generator for processor system.</DESCRIPTION>
       <DOCUMENTATION>
@@ -4634,6 +4608,8 @@
             <CONNECTION INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_aclk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_aclk"/>
             <CONNECTION INSTANCE="axi_tpg_0" PORT="clk"/>
+            <CONNECTION INSTANCE="v_cfa_0" PORT="aclk"/>
+            <CONNECTION INSTANCE="v_cresample_0" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="37125000" DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="2" NAME="CLKOUT1" SIGIS="CLK" SIGNAME="vita_clk_ref">
@@ -4708,7 +4684,7 @@
       <BUSINTERFACES/>
       <LICENSEINFO ICON_NAME="ps_core_earlyaccess"/>
     </MODULE>
-    <MODULE HWVERSION="5.04.a" INSTANCE="axi_vdma_0" IPTYPE="PERIPHERAL" MHS_INDEX="9" MODCLASS="PERIPHERAL" MODTYPE="axi_vdma">
+    <MODULE HWVERSION="5.04.a" INSTANCE="axi_vdma_0" IPTYPE="PERIPHERAL" MHS_INDEX="12" MODCLASS="PERIPHERAL" MODTYPE="axi_vdma">
       <DESCRIPTION TYPE="SHORT">AXI Video DMA</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">MemoryMap to/from Stream Video Direct Memory Access for AXI</DESCRIPTION>
       <DOCUMENTATION>
@@ -4981,33 +4957,23 @@
         <PORT DIR="O" MPD_INDEX="49" NAME="mm2s_prmry_reset_out_n" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TDATA" DIR="O" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="50" MSB="15" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGNAME="axi_vdma_0_M_AXIS_MM2S_TDATA" VECFORMULA="[C_M_AXIS_MM2S_TDATA_WIDTH-1:0]">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_axi4s_vid_out_0" PORT="s_axis_video_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TKEEP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="51" MSB="1" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGNAME="axi_vdma_0_M_AXIS_MM2S_TKEEP" VECFORMULA="[(C_M_AXIS_MM2S_TDATA_WIDTH/8)-1:0]">
+        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TDATA" DIR="O" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="50" MSB="15" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[C_M_AXIS_MM2S_TDATA_WIDTH-1:0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TVALID" DIR="O" MPD_INDEX="52" NAME="m_axis_mm2s_tvalid" SIGNAME="axi_vdma_0_M_AXIS_MM2S_TVALID">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_axi4s_vid_out_0" PORT="s_axis_video_tvalid"/>
-          </CONNECTIONS>
+        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TKEEP" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="51" MSB="1" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_M_AXIS_MM2S_TDATA_WIDTH/8)-1:0]">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TREADY" DIR="I" MPD_INDEX="53" NAME="m_axis_mm2s_tready" SIGNAME="axi_vdma_0_M_AXIS_MM2S_TREADY">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_axi4s_vid_out_0" PORT="s_axis_video_tready"/>
-          </CONNECTIONS>
+        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TVALID" DIR="O" MPD_INDEX="52" NAME="m_axis_mm2s_tvalid" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TLAST" DIR="O" MPD_INDEX="54" NAME="m_axis_mm2s_tlast" SIGNAME="axi_vdma_0_M_AXIS_MM2S_TLAST">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_axi4s_vid_out_0" PORT="s_axis_video_tlast"/>
-          </CONNECTIONS>
+        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TREADY" DIR="I" MPD_INDEX="53" NAME="m_axis_mm2s_tready" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TUSER" DIR="O" MPD_INDEX="55" NAME="m_axis_mm2s_tuser" SIGNAME="axi_vdma_0_M_AXIS_MM2S_TUSER" VECFORMULA="[C_M_AXIS_MM2S_TUSER_BITS-1:0]">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_axi4s_vid_out_0" PORT="s_axis_video_tuser"/>
-          </CONNECTIONS>
+        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TLAST" DIR="O" MPD_INDEX="54" NAME="m_axis_mm2s_tlast" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="M_AXIS_MM2S" DEF_SIGNAME="axi_vdma_0_M_AXIS_MM2S_TUSER" DIR="O" MPD_INDEX="55" NAME="m_axis_mm2s_tuser" SIGNAME="__NOC__" VECFORMULA="[C_M_AXIS_MM2S_TUSER_BITS-1:0]">
+          <CONNECTIONS/>
         </PORT>
         <PORT BUS="M_AXI_S2MM" DEF_SIGNAME="axi_interconnect_1_S_AWADDR" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="56" MSB="31" NAME="m_axi_s2mm_awaddr" RIGHT="0" SIGNAME="axi_interconnect_1_S_AWADDR" VECFORMULA="[C_M_AXI_S2MM_ADDR_WIDTH-1:0]">
           <CONNECTIONS>
@@ -5092,33 +5058,23 @@
         <PORT DIR="O" MPD_INDEX="72" NAME="s2mm_prmry_reset_out_n" SIGNAME="__NOC__">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TDATA" DIR="I" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="73" MSB="15" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TDATA" VECFORMULA="[C_S_AXIS_S2MM_TDATA_WIDTH-1:0]">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TKEEP" DIR="I" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="74" MSB="1" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TKEEP" VECFORMULA="[(C_S_AXIS_S2MM_TDATA_WIDTH/8)-1:0]">
+        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_TDATA" DIR="I" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="73" MSB="15" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[C_S_AXIS_S2MM_TDATA_WIDTH-1:0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TVALID" DIR="I" MPD_INDEX="75" NAME="s_axis_s2mm_tvalid" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TVALID">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tvalid"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_TKEEP" DIR="I" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="74" MSB="1" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_S_AXIS_S2MM_TDATA_WIDTH/8)-1:0]">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TREADY" DIR="O" MPD_INDEX="76" NAME="s_axis_s2mm_tready" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TREADY">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tready"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_TVALID" DIR="I" MPD_INDEX="75" NAME="s_axis_s2mm_tvalid" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TLAST" DIR="I" MPD_INDEX="77" NAME="s_axis_s2mm_tlast" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TLAST">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tlast"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_TREADY" DIR="O" MPD_INDEX="76" NAME="s_axis_s2mm_tready" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
-        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TUSER" DIR="I" MPD_INDEX="78" NAME="s_axis_s2mm_tuser" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_TUSER" VECFORMULA="[C_S_AXIS_S2MM_TUSER_BITS-1:0]">
-          <CONNECTIONS>
-            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tuser"/>
-          </CONNECTIONS>
+        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_TLAST" DIR="I" MPD_INDEX="77" NAME="s_axis_s2mm_tlast" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXIS_S2MM" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_TUSER" DIR="I" MPD_INDEX="78" NAME="s_axis_s2mm_tuser" SIGNAME="__NOC__" VECFORMULA="[C_S_AXIS_S2MM_TUSER_BITS-1:0]">
+          <CONNECTIONS/>
         </PORT>
         <PORT DIR="I" MPD_INDEX="79" NAME="mm2s_fsync" SIGNAME="__NOC__">
           <CONNECTIONS/>
@@ -5255,7 +5211,7 @@
             <PORTMAP DIR="O" PHYSICAL="m_axi_sg_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="axi_vdma_0_M_AXIS_MM2S" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="4" NAME="M_AXIS_MM2S" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="AXIS" BUSSTD_PSF="AXIS" MPD_INDEX="4" NAME="M_AXIS_MM2S" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="axi_resetn"/>
             <PORTMAP DIR="O" PHYSICAL="m_axis_mm2s_tdata"/>
@@ -5266,7 +5222,7 @@
             <PORTMAP DIR="O" PHYSICAL="m_axis_mm2s_tuser"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="5" NAME="S_AXIS_S2MM" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="AXIS" BUSSTD_PSF="AXIS" MPD_INDEX="5" NAME="S_AXIS_S2MM" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="axi_resetn"/>
             <PORTMAP DIR="I" PHYSICAL="s_axis_s2mm_tdata"/>
@@ -5287,7 +5243,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE HWVERSION="2.00.a" INSTANCE="axi_tpg_0" IPTYPE="PERIPHERAL" MHS_INDEX="10" MODCLASS="PERIPHERAL" MODTYPE="axi_tpg">
+    <MODULE HWVERSION="2.00.a" INSTANCE="axi_tpg_0" IPTYPE="PERIPHERAL" MHS_INDEX="13" MODCLASS="PERIPHERAL" MODTYPE="axi_tpg">
       <DESCRIPTION TYPE="SHORT">Video Test-Pattern Generator (Engineering)</DESCRIPTION>
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="0" NAME="C_S_AXI_PROTOCOL" VALUE="AXI4LITE"/>
@@ -5534,7 +5490,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE BUSSTD="AXI" BUSSTD_PSF="AXI" HWVERSION="1.06.a" INSTANCE="axi_interconnect_1" IPTYPE="BUS" IS_CROSSBAR="TRUE" MHS_INDEX="11" MODCLASS="BUS" MODTYPE="axi_interconnect">
+    <MODULE BUSSTD="AXI" BUSSTD_PSF="AXI" HWVERSION="1.06.a" INSTANCE="axi_interconnect_1" IPTYPE="BUS" IS_CROSSBAR="TRUE" MHS_INDEX="14" MODCLASS="BUS" MODTYPE="axi_interconnect">
       <DESCRIPTION TYPE="SHORT">AXI Interconnect</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">AXI4 Memory-Mapped Interconnect</DESCRIPTION>
       <DOCUMENTATION>
@@ -5573,7 +5529,7 @@
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="29" NAME="C_AXI_WUSER_WIDTH" TYPE="INTEGER" VALUE="1"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="30" NAME="C_AXI_RUSER_WIDTH" TYPE="INTEGER" VALUE="1"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="31" NAME="C_AXI_BUSER_WIDTH" TYPE="INTEGER" VALUE="1"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="32" NAME="C_AXI_CONNECTIVITY" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="32" NAME="C_AXI_CONNECTIVITY" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="33" NAME="C_S_AXI_SINGLE_THREAD" TYPE="STD_LOGIC_VECTOR" VALUE="0b0000000000000000"/>
         <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="34" NAME="C_M_AXI_SUPPORTS_REORDERING" TYPE="STD_LOGIC_VECTOR" VALUE="0b1111111111111111"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="35" NAME="C_S_AXI_SUPPORTS_NARROW_BURST" TYPE="STD_LOGIC_VECTOR" VALUE="0b1111111111111100"/>
@@ -6373,7 +6329,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE BUSSTD="AXI" BUSSTD_PSF="AXI" HWVERSION="1.06.a" INSTANCE="axi4lite_0" IPTYPE="BUS" MHS_INDEX="12" MODCLASS="BUS" MODTYPE="axi_interconnect">
+    <MODULE BUSSTD="AXI" BUSSTD_PSF="AXI" HWVERSION="1.06.a" INSTANCE="axi4lite_0" IPTYPE="BUS" MHS_INDEX="15" MODCLASS="BUS" MODTYPE="axi_interconnect">
       <DESCRIPTION TYPE="SHORT">AXI Interconnect</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">AXI4 Memory-Mapped Interconnect</DESCRIPTION>
       <DOCUMENTATION>
@@ -6383,7 +6339,7 @@
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="0" NAME="C_FAMILY" TYPE="STRING" VALUE="zynq"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="1" NAME="C_BASEFAMILY" TYPE="STRING" VALUE="zynq"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="2" NAME="C_NUM_SLAVE_SLOTS" TYPE="INTEGER" VALUE="1"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_NUM_MASTER_SLOTS" TYPE="INTEGER" VALUE="9"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_NUM_MASTER_SLOTS" TYPE="INTEGER" VALUE="12"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="4" NAME="C_AXI_ID_WIDTH" TYPE="INTEGER" VALUE="12"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="5" NAME="C_AXI_ADDR_WIDTH" TYPE="INTEGER" VALUE="32"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="6" NAME="C_AXI_DATA_MAX_WIDTH" TYPE="INTEGER" VALUE="32"/>
@@ -6391,15 +6347,15 @@
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="8" NAME="C_M_AXI_DATA_WIDTH" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002000000020"/>
         <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" MPD_INDEX="9" NAME="C_INTERCONNECT_DATA_WIDTH" TYPE="INTEGER" VALUE="32"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="10" NAME="C_S_AXI_PROTOCOL" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="11" NAME="C_M_AXI_PROTOCOL" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000000000000000000000000000000000000000000000000000000000000020000000200000002000000020000000200000002000000020000000200000002"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="12" NAME="C_M_AXI_BASE_ADDR" TYPE="STD_LOGIC_VECTOR" VALUE="0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000041200000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000040100000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000041240000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000051200000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000043000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000050100000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000052100000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000052200000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000051100000"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="11" NAME="C_M_AXI_PROTOCOL" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000000000000000000000000000000000000020000000200000002000000020000000200000002000000020000000200000002000000020000000200000002"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="12" NAME="C_M_AXI_BASE_ADDR" TYPE="STD_LOGIC_VECTOR" VALUE="0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000041200000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000040100000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000041240000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000051200000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000043000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000050100000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000052100000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000052200000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000051100000"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="13" NAME="C_M_AXI_HIGH_ADDR" TYPE="STD_LOGIC_VECTOR" VALUE="0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004120ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004010ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004124ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005120ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004300ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005010ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005210ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005220ffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005110ffff"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="14" NAME="C_S_AXI_BASE_ID" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="15" NAME="C_S_AXI_THREAD_ID_WIDTH" TYPE="STD_LOGIC_VECTOR" VALUE="0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="16" NAME="C_S_AXI_IS_INTERCONNECT" TYPE="STD_LOGIC_VECTOR" VALUE="0b0000000000000000"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="17" NAME="C_S_AXI_ACLK_RATIO" TYPE="STD_LOGIC_VECTOR" VALUE="0x00000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000102faf080"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="18" NAME="C_S_AXI_IS_ACLK_ASYNC" TYPE="STD_LOGIC_VECTOR" VALUE="0b0000000000000000"/>
-        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="19" NAME="C_M_AXI_ACLK_RATIO" TYPE="STD_LOGIC_VECTOR" VALUE="0x0000000100000001000000010000000100000001000000010000000102faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf080"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="19" NAME="C_M_AXI_ACLK_RATIO" TYPE="STD_LOGIC_VECTOR" VALUE="0x0000000100000001000000010000000102faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf08002faf080"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="20" NAME="C_M_AXI_IS_ACLK_ASYNC" TYPE="STD_LOGIC_VECTOR" VALUE="0b0000000000000000"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="21" NAME="C_INTERCONNECT_ACLK_RATIO" TYPE="INTEGER" VALUE="50000000"/>
         <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="22" NAME="C_S_AXI_SUPPORTS_WRITE" TYPE="STD_LOGIC_VECTOR" VALUE="0b1111111111111111"/>
@@ -6474,7 +6430,7 @@
         <PORT DEF_SIGNAME="axi4lite_0_S_ARESETN" DIR="O" MPD_INDEX="2" NAME="S_AXI_ARESET_OUT_N" SIGIS="RST" SIGNAME="axi4lite_0_S_ARESETN" VECFORMULA="[(C_NUM_SLAVE_SLOTS-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="3" MSB="8" NAME="M_AXI_ARESET_OUT_N" RIGHT="0" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="3" MSB="11" NAME="M_AXI_ARESET_OUT_N" RIGHT="0" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_ARESETN"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_ARESETN"/>
@@ -6485,6 +6441,9 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_ARESETN"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_ARESETN"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_ARESETN"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_aresetn"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_aresetn"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" IS_VALID="FALSE" MPD_INDEX="4" NAME="IRQ" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__">
@@ -6698,13 +6657,13 @@
             <CONNECTION BUSINTERFACE="[M_AXI_GP0]" INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ACLK" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="49" MSB="8" NAME="M_AXI_ACLK" RIGHT="0" SIGIS="CLK" SIGNAME="axi4lite_0_M_ACLK" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ACLK" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="49" MSB="11" NAME="M_AXI_ACLK" RIGHT="0" SIGIS="CLK" SIGNAME="axi4lite_0_M_ACLK" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWID" DIR="O" ENDIAN="LITTLE" LEFT="107" LSB="0" MPD_INDEX="50" MSB="107" NAME="M_AXI_AWID" RIGHT="0" SIGNAME="axi4lite_0_M_AWID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWID" DIR="O" ENDIAN="LITTLE" LEFT="143" LSB="0" MPD_INDEX="50" MSB="143" NAME="M_AXI_AWID" RIGHT="0" SIGNAME="axi4lite_0_M_AWID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWADDR" DIR="O" ENDIAN="LITTLE" LEFT="287" LSB="0" MPD_INDEX="51" MSB="287" NAME="M_AXI_AWADDR" RIGHT="0" SIGNAME="axi4lite_0_M_AWADDR" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ADDR_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWADDR" DIR="O" ENDIAN="LITTLE" LEFT="383" LSB="0" MPD_INDEX="51" MSB="383" NAME="M_AXI_AWADDR" RIGHT="0" SIGNAME="axi4lite_0_M_AWADDR" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ADDR_WIDTH)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_AWADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_AWADDR"/>
@@ -6715,36 +6674,39 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_AWADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_AWADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_AWADDR"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_awaddr"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_awaddr"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWLEN" DIR="O" ENDIAN="LITTLE" LEFT="71" LSB="0" MPD_INDEX="52" MSB="71" NAME="M_AXI_AWLEN" RIGHT="0" SIGNAME="axi4lite_0_M_AWLEN" VECFORMULA="[((C_NUM_MASTER_SLOTS*8)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWLEN" DIR="O" ENDIAN="LITTLE" LEFT="95" LSB="0" MPD_INDEX="52" MSB="95" NAME="M_AXI_AWLEN" RIGHT="0" SIGNAME="axi4lite_0_M_AWLEN" VECFORMULA="[((C_NUM_MASTER_SLOTS*8)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWSIZE" DIR="O" ENDIAN="LITTLE" LEFT="26" LSB="0" MPD_INDEX="53" MSB="26" NAME="M_AXI_AWSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_AWSIZE" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWSIZE" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="53" MSB="35" NAME="M_AXI_AWSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_AWSIZE" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWBURST" DIR="O" ENDIAN="LITTLE" LEFT="17" LSB="0" MPD_INDEX="54" MSB="17" NAME="M_AXI_AWBURST" RIGHT="0" SIGNAME="axi4lite_0_M_AWBURST" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWBURST" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="54" MSB="23" NAME="M_AXI_AWBURST" RIGHT="0" SIGNAME="axi4lite_0_M_AWBURST" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWLOCK" DIR="O" ENDIAN="LITTLE" LEFT="17" LSB="0" MPD_INDEX="55" MSB="17" NAME="M_AXI_AWLOCK" RIGHT="0" SIGNAME="axi4lite_0_M_AWLOCK" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWLOCK" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="55" MSB="23" NAME="M_AXI_AWLOCK" RIGHT="0" SIGNAME="axi4lite_0_M_AWLOCK" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWCACHE" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="56" MSB="35" NAME="M_AXI_AWCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_AWCACHE" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWCACHE" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="56" MSB="47" NAME="M_AXI_AWCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_AWCACHE" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWPROT" DIR="O" ENDIAN="LITTLE" LEFT="26" LSB="0" MPD_INDEX="57" MSB="26" NAME="M_AXI_AWPROT" RIGHT="0" SIGNAME="axi4lite_0_M_AWPROT" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWPROT" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="57" MSB="35" NAME="M_AXI_AWPROT" RIGHT="0" SIGNAME="axi4lite_0_M_AWPROT" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWREGION" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="58" MSB="35" NAME="M_AXI_AWREGION" RIGHT="0" SIGNAME="axi4lite_0_M_AWREGION" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWREGION" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="58" MSB="47" NAME="M_AXI_AWREGION" RIGHT="0" SIGNAME="axi4lite_0_M_AWREGION" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWQOS" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="59" MSB="35" NAME="M_AXI_AWQOS" RIGHT="0" SIGNAME="axi4lite_0_M_AWQOS" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWQOS" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="59" MSB="47" NAME="M_AXI_AWQOS" RIGHT="0" SIGNAME="axi4lite_0_M_AWQOS" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWUSER" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="60" MSB="8" NAME="M_AXI_AWUSER" RIGHT="0" SIGNAME="axi4lite_0_M_AWUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_AWUSER_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWUSER" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="60" MSB="11" NAME="M_AXI_AWUSER" RIGHT="0" SIGNAME="axi4lite_0_M_AWUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_AWUSER_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWVALID" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="61" MSB="8" NAME="M_AXI_AWVALID" RIGHT="0" SIGNAME="axi4lite_0_M_AWVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWVALID" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="61" MSB="11" NAME="M_AXI_AWVALID" RIGHT="0" SIGNAME="axi4lite_0_M_AWVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_AWVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_AWVALID"/>
@@ -6755,9 +6717,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_AWVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_AWVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_AWVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_awvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_awvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="62" MSB="8" NAME="M_AXI_AWREADY" RIGHT="0" SIGNAME="axi4lite_0_M_AWREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_AWREADY" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="62" MSB="11" NAME="M_AXI_AWREADY" RIGHT="0" SIGNAME="axi4lite_0_M_AWREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_AWREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_AWREADY"/>
@@ -6768,12 +6733,15 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_AWREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_AWREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_AWREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_awready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_awready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WID" DIR="O" ENDIAN="LITTLE" LEFT="107" LSB="0" MPD_INDEX="63" MSB="107" NAME="M_AXI_WID" RIGHT="0" SIGNAME="axi4lite_0_M_WID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WID" DIR="O" ENDIAN="LITTLE" LEFT="143" LSB="0" MPD_INDEX="63" MSB="143" NAME="M_AXI_WID" RIGHT="0" SIGNAME="axi4lite_0_M_WID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="O" ENDIAN="LITTLE" LEFT="287" LSB="0" MPD_INDEX="64" MSB="287" NAME="M_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WDATA" DIR="O" ENDIAN="LITTLE" LEFT="383" LSB="0" MPD_INDEX="64" MSB="383" NAME="M_AXI_WDATA" RIGHT="0" SIGNAME="axi4lite_0_M_WDATA" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_WDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_WDATA"/>
@@ -6784,9 +6752,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_WDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_WDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_WDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_wdata"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_wdata"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WSTRB" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="65" MSB="35" NAME="M_AXI_WSTRB" RIGHT="0" SIGNAME="axi4lite_0_M_WSTRB" VECFORMULA="[(((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)/8)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WSTRB" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="65" MSB="47" NAME="M_AXI_WSTRB" RIGHT="0" SIGNAME="axi4lite_0_M_WSTRB" VECFORMULA="[(((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)/8)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_WSTRB"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_WSTRB"/>
@@ -6796,15 +6767,18 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_WSTRB"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_WSTRB"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_WSTRB"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_wstrb"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_wstrb"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WLAST" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="66" MSB="8" NAME="M_AXI_WLAST" RIGHT="0" SIGNAME="axi4lite_0_M_WLAST" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WLAST" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="66" MSB="11" NAME="M_AXI_WLAST" RIGHT="0" SIGNAME="axi4lite_0_M_WLAST" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WUSER" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="67" MSB="8" NAME="M_AXI_WUSER" RIGHT="0" SIGNAME="axi4lite_0_M_WUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_WUSER_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WUSER" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="67" MSB="11" NAME="M_AXI_WUSER" RIGHT="0" SIGNAME="axi4lite_0_M_WUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_WUSER_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WVALID" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="68" MSB="8" NAME="M_AXI_WVALID" RIGHT="0" SIGNAME="axi4lite_0_M_WVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WVALID" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="68" MSB="11" NAME="M_AXI_WVALID" RIGHT="0" SIGNAME="axi4lite_0_M_WVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_WVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_WVALID"/>
@@ -6815,9 +6789,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_WVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_WVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_WVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_wvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_wvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="69" MSB="8" NAME="M_AXI_WREADY" RIGHT="0" SIGNAME="axi4lite_0_M_WREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_WREADY" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="69" MSB="11" NAME="M_AXI_WREADY" RIGHT="0" SIGNAME="axi4lite_0_M_WREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_WREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_WREADY"/>
@@ -6828,12 +6805,15 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_WREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_WREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_WREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_wready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_wready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_BID" DIR="I" ENDIAN="LITTLE" LEFT="107" LSB="0" MPD_INDEX="70" MSB="107" NAME="M_AXI_BID" RIGHT="0" SIGNAME="axi4lite_0_M_BID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_BID" DIR="I" ENDIAN="LITTLE" LEFT="143" LSB="0" MPD_INDEX="70" MSB="143" NAME="M_AXI_BID" RIGHT="0" SIGNAME="axi4lite_0_M_BID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="I" ENDIAN="LITTLE" LEFT="17" LSB="0" MPD_INDEX="71" MSB="17" NAME="M_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_BRESP" DIR="I" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="71" MSB="23" NAME="M_AXI_BRESP" RIGHT="0" SIGNAME="axi4lite_0_M_BRESP" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_BRESP"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_BRESP"/>
@@ -6844,12 +6824,15 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_BRESP"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_BRESP"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_BRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_bresp"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_bresp"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_BUSER" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="72" MSB="8" NAME="M_AXI_BUSER" RIGHT="0" SIGNAME="axi4lite_0_M_BUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_BUSER_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_BUSER" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="72" MSB="11" NAME="M_AXI_BUSER" RIGHT="0" SIGNAME="axi4lite_0_M_BUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_BUSER_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="73" MSB="8" NAME="M_AXI_BVALID" RIGHT="0" SIGNAME="axi4lite_0_M_BVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_BVALID" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="73" MSB="11" NAME="M_AXI_BVALID" RIGHT="0" SIGNAME="axi4lite_0_M_BVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_BVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_BVALID"/>
@@ -6860,9 +6843,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_BVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_BVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_BVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_bvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_bvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="74" MSB="8" NAME="M_AXI_BREADY" RIGHT="0" SIGNAME="axi4lite_0_M_BREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_BREADY" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="74" MSB="11" NAME="M_AXI_BREADY" RIGHT="0" SIGNAME="axi4lite_0_M_BREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_BREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_BREADY"/>
@@ -6873,12 +6859,15 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_BREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_BREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_BREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_bready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_bready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARID" DIR="O" ENDIAN="LITTLE" LEFT="107" LSB="0" MPD_INDEX="75" MSB="107" NAME="M_AXI_ARID" RIGHT="0" SIGNAME="axi4lite_0_M_ARID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARID" DIR="O" ENDIAN="LITTLE" LEFT="143" LSB="0" MPD_INDEX="75" MSB="143" NAME="M_AXI_ARID" RIGHT="0" SIGNAME="axi4lite_0_M_ARID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARADDR" DIR="O" ENDIAN="LITTLE" LEFT="287" LSB="0" MPD_INDEX="76" MSB="287" NAME="M_AXI_ARADDR" RIGHT="0" SIGNAME="axi4lite_0_M_ARADDR" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ADDR_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARADDR" DIR="O" ENDIAN="LITTLE" LEFT="383" LSB="0" MPD_INDEX="76" MSB="383" NAME="M_AXI_ARADDR" RIGHT="0" SIGNAME="axi4lite_0_M_ARADDR" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ADDR_WIDTH)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_ARADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_ARADDR"/>
@@ -6889,36 +6878,39 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_ARADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_ARADDR"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_ARADDR"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_araddr"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_araddr"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARLEN" DIR="O" ENDIAN="LITTLE" LEFT="71" LSB="0" MPD_INDEX="77" MSB="71" NAME="M_AXI_ARLEN" RIGHT="0" SIGNAME="axi4lite_0_M_ARLEN" VECFORMULA="[((C_NUM_MASTER_SLOTS*8)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARLEN" DIR="O" ENDIAN="LITTLE" LEFT="95" LSB="0" MPD_INDEX="77" MSB="95" NAME="M_AXI_ARLEN" RIGHT="0" SIGNAME="axi4lite_0_M_ARLEN" VECFORMULA="[((C_NUM_MASTER_SLOTS*8)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARSIZE" DIR="O" ENDIAN="LITTLE" LEFT="26" LSB="0" MPD_INDEX="78" MSB="26" NAME="M_AXI_ARSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_ARSIZE" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARSIZE" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="78" MSB="35" NAME="M_AXI_ARSIZE" RIGHT="0" SIGNAME="axi4lite_0_M_ARSIZE" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARBURST" DIR="O" ENDIAN="LITTLE" LEFT="17" LSB="0" MPD_INDEX="79" MSB="17" NAME="M_AXI_ARBURST" RIGHT="0" SIGNAME="axi4lite_0_M_ARBURST" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARBURST" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="79" MSB="23" NAME="M_AXI_ARBURST" RIGHT="0" SIGNAME="axi4lite_0_M_ARBURST" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARLOCK" DIR="O" ENDIAN="LITTLE" LEFT="17" LSB="0" MPD_INDEX="80" MSB="17" NAME="M_AXI_ARLOCK" RIGHT="0" SIGNAME="axi4lite_0_M_ARLOCK" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARLOCK" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="80" MSB="23" NAME="M_AXI_ARLOCK" RIGHT="0" SIGNAME="axi4lite_0_M_ARLOCK" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARCACHE" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="81" MSB="35" NAME="M_AXI_ARCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_ARCACHE" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARCACHE" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="81" MSB="47" NAME="M_AXI_ARCACHE" RIGHT="0" SIGNAME="axi4lite_0_M_ARCACHE" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARPROT" DIR="O" ENDIAN="LITTLE" LEFT="26" LSB="0" MPD_INDEX="82" MSB="26" NAME="M_AXI_ARPROT" RIGHT="0" SIGNAME="axi4lite_0_M_ARPROT" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARPROT" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="82" MSB="35" NAME="M_AXI_ARPROT" RIGHT="0" SIGNAME="axi4lite_0_M_ARPROT" VECFORMULA="[((C_NUM_MASTER_SLOTS*3)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARREGION" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="83" MSB="35" NAME="M_AXI_ARREGION" RIGHT="0" SIGNAME="axi4lite_0_M_ARREGION" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARREGION" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="83" MSB="47" NAME="M_AXI_ARREGION" RIGHT="0" SIGNAME="axi4lite_0_M_ARREGION" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARQOS" DIR="O" ENDIAN="LITTLE" LEFT="35" LSB="0" MPD_INDEX="84" MSB="35" NAME="M_AXI_ARQOS" RIGHT="0" SIGNAME="axi4lite_0_M_ARQOS" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARQOS" DIR="O" ENDIAN="LITTLE" LEFT="47" LSB="0" MPD_INDEX="84" MSB="47" NAME="M_AXI_ARQOS" RIGHT="0" SIGNAME="axi4lite_0_M_ARQOS" VECFORMULA="[((C_NUM_MASTER_SLOTS*4)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARUSER" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="85" MSB="8" NAME="M_AXI_ARUSER" RIGHT="0" SIGNAME="axi4lite_0_M_ARUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ARUSER_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARUSER" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="85" MSB="11" NAME="M_AXI_ARUSER" RIGHT="0" SIGNAME="axi4lite_0_M_ARUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ARUSER_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARVALID" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="86" MSB="8" NAME="M_AXI_ARVALID" RIGHT="0" SIGNAME="axi4lite_0_M_ARVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARVALID" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="86" MSB="11" NAME="M_AXI_ARVALID" RIGHT="0" SIGNAME="axi4lite_0_M_ARVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_ARVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_ARVALID"/>
@@ -6929,9 +6921,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_ARVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_ARVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_ARVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_arvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_arvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="87" MSB="8" NAME="M_AXI_ARREADY" RIGHT="0" SIGNAME="axi4lite_0_M_ARREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_ARREADY" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="87" MSB="11" NAME="M_AXI_ARREADY" RIGHT="0" SIGNAME="axi4lite_0_M_ARREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_ARREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_ARREADY"/>
@@ -6942,12 +6937,15 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_ARREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_ARREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_ARREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_arready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_arready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RID" DIR="I" ENDIAN="LITTLE" LEFT="107" LSB="0" MPD_INDEX="88" MSB="107" NAME="M_AXI_RID" RIGHT="0" SIGNAME="axi4lite_0_M_RID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RID" DIR="I" ENDIAN="LITTLE" LEFT="143" LSB="0" MPD_INDEX="88" MSB="143" NAME="M_AXI_RID" RIGHT="0" SIGNAME="axi4lite_0_M_RID" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_ID_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="I" ENDIAN="LITTLE" LEFT="287" LSB="0" MPD_INDEX="89" MSB="287" NAME="M_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RDATA" DIR="I" ENDIAN="LITTLE" LEFT="383" LSB="0" MPD_INDEX="89" MSB="383" NAME="M_AXI_RDATA" RIGHT="0" SIGNAME="axi4lite_0_M_RDATA" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_DATA_MAX_WIDTH)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_RDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_RDATA"/>
@@ -6958,9 +6956,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_RDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_RDATA"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_RDATA"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_rdata"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_rdata"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="I" ENDIAN="LITTLE" LEFT="17" LSB="0" MPD_INDEX="90" MSB="17" NAME="M_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RRESP" DIR="I" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="90" MSB="23" NAME="M_AXI_RRESP" RIGHT="0" SIGNAME="axi4lite_0_M_RRESP" VECFORMULA="[((C_NUM_MASTER_SLOTS*2)-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_RRESP"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_RRESP"/>
@@ -6971,15 +6972,18 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_RRESP"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_RRESP"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_RRESP"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_rresp"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_rresp"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RLAST" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="91" MSB="8" NAME="M_AXI_RLAST" RIGHT="0" SIGNAME="axi4lite_0_M_RLAST" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RLAST" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="91" MSB="11" NAME="M_AXI_RLAST" RIGHT="0" SIGNAME="axi4lite_0_M_RLAST" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RUSER" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="92" MSB="8" NAME="M_AXI_RUSER" RIGHT="0" SIGNAME="axi4lite_0_M_RUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_RUSER_WIDTH)-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RUSER" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="92" MSB="11" NAME="M_AXI_RUSER" RIGHT="0" SIGNAME="axi4lite_0_M_RUSER" VECFORMULA="[((C_NUM_MASTER_SLOTS*C_AXI_RUSER_WIDTH)-1):0]">
           <CONNECTIONS/>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="93" MSB="8" NAME="M_AXI_RVALID" RIGHT="0" SIGNAME="axi4lite_0_M_RVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RVALID" DIR="I" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="93" MSB="11" NAME="M_AXI_RVALID" RIGHT="0" SIGNAME="axi4lite_0_M_RVALID" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_RVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_RVALID"/>
@@ -6990,9 +6994,12 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_RVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_RVALID"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_RVALID"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_rvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_rvalid"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="O" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="94" MSB="8" NAME="M_AXI_RREADY" RIGHT="0" SIGNAME="axi4lite_0_M_RREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
+        <PORT DEF_SIGNAME="axi4lite_0_M_RREADY" DIR="O" ENDIAN="LITTLE" LEFT="11" LSB="0" MPD_INDEX="94" MSB="11" NAME="M_AXI_RREADY" RIGHT="0" SIGNAME="axi4lite_0_M_RREADY" VECFORMULA="[(C_NUM_MASTER_SLOTS-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_1" PORT="S_AXI_RREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_tc_0" PORT="S_AXI_RREADY"/>
@@ -7003,6 +7010,9 @@
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="SWs_8Bits" PORT="S_AXI_RREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="IIC_FMC" PORT="S_AXI_RREADY"/>
             <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="BTNs_5Bits" PORT="S_AXI_RREADY"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cfa_0" PORT="s_axi_rready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axi_rready"/>
+            <CONNECTION BUSINTERFACE="[S_AXI]" INSTANCE="v_cresample_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI_CTRL" DEF_SIGNAME="__BUS__" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="95" MSB="31" NAME="S_AXI_CTRL_AWADDR" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_S_AXI_CTRL_ADDR_WIDTH - 1) : 0]"/>
@@ -7333,7 +7343,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE HWVERSION="1.01.b" INSTANCE="SWs_8Bits" IPTYPE="PERIPHERAL" MHS_INDEX="13" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio">
+    <MODULE HWVERSION="1.01.b" INSTANCE="SWs_8Bits" IPTYPE="PERIPHERAL" MHS_INDEX="16" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio">
       <DESCRIPTION TYPE="SHORT">AXI General Purpose IO</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">General Purpose Input/Output (GPIO) core for the AXI bus.</DESCRIPTION>
       <DOCUMENTATION>
@@ -7534,7 +7544,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE HWVERSION="1.02.a" INSTANCE="IIC_FMC" IPTYPE="PERIPHERAL" MHS_INDEX="14" MODCLASS="PERIPHERAL" MODTYPE="axi_iic">
+    <MODULE HWVERSION="1.02.a" INSTANCE="IIC_FMC" IPTYPE="PERIPHERAL" MHS_INDEX="17" MODCLASS="PERIPHERAL" MODTYPE="axi_iic">
       <DESCRIPTION TYPE="SHORT">AXI IIC Interface</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">AXI interface to Philips I2C bus v2.1</DESCRIPTION>
       <DOCUMENTATION>
@@ -7751,7 +7761,7 @@
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
     </MODULE>
-    <MODULE HWVERSION="1.01.b" INSTANCE="BTNs_5Bits" IPTYPE="PERIPHERAL" MHS_INDEX="15" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio">
+    <MODULE HWVERSION="1.01.b" INSTANCE="BTNs_5Bits" IPTYPE="PERIPHERAL" MHS_INDEX="18" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio">
       <DESCRIPTION TYPE="SHORT">AXI General Purpose IO</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">General Purpose Input/Output (GPIO) core for the AXI bus.</DESCRIPTION>
       <DOCUMENTATION>
@@ -7951,6 +7961,779 @@
         </MEMRANGE>
       </MEMORYMAP>
       <LICENSEINFO ICON_NAME="ps_core_preferred"/>
+    </MODULE>
+    <MODULE HWVERSION="6.01.a" INSTANCE="v_cfa_0" IPTYPE="PERIPHERAL" MHS_INDEX="5" MODCLASS="PERIPHERAL" MODTYPE="v_cfa">
+      <DESCRIPTION TYPE="SHORT">Color Filter Array Interpolation</DESCRIPTION>
+      <DESCRIPTION TYPE="LONG">Interpolates color from a Bayer sampled image</DESCRIPTION>
+      <DOCUMENTATION>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=v_cfa;v=v6_01_a;d=pg002_v_cfa.pdf" TYPE="IP"/>
+      </DOCUMENTATION>
+      <PARAMETERS>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_S_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="1" NAME="C_S_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="12"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="2" NAME="C_S_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="3" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="4" NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="24"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="5" NAME="C_M_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="2"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="6" NAME="C_HAS_INTC_IF" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="7" NAME="C_HAS_AXI4_LITE" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="8" NAME="C_MAX_COLS" TYPE="INTEGER" VALUE="1920"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="9" NAME="C_ACTIVE_COLS" TYPE="INTEGER" VALUE="1920"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="10" NAME="C_ACTIVE_ROWS" TYPE="INTEGER" VALUE="1080"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="11" NAME="C_HAS_DEBUG" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="12" NAME="C_BAYER_PHASE" TYPE="INTEGER" VALUE="3"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="13" NAME="C_FAMILY" TYPE="STRING" VALUE="zynq"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="14" NAME="C_S_AXI_PROTOCOL" VALUE="AXI4LITE"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" CHANGEDBY="SYSTEM" MPD_INDEX="15" NAME="C_S_AXI_ID_WIDTH" TYPE="INTEGER" VALUE="12"/>
+        <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="16" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0xffffffff"/>
+        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="17" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="0x00000000"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="18" NAME="C_S_AXI_ADDR_WIDTH" TYPE="INTEGER" VALUE="9"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="19" NAME="C_S_AXI_DATA_WIDTH" TYPE="INTEGER" VALUE="32"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="20" NAME="C_S_AXI_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="50000000"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="21" NAME="C_M_AXIS_VIDEO_PROTOCOL" TYPE="STRING" VALUE="XIL_AXI_STREAM_VID_DATA"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="22" NAME="C_S_AXIS_VIDEO_PROTOCOL" TYPE="STRING" VALUE="XIL_AXI_STREAM_VID_DATA"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="8" LSB="0" MPD_INDEX="0" MSB="8" NAME="intc_if" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[8:0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT CLKFREQUENCY="148500000" DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="1" NAME="aclk" SIGIS="CLK" SIGNAME="vid_out_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_generator_1" PORT="CLKOUT0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="2" NAME="aclken" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="3" NAME="aresetn" SIGIS="RST" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="O" MPD_INDEX="4" NAME="irq" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tdata" DIR="I" ENDIAN="LITTLE" LEFT="7" LSB="0" MPD_INDEX="5" MSB="7" NAME="s_axis_video_tdata" RIGHT="0" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_S_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tready" DIR="O" MPD_INDEX="6" NAME="s_axis_video_tready" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tready">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tvalid" DIR="I" MPD_INDEX="7" NAME="s_axis_video_tvalid" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tvalid">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tlast" DIR="I" MPD_INDEX="8" NAME="s_axis_video_tlast" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tlast">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tuser" DIR="I" MPD_INDEX="9" NAME="s_axis_video_tuser" SIGNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO_tuser">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_vid_in_axi4s_0" PORT="m_axis_video_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tdata" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="10" MSB="23" NAME="m_axis_video_tdata" RIGHT="0" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_M_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axis_video_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tready" DIR="I" MPD_INDEX="11" NAME="m_axis_video_tready" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tready">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axis_video_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tvalid" DIR="O" MPD_INDEX="12" NAME="m_axis_video_tvalid" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tvalid">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axis_video_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tlast" DIR="O" MPD_INDEX="13" NAME="m_axis_video_tlast" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tlast">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axis_video_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tuser">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axis_video_tuser_sof"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" CLKFREQUENCY="50000000" DEF_SIGNAME="__BUS__" DIR="I" MPD_INDEX="15" NAME="s_axi_aclk" SIGIS="CLK" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="17" NAME="s_axi_aresetn" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARESET_OUT_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awaddr" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="18" MSB="8" NAME="s_axi_awaddr" RIGHT="0" SIGNAME="axi4lite_0_M_awaddr" VECFORMULA="[(C_S_AXI_ADDR_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awvalid" DIR="I" MPD_INDEX="19" NAME="s_axi_awvalid" SIGNAME="axi4lite_0_M_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awready" DIR="O" MPD_INDEX="20" NAME="s_axi_awready" SIGNAME="axi4lite_0_M_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wdata" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="21" MSB="31" NAME="s_axi_wdata" RIGHT="0" SIGNAME="axi4lite_0_M_wdata" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wstrb" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="22" MSB="3" NAME="s_axi_wstrb" RIGHT="0" SIGNAME="axi4lite_0_M_wstrb" VECFORMULA="[((C_S_AXI_DATA_WIDTH/8)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wvalid" DIR="I" MPD_INDEX="23" NAME="s_axi_wvalid" SIGNAME="axi4lite_0_M_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wready" DIR="O" MPD_INDEX="24" NAME="s_axi_wready" SIGNAME="axi4lite_0_M_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bresp" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="25" MSB="1" NAME="s_axi_bresp" RIGHT="0" SIGNAME="axi4lite_0_M_bresp" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bvalid" DIR="O" MPD_INDEX="26" NAME="s_axi_bvalid" SIGNAME="axi4lite_0_M_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bready" DIR="I" MPD_INDEX="27" NAME="s_axi_bready" SIGNAME="axi4lite_0_M_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_araddr" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="28" MSB="8" NAME="s_axi_araddr" RIGHT="0" SIGNAME="axi4lite_0_M_araddr" VECFORMULA="[(C_S_AXI_ADDR_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_arvalid" DIR="I" MPD_INDEX="29" NAME="s_axi_arvalid" SIGNAME="axi4lite_0_M_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_arready" DIR="O" MPD_INDEX="30" NAME="s_axi_arready" SIGNAME="axi4lite_0_M_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rdata" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="31" MSB="31" NAME="s_axi_rdata" RIGHT="0" SIGNAME="axi4lite_0_M_rdata" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rresp" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="32" MSB="1" NAME="s_axi_rresp" RIGHT="0" SIGNAME="axi4lite_0_M_rresp" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rvalid" DIR="O" MPD_INDEX="33" NAME="s_axi_rvalid" SIGNAME="axi4lite_0_M_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rready" DIR="I" MPD_INDEX="34" NAME="s_axi_rready" SIGNAME="axi4lite_0_M_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="1" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axis_video_tready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tlast"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="v_cfa_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="2" NAME="M_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tdata"/>
+            <PORTMAP DIR="I" PHYSICAL="m_axis_video_tready"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tlast"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axi4lite_0" BUSSTD="AXI" BUSSTD_PSF="AXI" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="0" NAME="S_AXI" PROTOCOL="AXI4LITE" TYPE="SLAVE">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_aclk"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_aresetn"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_awready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_wready"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_bready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_arready"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+      <MEMORYMAP>
+        <MEMRANGE BASEDECIMAL="4294967295" BASENAME="C_BASEADDR" BASEVALUE="0xffffffff" HIGHDECIMAL="0" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x00000000" MEMTYPE="REGISTER" MINSIZE="0x00200" SIZE="0" SIZEABRV="U">
+          <SLAVES>
+            <SLAVE BUSINTERFACE="S_AXI"/>
+          </SLAVES>
+        </MEMRANGE>
+      </MEMORYMAP>
+      <LICENSEINFO EXPIRESON="Does not expire" ICON_NAME="ps_pay_core_2" STATE="VALID" TYPE="Bought"/>
+    </MODULE>
+    <MODULE HWVERSION="6.01.a" INSTANCE="v_rgb2ycrcb_0" IPTYPE="PERIPHERAL" MHS_INDEX="3" MODCLASS="PERIPHERAL" MODTYPE="v_rgb2ycrcb">
+      <DESCRIPTION TYPE="SHORT">RGB to YCrCb Color-Space Converter</DESCRIPTION>
+      <DESCRIPTION TYPE="LONG">Converts RGB video to YCrCb video</DESCRIPTION>
+      <DOCUMENTATION>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=v_rgb2ycrcb;v=v6_01_a;d=pg013_v_rgb2ycrcb.pdf" TYPE="IP"/>
+      </DOCUMENTATION>
+      <PARAMETERS>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_HAS_AXI4_LITE" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="1" NAME="C_HAS_DEBUG" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="2" NAME="C_HAS_INTC_IF" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="3" NAME="C_S_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="4" NAME="C_S_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="2"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="5" NAME="C_S_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="24"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="6" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="7" NAME="C_M_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="8" NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="24"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="9" NAME="C_ACTIVE_ROWS" TYPE="INTEGER" VALUE="1080"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="10" NAME="C_ACTIVE_COLS" TYPE="INTEGER" VALUE="1920"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="11" NAME="C_MAX_COLS" TYPE="INTEGER" VALUE="1920"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="12" NAME="YOFFSET" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="13" NAME="CBOFFSET" TYPE="INTEGER" VALUE="128"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="14" NAME="CROFFSET" TYPE="INTEGER" VALUE="128"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="15" NAME="C_YOFFSET" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="16" NAME="C_CBOFFSET" TYPE="INTEGER" VALUE="128"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="17" NAME="C_CROFFSET" TYPE="INTEGER" VALUE="128"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="18" NAME="C_HAS_CLIP" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="19" NAME="C_HAS_CLAMP" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="20" NAME="YMAX" TYPE="INTEGER" VALUE="255"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="21" NAME="CBMAX" TYPE="INTEGER" VALUE="255"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="22" NAME="CRMAX" TYPE="INTEGER" VALUE="255"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="23" NAME="C_YMAX" TYPE="INTEGER" VALUE="240"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="24" NAME="C_CBMAX" TYPE="INTEGER" VALUE="240"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="25" NAME="C_CRMAX" TYPE="INTEGER" VALUE="240"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="26" NAME="YMIN" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="27" NAME="CBMIN" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="28" NAME="CRMIN" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="29" NAME="C_YMIN" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="30" NAME="C_CBMIN" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="31" NAME="C_CRMIN" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="32" NAME="ACOEF" TYPE="REAL" VALUE="0.299"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="33" NAME="BCOEF" TYPE="REAL" VALUE="0.114"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="34" NAME="CCOEF" TYPE="REAL" VALUE="0.713"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="35" NAME="DCOEF" TYPE="REAL" VALUE="0.564"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="36" NAME="C_ACOEF" TYPE="INTEGER" VALUE="19595"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="37" NAME="C_BCOEF" TYPE="INTEGER" VALUE="7471"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="38" NAME="C_CCOEF" TYPE="INTEGER" VALUE="46727"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="39" NAME="C_DCOEF" TYPE="INTEGER" VALUE="36962"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="40" NAME="Standard_Sel" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="41" NAME="Input_Range" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="42" NAME="C_S_AXI_PROTOCOL" VALUE="AXI4LITE"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" CHANGEDBY="SYSTEM" MPD_INDEX="43" NAME="C_S_AXI_ID_WIDTH" TYPE="INTEGER" VALUE="12"/>
+        <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="44" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0xffffffff"/>
+        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="45" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="0x00000000"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="46" NAME="C_S_AXI_ADDR_WIDTH" TYPE="INTEGER" VALUE="9"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="47" NAME="C_S_AXI_DATA_WIDTH" TYPE="INTEGER" VALUE="32"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="48" NAME="C_S_AXI_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="50000000"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="49" NAME="C_M_AXIS_VIDEO_PROTOCOL" TYPE="STRING" VALUE="XIL_AXI_STREAM_VID_DATA"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="50" NAME="C_S_AXIS_VIDEO_PROTOCOL" TYPE="STRING" VALUE="XIL_AXI_STREAM_VID_DATA"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="51" NAME="C_FAMILY" TYPE="STRING" VALUE="zynq"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT BUS="S_AXI" CLKFREQUENCY="50000000" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="15" NAME="s_axi_aclk" SIGIS="CLK" SIGNAME="axi4lite_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO:M_AXIS_VIDEO" DEF_SIGNAME="__BUS__" DIR="I" MPD_INDEX="0" NAME="aclk" SIGIS="CLK" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="1" NAME="aclken" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="2" NAME="aresetn" SIGIS="RST" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="O" MPD_INDEX="3" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="8" LSB="0" MPD_INDEX="4" MSB="8" NAME="intc_if" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[8:0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tdata" DIR="I" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="5" MSB="23" NAME="s_axis_video_tdata" RIGHT="0" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_S_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="m_axis_video_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tready" DIR="O" MPD_INDEX="6" NAME="s_axis_video_tready" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tready">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="m_axis_video_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tvalid" DIR="I" MPD_INDEX="7" NAME="s_axis_video_tvalid" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tvalid">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="m_axis_video_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tlast" DIR="I" MPD_INDEX="8" NAME="s_axis_video_tlast" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tlast">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="m_axis_video_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tuser" DIR="I" MPD_INDEX="9" NAME="s_axis_video_tuser_sof" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tuser">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_cfa_0" PORT="m_axis_video_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tdata" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="10" MSB="23" NAME="m_axis_video_tdata" RIGHT="0" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_M_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cresample_0" PORT="s_axis_video_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tready" DIR="I" MPD_INDEX="11" NAME="m_axis_video_tready" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tready">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cresample_0" PORT="s_axis_video_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tvalid" DIR="O" MPD_INDEX="12" NAME="m_axis_video_tvalid" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tvalid">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cresample_0" PORT="s_axis_video_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tlast" DIR="O" MPD_INDEX="13" NAME="m_axis_video_tlast" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tlast">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cresample_0" PORT="s_axis_video_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser_sof" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tuser">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cresample_0" PORT="s_axis_video_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_aresetn" DIR="I" MPD_INDEX="17" NAME="s_axi_aresetn" SIGIS="RST" SIGNAME="axi4lite_0_M_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARESET_OUT_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awaddr" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="18" MSB="8" NAME="s_axi_awaddr" RIGHT="0" SIGNAME="axi4lite_0_M_awaddr" VECFORMULA="[(C_S_AXI_ADDR_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awvalid" DIR="I" MPD_INDEX="19" NAME="s_axi_awvalid" SIGNAME="axi4lite_0_M_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awready" DIR="O" MPD_INDEX="20" NAME="s_axi_awready" SIGNAME="axi4lite_0_M_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wdata" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="21" MSB="31" NAME="s_axi_wdata" RIGHT="0" SIGNAME="axi4lite_0_M_wdata" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wstrb" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="22" MSB="3" NAME="s_axi_wstrb" RIGHT="0" SIGNAME="axi4lite_0_M_wstrb" VECFORMULA="[((C_S_AXI_DATA_WIDTH/8)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wvalid" DIR="I" MPD_INDEX="23" NAME="s_axi_wvalid" SIGNAME="axi4lite_0_M_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wready" DIR="O" MPD_INDEX="24" NAME="s_axi_wready" SIGNAME="axi4lite_0_M_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bresp" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="25" MSB="1" NAME="s_axi_bresp" RIGHT="0" SIGNAME="axi4lite_0_M_bresp" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bvalid" DIR="O" MPD_INDEX="26" NAME="s_axi_bvalid" SIGNAME="axi4lite_0_M_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bready" DIR="I" MPD_INDEX="27" NAME="s_axi_bready" SIGNAME="axi4lite_0_M_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_araddr" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="28" MSB="8" NAME="s_axi_araddr" RIGHT="0" SIGNAME="axi4lite_0_M_araddr" VECFORMULA="[(C_S_AXI_ADDR_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_arvalid" DIR="I" MPD_INDEX="29" NAME="s_axi_arvalid" SIGNAME="axi4lite_0_M_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_arready" DIR="O" MPD_INDEX="30" NAME="s_axi_arready" SIGNAME="axi4lite_0_M_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rdata" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="31" MSB="31" NAME="s_axi_rdata" RIGHT="0" SIGNAME="axi4lite_0_M_rdata" VECFORMULA="[(C_S_AXI_DATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rresp" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="32" MSB="1" NAME="s_axi_rresp" RIGHT="0" SIGNAME="axi4lite_0_M_rresp" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rvalid" DIR="O" MPD_INDEX="33" NAME="s_axi_rvalid" SIGNAME="axi4lite_0_M_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rready" DIR="I" MPD_INDEX="34" NAME="s_axi_rready" SIGNAME="axi4lite_0_M_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi4lite_0" BUSSTD="AXI" BUSSTD_PSF="AXI" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="S_AXI" PROTOCOL="AXI4LITE" TYPE="SLAVE">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_aclk"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_aresetn"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_awready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_wready"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_bready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_arready"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="v_cfa_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="1" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="aclk"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axis_video_tready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tlast"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tuser_sof"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="2" NAME="M_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="aclk"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tdata"/>
+            <PORTMAP DIR="I" PHYSICAL="m_axis_video_tready"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tlast"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tuser_sof"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+      <MEMORYMAP>
+        <MEMRANGE BASEDECIMAL="4294967295" BASENAME="C_BASEADDR" BASEVALUE="0xffffffff" HIGHDECIMAL="0" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x00000000" MEMTYPE="REGISTER" MINSIZE="0x00200" SIZE="0" SIZEABRV="U">
+          <SLAVES>
+            <SLAVE BUSINTERFACE="S_AXI"/>
+          </SLAVES>
+        </MEMRANGE>
+      </MEMORYMAP>
+      <LICENSEINFO ICON_NAME="ps_core_preferred"/>
+    </MODULE>
+    <MODULE HWVERSION="3.01.a" INSTANCE="v_cresample_0" IPTYPE="PERIPHERAL" MHS_INDEX="4" MODCLASS="PERIPHERAL" MODTYPE="v_cresample">
+      <DESCRIPTION TYPE="SHORT">Chroma Resampler</DESCRIPTION>
+      <DESCRIPTION TYPE="LONG">Converts between chroma subsampling formats</DESCRIPTION>
+      <DOCUMENTATION>
+        <DOCUMENT SOURCE="C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/v_cresample_v3_01_a/doc/pg012_v_cresample.pdf" TYPE="IP"/>
+      </DOCUMENTATION>
+      <PARAMETERS>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_HAS_AXI4_LITE" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="1" NAME="C_HAS_DEBUG" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="2" NAME="C_HAS_INTC_IF" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="3" NAME="C_S_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="4" NAME="C_S_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="5" NAME="C_S_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="UPDATE" MPD_INDEX="6" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="7" NAME="C_M_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="8" NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="24"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="9" NAME="C_ACTIVE_ROWS" TYPE="INTEGER" VALUE="1080"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="10" NAME="C_ACTIVE_COLS" TYPE="INTEGER" VALUE="1920"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="11" NAME="C_MAX_COLS" TYPE="INTEGER" VALUE="1920"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="12" NAME="C_CHROMA_PARITY" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="13" NAME="C_FIELD_PARITY" TYPE="INTEGER" VALUE="1"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="14" NAME="C_INTERLACED" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="15" NAME="C_NUM_H_TAPS" TYPE="INTEGER" VALUE="2"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="16" NAME="C_NUM_V_TAPS" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="17" NAME="C_CONVERT_TYPE" TYPE="INTEGER" VALUE="0"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="18" NAME="C_COEF_WIDTH" TYPE="INTEGER" VALUE="16"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="19" NAME="C_S_AXI_PROTOCOL" VALUE="AXI4LITE"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" CHANGEDBY="SYSTEM" MPD_INDEX="20" NAME="C_S_AXI_ID_WIDTH" TYPE="INTEGER" VALUE="12"/>
+        <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="21" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0xffffffff"/>
+        <PARAMETER ADDRESS="HIGH" ADDR_TYPE="REGISTER" ASSIGNMENT="REQUIRE" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="22" NAME="C_HIGHADDR" TYPE="std_logic_vector" VALUE="0x00000000"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="23" NAME="C_S_AXI_ADDR_WIDTH" TYPE="INTEGER" VALUE="9"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="24" NAME="C_S_AXI_DATA_WIDTH" TYPE="INTEGER" VALUE="32"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL_UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="25" NAME="C_S_AXI_CLK_FREQ_HZ" TYPE="INTEGER" VALUE="50000000"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="26" NAME="C_M_AXIS_VIDEO_PROTOCOL" TYPE="STRING" VALUE="XIL_AXI_STREAM_VID_DATA"/>
+        <PARAMETER ASSIGNMENT="CONSTANT" MPD_INDEX="27" NAME="C_S_AXIS_VIDEO_PROTOCOL" TYPE="STRING" VALUE="XIL_AXI_STREAM_VID_DATA"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="SYSTEM" MPD_INDEX="28" NAME="C_FAMILY" TYPE="STRING" VALUE="zynq"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT BUS="S_AXI" CLKFREQUENCY="50000000" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="15" NAME="s_axi_aclk" SIGIS="CLK" SIGNAME="axi4lite_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="148500000" DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="0" NAME="aclk" SIGIS="CLK" SIGNAME="vid_out_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clock_generator_1" PORT="CLKOUT0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="1" NAME="aclken" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="2" NAME="aresetn" SIGIS="RST" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="O" MPD_INDEX="3" NAME="irq" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="8" LSB="0" MPD_INDEX="4" MSB="8" NAME="intc_if" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[8:0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tdata" DIR="I" ENDIAN="LITTLE" LEFT="15" LSB="0" MPD_INDEX="5" MSB="15" NAME="s_axis_video_tdata" RIGHT="0" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tdata" VECFORMULA="[(C_S_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="m_axis_video_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tready" DIR="O" MPD_INDEX="6" NAME="s_axis_video_tready" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tready">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="m_axis_video_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tvalid" DIR="I" MPD_INDEX="7" NAME="s_axis_video_tvalid" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tvalid">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="m_axis_video_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tlast" DIR="I" MPD_INDEX="8" NAME="s_axis_video_tlast" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tlast">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="m_axis_video_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tuser" DIR="I" MPD_INDEX="9" NAME="s_axis_video_tuser" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tuser">
+          <CONNECTIONS>
+            <CONNECTION BUSINTERFACE="[M_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="m_axis_video_tuser_sof"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_tdata" DIR="O" ENDIAN="LITTLE" LEFT="23" LSB="0" MPD_INDEX="10" MSB="23" NAME="m_axis_video_tdata" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[(C_M_AXIS_VIDEO_TDATA_WIDTH-1):0]">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_tready" DIR="I" MPD_INDEX="11" NAME="m_axis_video_tready" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_tvalid" DIR="O" MPD_INDEX="12" NAME="m_axis_video_tvalid" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_tlast" DIR="O" MPD_INDEX="13" NAME="m_axis_video_tlast" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="__NOC__">
+          <CONNECTIONS/>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="17" NAME="s_axi_aresetn" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARESET_OUT_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awaddr" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="18" MSB="8" NAME="s_axi_awaddr" RIGHT="0" SIGNAME="axi4lite_0_M_awaddr" VECFORMULA="[(9-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awvalid" DIR="I" MPD_INDEX="19" NAME="s_axi_awvalid" SIGNAME="axi4lite_0_M_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_awready" DIR="O" MPD_INDEX="20" NAME="s_axi_awready" SIGNAME="axi4lite_0_M_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wdata" DIR="I" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="21" MSB="31" NAME="s_axi_wdata" RIGHT="0" SIGNAME="axi4lite_0_M_wdata" VECFORMULA="[(32-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wstrb" DIR="I" ENDIAN="LITTLE" LEFT="3" LSB="0" MPD_INDEX="22" MSB="3" NAME="s_axi_wstrb" RIGHT="0" SIGNAME="axi4lite_0_M_wstrb" VECFORMULA="[((32/8)-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wvalid" DIR="I" MPD_INDEX="23" NAME="s_axi_wvalid" SIGNAME="axi4lite_0_M_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_wready" DIR="O" MPD_INDEX="24" NAME="s_axi_wready" SIGNAME="axi4lite_0_M_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bresp" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="25" MSB="1" NAME="s_axi_bresp" RIGHT="0" SIGNAME="axi4lite_0_M_bresp" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bvalid" DIR="O" MPD_INDEX="26" NAME="s_axi_bvalid" SIGNAME="axi4lite_0_M_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_bready" DIR="I" MPD_INDEX="27" NAME="s_axi_bready" SIGNAME="axi4lite_0_M_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_araddr" DIR="I" ENDIAN="LITTLE" LEFT="8" LSB="0" MPD_INDEX="28" MSB="8" NAME="s_axi_araddr" RIGHT="0" SIGNAME="axi4lite_0_M_araddr" VECFORMULA="[(9-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_arvalid" DIR="I" MPD_INDEX="29" NAME="s_axi_arvalid" SIGNAME="axi4lite_0_M_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_arready" DIR="O" MPD_INDEX="30" NAME="s_axi_arready" SIGNAME="axi4lite_0_M_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rdata" DIR="O" ENDIAN="LITTLE" LEFT="31" LSB="0" MPD_INDEX="31" MSB="31" NAME="s_axi_rdata" RIGHT="0" SIGNAME="axi4lite_0_M_rdata" VECFORMULA="[(32-1):0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rresp" DIR="O" ENDIAN="LITTLE" LEFT="1" LSB="0" MPD_INDEX="32" MSB="1" NAME="s_axi_rresp" RIGHT="0" SIGNAME="axi4lite_0_M_rresp" VECFORMULA="[1:0]">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rvalid" DIR="O" MPD_INDEX="33" NAME="s_axi_rvalid" SIGNAME="axi4lite_0_M_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_rready" DIR="I" MPD_INDEX="34" NAME="s_axi_rready" SIGNAME="axi4lite_0_M_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi4lite_0" PORT="M_AXI_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="axi4lite_0" BUSSTD="AXI" BUSSTD_PSF="AXI" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="0" NAME="S_AXI" PROTOCOL="AXI4LITE" TYPE="SLAVE">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_aclk"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_aresetn"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_awready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_wvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_wready"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_bready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_arready"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="1" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axis_video_tready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tlast"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" BUSSTD="AXIS" BUSSTD_PSF="AXIS" MPD_INDEX="2" NAME="M_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tdata"/>
+            <PORTMAP DIR="I" PHYSICAL="m_axis_video_tready"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tlast"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+      <MEMORYMAP>
+        <MEMRANGE BASEDECIMAL="4294967295" BASENAME="C_BASEADDR" BASEVALUE="0xffffffff" HIGHDECIMAL="0" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x00000000" MEMTYPE="REGISTER" MINSIZE="0x00200" SIZE="0" SIZEABRV="U">
+          <SLAVES>
+            <SLAVE BUSINTERFACE="S_AXI"/>
+          </SLAVES>
+        </MEMRANGE>
+      </MEMORYMAP>
+      <LICENSEINFO EXPIRESON="Does not expire" ICON_NAME="ps_pay_core_2" STATE="VALID" TYPE="Bought"/>
     </MODULE>
   </MODULES>
 
