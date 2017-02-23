@@ -34,6 +34,7 @@
 #include "xvtc.h"
 #include "xaxivdma.h"
 #include "xtpg_app.h"
+#include "xil_cache.h"
 
 
 // Constants for library code

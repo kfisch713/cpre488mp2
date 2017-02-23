@@ -2,7 +2,7 @@
 ##
 ##  Xilinx, Inc. 2006            www.xilinx.com
 ############################################################################
-##  File name :       C:/cpre488mp2/system/implementation/processing_system7_0_wrapper/processing_system7_0.xdc
+##  File name :       C:/temp/cpre488mp2/system/implementation/processing_system7_0_wrapper/processing_system7_0.xdc
 ##
 ##  Details :     Constraints file
 ##                    FPGA family:       zynq

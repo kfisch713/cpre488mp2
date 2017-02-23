@@ -25,7 +25,8 @@ src/camera_app.d: ../src/camera_app.c ../src/camera_app.h \
  ../../system_bsp/ps7_cortexa9_0/include/xaxivdma_i.h \
  ../../system_bsp/ps7_cortexa9_0/include/xdebug.h ../src/xtpg_app.h \
  ../../system_bsp/ps7_cortexa9_0/include/xstatus.h \
- ../../system_bsp/ps7_cortexa9_0/include/xil_io.h
+ ../../system_bsp/ps7_cortexa9_0/include/xil_io.h \
+ ../../system_bsp/ps7_cortexa9_0/include/xil_cache.h
 
 ../src/camera_app.h:
 
@@ -84,3 +85,5 @@ src/camera_app.d: ../src/camera_app.c ../src/camera_app.h \
 ../../system_bsp/ps7_cortexa9_0/include/xstatus.h:
 
 ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:
+
+../../system_bsp/ps7_cortexa9_0/include/xil_cache.h:

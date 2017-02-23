@@ -1,75 +1,75 @@
 WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 66 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 86 
+   C:\temp\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 105 
+   C:\temp\cpre488mp2\system\system.mhs line 105 
 WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 122 
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
+   C:\temp\cpre488mp2\system\system.mhs line 310 
 WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 66 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 86 
+   C:\temp\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 105 
+   C:\temp\cpre488mp2\system\system.mhs line 105 
 WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 122 
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
+   C:\temp\cpre488mp2\system\system.mhs line 310 
 WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 66 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 86 
+   C:\temp\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 105 
+   C:\temp\cpre488mp2\system\system.mhs line 105 
 WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 122 
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
+   C:\temp\cpre488mp2\system\system.mhs line 310 
 WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 66 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 86 
+   C:\temp\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 105 
+   C:\temp\cpre488mp2\system\system.mhs line 105 
 WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 122 
 WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
+   Superseded core for architecture 'zynq' -
+   C:\temp\cpre488mp2\system\system.mhs line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
+   C:\temp\cpre488mp2\system\system.mhs line 310 
 WARNING:EDK:2486 - The bitwidth 52 of new value 0xc00000000fe81 is greater than
    32
 WARNING:EDK:4131 - IPNAME: ps7_usb_0, PROPERTY: C_INTERCONNECT_M_AXI_BASE_ID -

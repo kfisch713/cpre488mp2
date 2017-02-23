@@ -179,9 +179,9 @@ vhdl proc_common_v3_00_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcore
 vhdl axi_lite_ipif_v1_00_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_00_a/hdl/vhdl/address_decoder.vhd
 vhdl axi_lite_ipif_v1_00_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_00_a/hdl/vhdl/slave_attachment.vhd
 vhdl axi_lite_ipif_v1_00_a C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_00_a/hdl/vhdl/axi_lite_ipif.vhd
-vhdl axi_tpg_v2_00_a C:\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd
-vhdl axi_tpg_v2_00_a C:\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/zplate_pkg.vhd
-vhdl axi_tpg_v2_00_a C:\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd
-vhdl axi_tpg_v2_00_a C:\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd
-vhdl axi_tpg_v2_00_a C:\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd
+vhdl axi_tpg_v2_00_a C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd
+vhdl axi_tpg_v2_00_a C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/zplate_pkg.vhd
+vhdl axi_tpg_v2_00_a C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd
+vhdl axi_tpg_v2_00_a C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd
+vhdl axi_tpg_v2_00_a C:\temp\cpre488mp2\repository\ProcessorIPLib\pcores\axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd
 vhdl work ../hdl/system_axi_tpg_0_wrapper.vhd
