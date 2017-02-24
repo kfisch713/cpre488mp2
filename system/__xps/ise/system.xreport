@@ -1,9 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2017-02-23T13:35:38</DateModified>
   <ModuleName>system</ModuleName>
   <SummaryTimeStamp>2017-02-23T13:35:38</SummaryTimeStamp>
+=======
+  <DateModified>2017-02-20T15:01:29</DateModified>
+  <ModuleName>system</ModuleName>
+  <SummaryTimeStamp>2017-02-20T15:01:29</SummaryTimeStamp>
+>>>>>>> de6db62d02778591c060903efebacac7cae8145f
   <SavedFilePath>C:/cpre488mp2/system/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
   <SavedFilterFilePath>C:/cpre488mp2/system/__xps/ise</SavedFilterFilePath>
