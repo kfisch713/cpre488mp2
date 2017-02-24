@@ -42,7 +42,7 @@ static int FRAME_LEN;
 /* Added for camera_interfaceing */
 #define MAX_RAW_IMAGES 32
 uint16_t *raw_images[MAX_RAW_IMAGES];
-static int NUM_SAVED_IMAGES = -1;
+static int NUM_SAVED_IMAGES = 0;
 static unsigned int curr_image_index = 0;
 
 static Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
@@ -79,9 +79,6 @@ enum color {
 
 // Main function. Initializes the devices and configures VDMA
 int main() {
-
-	printf("made it\n");
-
 	camera_config_init(&camera_config);
 	fmc_imageon_enable(&camera_config);
 	camera_interface_init();
@@ -92,8 +89,6 @@ int main() {
 
 // Initialize the camera configuration data structure
 void camera_config_init(camera_config_t *config) {
-	printf("Made it camera_config_init\r\n");
-
     config->uBaseAddr_IIC_FmcIpmi = XPAR_IIC_FMC_BASEADDR;
     config->uBaseAddr_IIC_FmcImageon = XPAR_FMC_IMAGEON_IIC_0_BASEADDR;
     config->uBaseAddr_VITA_Receiver = XPAR_FMC_IMAGEON_VITA_RECEIVER_0_BASEADDR;
@@ -140,21 +135,27 @@ static void camera_interface(camera_config_t *config) {
 	parkptr |= 0x1;
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET, parkptr);
 
-	clear_circ_park(config);
-	enable_circ_park(config);
+	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
+	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
+	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
+	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
+	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
+	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);
+	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
+	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);
 
 	// Pointers to the S2MM memory frame and M2SS memory frame
 	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
 	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
 
-	int i, j, curr_mode;
+	int i, curr_mode;
 
 	while(!SW(1)) {
 		curr_mode = SW(0);
-		if (curr_mode == MODE_PASS_THROUGH) { // HARDWARE PASS-THROUGH mode
-			// Do nothing for right now.
+		if (curr_mode == MODE_PASS_THROUGH) {
 			if (BTN(BTN_C)) {
 				if (NUM_SAVED_IMAGES < MAX_RAW_IMAGES) {
+					printf("saving image\n");
 					clear_circ_park(config);
 					uint16_t * raw_image = raw_images[curr_image_index];
 
@@ -162,34 +163,54 @@ static void camera_interface(camera_config_t *config) {
 						raw_image[i] = pS2MM_Mem[i];
 						pMM2S_Mem[i] = pS2MM_Mem[i];
 					}
-					usleep(30000);
+
+//					printf("sleeping\n");
+//					sleep(10);
+//					printf("waking\n");
+
+					NUM_SAVED_IMAGES++;
+					enable_circ_park(config);
+					printf("returning to loop, now with %d saved images\n", NUM_SAVED_IMAGES);
 				}
-				enable_circ_park(config);
 			}
 		} else { // PLAY BACK mode
-			clear_circ_park(config);
+			printf("entering play back mode\n");
+			//clear_circ_park(config);
 			while(curr_mode == MODE_PLAY_BACK) {
 				// update curr_mode
-				curr_mode = *SWs;
+				curr_mode = SW(0);
 
 
 			}
-			enable_circ_park(config);
+			//enable_circ_park(config);
 		}
 	}
 	return;
 }
 
 static void clear_circ_park(camera_config_t *config) {
+	// Grab the DMA parkptr, and update it to ensure that when parked, the S2MM side is on frame 0, and the MM2S side on frame 1
+		parkptr = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET);
+		parkptr &= ~XAXIVDMA_PARKPTR_READREF_MASK;
+		parkptr &= ~XAXIVDMA_PARKPTR_WRTREF_MASK;
+		parkptr |= 0x1;
+		XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET, parkptr);
+
 	// Grab the DMA Control Registers, and clear circular park mode.
 	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
-
 }
 
 static void enable_circ_park(camera_config_t * config) {
+	// Grab the DMA parkptr, and update it to ensure that when parked, the S2MM side is on frame 0, and the MM2S side on frame 1
+		parkptr = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET);
+		parkptr &= ~XAXIVDMA_PARKPTR_READREF_MASK;
+		parkptr &= ~XAXIVDMA_PARKPTR_WRTREF_MASK;
+		parkptr |= 0x1;
+		XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET, parkptr);
+
 	// Grab the DMA Control Registers, and re-enable circular park mode.
 	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);

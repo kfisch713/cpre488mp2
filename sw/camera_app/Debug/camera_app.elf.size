@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-  95214	   4072	2122368	2221654	 21e656	camera_app.elf
+ 122368	   4200	2122400	2248968	 225108	camera_app.elf

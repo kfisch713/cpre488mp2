@@ -41,7 +41,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" partName="camera_app.c" path="U:/Documents/cpre488mp2/sw/camera_app/src/camera_app.c" title="camera_app.c" tooltip="camera_app/src/camera_app.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camera_app/src/camera_app.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4873" selectionTopPixel="2433"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5601" selectionTopPixel="2260"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="C:/cpre488mp2/sw/system_bsp/ps7_cortexa9_0/include/xparameters.h" title="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
@@ -63,8 +63,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (1 item)"/>
 <category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Warnings (9 items)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="442" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1144"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -184,7 +185,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@397129d9" ratio="0.79591835" ratioLeft="741" ratioRight="190" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@397129d9" ratio="0.63480127" ratioLeft="591" ratioRight="340" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -207,40 +208,9 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/fmc_imageon_utils.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
 </editors>
-<item historyLabel="camera_app.c" index="0">
-<position/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="1854" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="9724" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="8370" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position/>
-</item>
-<item historyLabel="xparameters.h" index="1">
-<position info="not_deleted" x="7371" y="23"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position/>
-</item>
-<item historyLabel="xparameters.h" index="1">
-<position info="not_deleted" x="7998" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="8690" y="0"/>
-</item>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="8666" y="0"/>
 </item>
@@ -265,13 +235,13 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="4857" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="2">
+<item historyLabel="fmc_imageon_utils.c" index="1">
 <position info="not_deleted" x="80" y="0"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="5003" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="2">
+<item historyLabel="fmc_imageon_utils.c" index="1">
 <position info="not_deleted" x="80" y="0"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
@@ -325,13 +295,13 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="4286" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="3">
+<item historyLabel="xparameters.h" index="2">
 <position info="not_deleted" x="7998" y="0"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="1746" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="3">
+<item historyLabel="xparameters.h" index="2">
 <position info="not_deleted" x="7371" y="23"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
@@ -358,8 +328,38 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="5172" y="0"/>
 </item>
-<item active="true" historyLabel="camera_app.c" index="0">
+<item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="5210" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5568" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5571" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5994" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5822" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5803" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5806" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5988" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="6068" y="0"/>
+</item>
+<item active="true" historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="6183" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
