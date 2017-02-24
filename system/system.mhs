@@ -121,45 +121,28 @@ END
 BEGIN v_rgb2ycrcb
  PARAMETER INSTANCE = v_rgb2ycrcb_0
  PARAMETER HW_VER = 6.01.a
-<<<<<<< HEAD
  PARAMETER C_BASEADDR = 0x52120000
  PARAMETER C_HIGHADDR = 0x5212FFFF
  PARAMETER Input_Range = 2
  PARAMETER Standard_Sel = 3
-=======
- PARAMETER C_BASEADDR = 0xffffffff
- PARAMETER C_HIGHADDR = 0x00000000
- PARAMETER Input_Range = 0
->>>>>>> de6db62d02778591c060903efebacac7cae8145f
  BUS_INTERFACE S_AXI = axi4lite_0
  BUS_INTERFACE M_AXIS_VIDEO = v_rgb2ycrcb_0_M_AXIS_VIDEO
  BUS_INTERFACE S_AXIS_VIDEO = v_cfa_0_M_AXIS_VIDEO
  PORT s_axi_aclk = axi4lite_0_clk
  PORT aclk = vid_out_clk
-<<<<<<< HEAD
  PORT s_axi_aclken = net_vcc
  PORT aresetn = net_vcc
  PORT aclken = net_vcc
-=======
->>>>>>> de6db62d02778591c060903efebacac7cae8145f
 END
 
 BEGIN v_cresample
  PARAMETER INSTANCE = v_cresample_0
  PARAMETER HW_VER = 3.01.a
-<<<<<<< HEAD
  PARAMETER C_BASEADDR = 0x52130000
  PARAMETER C_HIGHADDR = 0x5213FFFF
  PARAMETER C_S_AXIS_VIDEO_FORMAT = 1
  PARAMETER C_M_AXIS_VIDEO_FORMAT = 0
  PARAMETER C_CONVERT_TYPE = 2
-=======
- PARAMETER C_BASEADDR = 0xffffffff
- PARAMETER C_HIGHADDR = 0x00000000
- PARAMETER C_S_AXIS_VIDEO_FORMAT = 0
- PARAMETER C_M_AXIS_VIDEO_FORMAT = 1
- PARAMETER C_CONVERT_TYPE = 0
->>>>>>> de6db62d02778591c060903efebacac7cae8145f
  BUS_INTERFACE S_AXI = axi4lite_0
  BUS_INTERFACE S_AXIS_VIDEO = v_rgb2ycrcb_0_M_AXIS_VIDEO
  BUS_INTERFACE M_AXIS_VIDEO = v_cresample_0_M_AXIS_VIDEO
@@ -405,10 +388,7 @@ BEGIN axi_vdma
  BUS_INTERFACE M_AXI_MM2S = axi_interconnect_1
  BUS_INTERFACE M_AXI_S2MM = axi_interconnect_1
  BUS_INTERFACE S_AXIS_S2MM = v_cresample_0_M_AXIS_VIDEO
-<<<<<<< HEAD
  BUS_INTERFACE M_AXIS_MM2S = axi_vdma_0_M_AXIS_MM2S
-=======
->>>>>>> de6db62d02778591c060903efebacac7cae8145f
  PORT s_axi_lite_aclk = axi4lite_0_clk
  PORT m_axi_mm2s_aclk = vid_out_clk
  PORT m_axi_s2mm_aclk = vid_out_clk

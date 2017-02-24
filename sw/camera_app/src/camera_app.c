@@ -147,50 +147,7 @@ static void camera_interface(camera_config_t *config) {
 	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
 	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
 
-<<<<<<< HEAD
 	int i, j, curr_mode;
-=======
-	uint16_t R, G, B;
-	uint16_t Y, CB, CR;
-
-	printf("Made it before loop\r\n");
-
-	// Run for 1000 frames before going back to HW mode
-	for (j = 0; j < 1000; j++) {
-		for (i = 0 ; i < WIDTH*HEIGHT; i++) {
-			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1] % 255; // made it all very green!
-			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i+j-1]; // makes the image slowly shift to the right and wrap around.
-			//pMM2S_Mem[i] = pS2MM_Mem[i];
-
-			/* YCbYCr, little endian */
-			//This is the software bayer filter. It isn't working. Can't get any color to display. Try setting a constant color. -Kyle
-			/*
-			switch (color_lut[i]) {
-				case RED:
-					R = pS2MM_Mem[i];
-					G = average_vert(i, pS2MM_Mem);
-					B = average_x(i, pS2MM_Mem);
-					break;
-				case GREEN:
-					G = pS2MM_Mem[i];
-					if ( (i+1 < FRAME_LEN) && (color_lut[i+1] == RED)) {
-						R = average_hor(i, pS2MM_Mem);
-						B = average_vert(i, pS2MM_Mem);
-					} else if ( (i-1 > 0) && (color_lut[i-1] == BLUE)){
-						R = average_vert(i, pS2MM_Mem);
-						B = average_hor(i, pS2MM_Mem);
-					}
-					break;
-				case BLUE:
-					R = average_x(i, pS2MM_Mem);
-					G = average_vert(i, pS2MM_Mem);
-					B = pS2MM_Mem[i];
-					break;
-			}
-//			R = 0;
-//			G = 0;
-//			B = 255;
->>>>>>> de6db62d02778591c060903efebacac7cae8145f
 
 	while(!SW(1)) {
 		curr_mode = SW(0);
