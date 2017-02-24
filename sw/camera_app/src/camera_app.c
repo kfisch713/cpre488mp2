@@ -32,6 +32,7 @@ static void camera_interface_free();
 static void camera_interface();
 static void clear_circ_park(camera_config_t *);
 static void enable_circ_park(camera_config_t *);
+static void display_raw_image(unsigned int index);
 camera_config_t camera_config;
 
 static int HEIGHT;
@@ -42,7 +43,7 @@ static int FRAME_LEN;
 #define MAX_RAW_IMAGES 32
 uint16_t *raw_images[MAX_RAW_IMAGES];
 static int NUM_SAVED_IMAGES = -1;
-static curr_image_index = 0;
+static unsigned int curr_image_index = 0;
 
 static Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
 static Xuint32 parkptr;
@@ -75,7 +76,6 @@ enum color {
     GREEN,
     BLUE
 };
-
 
 // Main function. Initializes the devices and configures VDMA
 int main() {
@@ -155,12 +155,16 @@ static void camera_interface(camera_config_t *config) {
 			// Do nothing for right now.
 			if (BTN(BTN_C)) {
 				if (NUM_SAVED_IMAGES < MAX_RAW_IMAGES) {
+					clear_circ_park(config);
 					uint16_t * raw_image = raw_images[curr_image_index];
 
 					for (i = 0; i < FRAME_LEN; ++i) {
 						raw_image[i] = pS2MM_Mem[i];
+						pMM2S_Mem[i] = pS2MM_Mem[i];
 					}
+					usleep(30000);
 				}
+				enable_circ_park(config);
 			}
 		} else { // PLAY BACK mode
 			clear_circ_park(config);

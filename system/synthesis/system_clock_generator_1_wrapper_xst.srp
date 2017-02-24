@@ -1,6 +1,6 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:\cpre488mp2\system\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to U:\Documents\cpre488mp2\system\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_clock_generator_1_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\cpre488mp2\system\pcores\" "C:\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"U:\Documents\cpre488mp2\system\pcores\" "U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc7z020clg484-1
@@ -74,10 +74,10 @@ Parsing architecture <STRUCT> of entity <mmcm_module>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" into library clock_generator_v4_03_a
 Parsing entity <plle2_module>.
 Parsing architecture <STRUCT> of entity <plle2_module>.
-Parsing VHDL file "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" into library clock_generator_1_v4_03_a
+Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" into library clock_generator_1_v4_03_a
 Parsing entity <clock_generator>.
 Parsing architecture <STRUCTURE> of entity <clock_generator>.
-Parsing VHDL file "C:\cpre488mp2\system\hdl\system_clock_generator_1_wrapper.vhd" into library work
+Parsing VHDL file "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_clock_generator_1_wrapper.vhd" into library work
 Parsing entity <system_clock_generator_1_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_clock_generator_1_wrapper>.
 
@@ -88,28 +88,28 @@ Parsing architecture <STRUCTURE> of entity <system_clock_generator_1_wrapper>.
 Elaborating entity <system_clock_generator_1_wrapper> (architecture <STRUCTURE>) from library <work>.
 
 Elaborating entity <clock_generator> (architecture <STRUCTURE>) with generics from library <clock_generator_1_v4_03_a>.
-WARNING:HDLCompiler:1127 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 266: Assignment to net_vdd0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 266: Assignment to net_vdd0 ignored, since the identifier is never used
 
 Elaborating entity <mmcm_module> (architecture <STRUCT>) with generics from library <clock_generator_v4_03_a>.
 WARNING:HDLCompiler:89 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/mmcm_module.vhd" Line 156: <mmcm_adv> remains a black-box since it has no binding entity.
-WARNING:HDLCompiler:1127 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 390: Assignment to sig_mmcm1_clkout2_buf ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 396: Assignment to sig_mmcm1_clkout3_buf ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 402: Assignment to sig_mmcm1_clkout4_buf ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 408: Assignment to sig_mmcm1_clkout5_buf ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 414: Assignment to sig_mmcm1_clkout6_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 390: Assignment to sig_mmcm1_clkout2_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 396: Assignment to sig_mmcm1_clkout3_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 402: Assignment to sig_mmcm1_clkout4_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 408: Assignment to sig_mmcm1_clkout5_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 414: Assignment to sig_mmcm1_clkout6_buf ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system_clock_generator_1_wrapper>.
-    Related source file is "C:\cpre488mp2\system\hdl\system_clock_generator_1_wrapper.vhd".
+    Related source file is "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_clock_generator_1_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_clock_generator_1_wrapper> synthesized.
 
 Synthesizing Unit <clock_generator>.
-    Related source file is "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd".
+    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd".
         C_FAMILY = "zynq"
         C_DEVICE = "7z020"
         C_PACKAGE = "clg484"
@@ -119,19 +119,19 @@ WARNING:Xst:647 - Input <CLKFBIN> is never used. This port will be preserved and
 WARNING:Xst:647 - Input <PSCLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <PSEN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <PSINCDEC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKFBOUTB> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT2> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT3> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT4> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT5> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT6> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT0B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT1B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT2B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT3B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKFBSTOPPED> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKINSTOPPED> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <PSDONE> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKFBOUTB> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT2> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT3> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT4> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT5> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT6> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT0B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT1B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT2B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKOUT3B> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKFBSTOPPED> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <CLKINSTOPPED> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/hdl/elaborate/clock_generator_1_v4_03_a/hdl/vhdl/clock_generator.vhd" line 286: Output port <PSDONE> of the instance <MMCM1_INST> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <clock_generator> synthesized.
@@ -340,12 +340,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.02 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.72 secs
  
 --> 
 
-Total memory usage is 509512 kilobytes
+Total memory usage is 510344 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   11 (   0 filtered)

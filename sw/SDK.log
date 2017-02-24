@@ -559,3 +559,36 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 19:19:07.776 INFO  - Processor reset is completed for ps7_cortexa9_0 
 19:23:13.195 INFO  - Processor reset is completed for ps7_cortexa9_0 
 19:25:14.064 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+05:18:34.748 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\system.xml. 
+05:18:37.596 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\system.xml. 
+05:18:38.642 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+05:18:39.298 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+05:20:30.691 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+05:20:30.945 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+05:20:31.135 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+05:20:31.363 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+05:20:31.772 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+05:20:32.702 INFO  - Restoring local repository preferences: 
+		 C:\cpre488mp2\repository\ProcessorIPLib
+		 \\my.files.iastate.edu\Users\burneykb\Documents\cpre488mp2\repository\ProcessorIPLib 
+05:20:39.359 INFO  - Updating hardware inferred compiler options for camera_app. 
+05:20:39.406 INFO  - Clearing existing target manager status. 
+05:21:50.248 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp2/sw/system_hw_platform/system.bit" 
+05:22:08.773 ERROR - No such port: COM8 
+05:22:09.139 INFO  - Processor reset is completed for ps7_cortexa9_0 
+05:22:09.240 INFO  - PS initialization will be done as it is not done before. 
+05:22:09.244 INFO  - Running PS initialization.... 
+05:22:10.050 INFO  - ps7_init is completed. 
+05:22:10.150 INFO  - ps7_post_config is completed. 
+05:22:10.250 INFO  - PS Initialization is complete. 
+05:23:22.059 INFO  - Processor reset is completed for ps7_cortexa9_0 
+05:29:11.013 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+05:29:13.311 INFO  - Processor reset is completed for ps7_cortexa9_0 
+05:35:24.836 INFO  - Processor reset is completed for ps7_cortexa9_0 
+05:35:24.936 INFO  - PS initialization will be done as it is not done before. 
+05:35:24.938 INFO  - Running PS initialization.... 
+05:35:25.733 INFO  - ps7_init is completed. 
+05:35:25.833 INFO  - ps7_post_config is completed. 
+05:35:25.933 INFO  - PS Initialization is complete. 
+05:35:43.003 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+05:38:05.518 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

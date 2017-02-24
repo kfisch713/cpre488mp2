@@ -24,9 +24,7 @@
     <SET ID="axi_vdma_0" IS_EXPANDED="TRUE"/>
     <SET ID="IIC_FMC" IS_EXPANDED="TRUE"/>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="VTIMING_IN" PARENT="v_axi4s_vid_out_0"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="v_vid_in_axi4s_0" IS_EXPANDED="TRUE" ROW_INDEX="17"/>
@@ -93,7 +91,7 @@
   </SET>
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
-    <HEADERS HSCROLL="0" VSCROLL="205">
+    <HEADERS HSCROLL="0" VSCROLL="0">
       <VARIABLE COL_INDEX="0" COL_WIDTH="313" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="365" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" COL_WIDTH="260" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
@@ -109,17 +107,8 @@
       <VARIABLE COL_INDEX="11" COL_WIDTH="374" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="267,924,200" VERSION="0"/>
-    <SET ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE">
-      <SET ID="S_AXIS_VIDEO" IS_EXPANDED="TRUE"/>
-      <SET ID="VTIMING_IN" IS_EXPANDED="TRUE"/>
-    </SET>
-    <SET ID="fmc_imageon_hdmi_out_0" IS_EXPANDED="TRUE">
-      <SET ID="XSVI_VIDEO_IN" IS_EXPANDED="TRUE"/>
-    </SET>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="video_vsync" PARENT="v_axi4s_vid_out_0"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="FALSE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
@@ -129,11 +118,11 @@
       <VARIABLE ID="v_rgb2ycrcb_0" ROW_INDEX="19"/>
       <VARIABLE ID="v_cresample_0" ROW_INDEX="17"/>
       <VARIABLE ID="v_cfa_0" ROW_INDEX="18"/>
-      <VARIABLE ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
+      <VARIABLE ID="v_axi4s_vid_out_0" ROW_INDEX="12"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="3"/>
       <VARIABLE ID="fmc_imageon_vita_receiver_0" ROW_INDEX="11"/>
       <VARIABLE ID="fmc_imageon_iic_0" ROW_INDEX="7"/>
-      <VARIABLE ID="fmc_imageon_hdmi_out_0" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
+      <VARIABLE ID="fmc_imageon_hdmi_out_0" ROW_INDEX="10"/>
       <VARIABLE ID="clock_generator_1" ROW_INDEX="16"/>
       <VARIABLE ID="axi_vdma_0" ROW_INDEX="9"/>
       <VARIABLE ID="axi_tpg_0" ROW_INDEX="8"/>

@@ -1,31 +1,6 @@
-19:25:10 **** Auto Build of configuration Debug for project camera_app ****
+05:35:20 **** Incremental Build of configuration Debug for project camera_app ****
 make all 
-'Building file: ../src/camera_app.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
-../src/camera_app.c:45:8: warning: type defaults to 'int' in declaration of 'curr_image_index' [-Wimplicit-int]
-../src/camera_app.c: In function 'camera_interface':
-../src/camera_app.c:150:9: warning: unused variable 'j' [-Wunused-variable]
-../src/camera_app.c:148:20: warning: unused variable 'pMM2S_Mem' [-Wunused-variable]
-../src/camera_app.c: At top level:
-../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
-../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
-../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
-../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
-../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
-'Finished building: ../src/camera_app.c'
-' '
-'Building target: camera_app.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: camera_app.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  95146	   4072	2122368	2221586	 21e612	camera_app.elf
-'Finished building: camera_app.elf.size'
-' '
+make: Nothing to be done for `all'.
 
-19:25:10 Build Finished (took 451ms)
+05:35:21 Build Finished (took 225ms)
 

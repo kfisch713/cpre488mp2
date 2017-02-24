@@ -1,7 +1,7 @@
 
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Thu Feb 23 13:35:40 2017">
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Fri Feb 24 04:59:21 2017">
 
-  <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="C:/cpre488mp2/system/system.xmp" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/system.xmp" SPEEDGRADE="-1"/>
 
   <MODULES>
     <MODULE HWVERSION="2.01.a" INSTANCE="v_vid_in_axi4s_0" IPTYPE="PERIPHERAL" MHS_INDEX="0" MODCLASS="PERIPHERAL" MODTYPE="v_vid_in_axi4s">
@@ -11,7 +11,7 @@
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=v_vid_in_axi4s;v=v2_01_a;d=pg043_v_vid_in_axi4s.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
-        <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="0" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
+        <PARAMETER ASSIGNMENT="OPTIONAL" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="0" NAME="C_M_AXIS_VIDEO_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
         <PARAMETER ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="1" NAME="C_M_AXIS_VIDEO_FORMAT" TYPE="INTEGER" VALUE="12"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="2" NAME="VID_IN_DATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
         <PARAMETER ASSIGNMENT="UPDATE" CHANGEDBY="SYSTEM" MPD_INDEX="3" NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" TYPE="INTEGER" VALUE="8"/>
@@ -62,10 +62,6 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="7" LSB="0" MHS_INDEX="8" MPD_INDEX="7" MSB="7" NAME="vid_data" RIGHT="0" SIGNAME="fmc_imageon_vita_receiver_0_xsvi_video_data_o" VECFORMULA="[(VID_IN_DATA_WIDTH-1):0]">
-          <SIGNALS>
-            <SIGNAL NAME="0b10000000"/>
-            <SIGNAL NAME="fmc_imageon_vita_receiver_0_xsvi_video_data_o"/>
-          </SIGNALS>
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[XSVI_VIDEO_OUT]" INSTANCE="fmc_imageon_vita_receiver_0" PORT="xsvi_video_data_o"/>
           </CONNECTIONS>
@@ -165,7 +161,7 @@
       <DESCRIPTION TYPE="SHORT">Video Timing Controller</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Configurable video timing generator and detector for blanks syncs and active video</DESCRIPTION>
       <DOCUMENTATION>
-        <DOCUMENT SOURCE="C:/cpre488mp2/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
+        <DOCUMENT SOURCE="//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_GEN_AUTO_SWITCH" TYPE="integer" VALUE="1"/>
@@ -450,7 +446,7 @@
       <DESCRIPTION TYPE="SHORT">Video Timing Controller</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Configurable video timing generator and detector for blanks syncs and active video</DESCRIPTION>
       <DOCUMENTATION>
-        <DOCUMENT SOURCE="C:/cpre488mp2/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
+        <DOCUMENT SOURCE="//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_GEN_AUTO_SWITCH" TYPE="integer" VALUE="1"/>
@@ -828,12 +824,17 @@
             <CONNECTION INSTANCE="clock_generator_1" PORT="CLKOUT0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="1" NAME="aclken" SIGNAME="net_vcc">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="net_vcc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="2" NAME="aresetn" SIGIS="RST" SIGNAME="net_vcc">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="2" NAME="aresetn" SIGIS="RST" SIGNAME="net_vcc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_vcc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="1" NAME="aclken" SIGNAME="net_vcc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
@@ -892,11 +893,6 @@
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser_sof" SIGNAME="v_rgb2ycrcb_0_M_AXIS_VIDEO_tuser">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_cresample_0" PORT="s_axis_video_tuser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="net_vcc">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_aresetn" DIR="I" MPD_INDEX="17" NAME="s_axi_aresetn" SIGIS="RST" SIGNAME="axi4lite_0_M_aresetn">
@@ -1092,12 +1088,17 @@
             <CONNECTION INSTANCE="clock_generator_1" PORT="CLKOUT0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="1" NAME="aclken" SIGNAME="net_vcc">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="net_vcc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="2" NAME="aresetn" SIGIS="RST" SIGNAME="net_vcc">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="1" NAME="aclken" SIGNAME="net_vcc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_vcc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="2" NAME="aresetn" SIGIS="RST" SIGNAME="net_vcc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
@@ -1156,11 +1157,6 @@
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cresample_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser" SIGNAME="v_cresample_0_M_AXIS_VIDEO_tuser">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXIS_S2MM]" INSTANCE="axi_vdma_0" PORT="s_axis_s2mm_tuser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="net_vcc">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="17" NAME="s_axi_aresetn" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
@@ -1343,18 +1339,28 @@
             <CONNECTION INSTANCE="clock_generator_1" PORT="CLKOUT0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="net_vcc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_vcc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT BUS="S_AXI" CLKFREQUENCY="50000000" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="15" NAME="s_axi_aclk" SIGIS="CLK" SIGNAME="axi4lite_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="3" MPD_INDEX="3" NAME="aresetn" SIGIS="RST" SIGNAME="net_vcc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_vcc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="2" NAME="aclken" SIGNAME="net_vcc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="net_vcc"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" ENDIAN="LITTLE" IS_VALID="FALSE" LEFT="8" LSB="0" MPD_INDEX="0" MSB="8" NAME="intc_if" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[8:0]">
           <CONNECTIONS/>
-        </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="2" NAME="aclken" SIGNAME="net_vcc">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_vcc"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="3" NAME="aresetn" SIGIS="RST" SIGNAME="net_vcc">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_vcc"/>
-          </CONNECTIONS>
         </PORT>
         <PORT DIR="O" MPD_INDEX="4" NAME="irq" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="__NOC__">
           <CONNECTIONS/>
@@ -1407,16 +1413,6 @@
         <PORT BUS="M_AXIS_VIDEO" DEF_SIGNAME="v_cfa_0_M_AXIS_VIDEO_tuser" DIR="O" MPD_INDEX="14" NAME="m_axis_video_tuser" SIGNAME="v_cfa_0_M_AXIS_VIDEO_tuser">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[S_AXIS_VIDEO]" INSTANCE="v_rgb2ycrcb_0" PORT="s_axis_video_tuser_sof"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT BUS="S_AXI" CLKFREQUENCY="50000000" DEF_SIGNAME="__BUS__" DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="15" NAME="s_axi_aclk" SIGIS="CLK" SIGNAME="axi4lite_0_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MPD_INDEX="16" NAME="s_axi_aclken" SIGNAME="net_vcc">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
         <PORT BUS="S_AXI" DEF_SIGNAME="axi4lite_0_M_ARESETN" DIR="I" MPD_INDEX="17" NAME="s_axi_aresetn" SIGIS="RST" SIGNAME="axi4lite_0_M_ARESETN">
@@ -1511,24 +1507,6 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="1" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
-          <PORTMAPS>
-            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tdata"/>
-            <PORTMAP DIR="O" PHYSICAL="s_axis_video_tready"/>
-            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tvalid"/>
-            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tlast"/>
-            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tuser"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="v_cfa_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="2" NAME="M_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
-          <PORTMAPS>
-            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tdata"/>
-            <PORTMAP DIR="I" PHYSICAL="m_axis_video_tready"/>
-            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tvalid"/>
-            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tlast"/>
-            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tuser"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axi4lite_0" BUSSTD="AXI" BUSSTD_PSF="AXI" IS_INSTANTIATED="TRUE" MHS_INDEX="1" MPD_INDEX="0" NAME="S_AXI" PROTOCOL="AXI4LITE" TYPE="SLAVE">
           <PORTMAPS>
             <PORTMAP DIR="I" PHYSICAL="s_axi_aclk"/>
@@ -1550,6 +1528,24 @@
             <PORTMAP DIR="O" PHYSICAL="s_axi_rresp"/>
             <PORTMAP DIR="O" PHYSICAL="s_axi_rvalid"/>
             <PORTMAP DIR="I" PHYSICAL="s_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="v_vid_in_axi4s_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="0" MPD_INDEX="1" NAME="S_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="TARGET">
+          <PORTMAPS>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tdata"/>
+            <PORTMAP DIR="O" PHYSICAL="s_axis_video_tready"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tvalid"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tlast"/>
+            <PORTMAP DIR="I" PHYSICAL="s_axis_video_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="v_cfa_0_M_AXIS_VIDEO" BUSSTD="AXIS" BUSSTD_PSF="AXIS" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="2" NAME="M_AXIS_VIDEO" PROTOCOL="XIL_AXI_STREAM_VID_DATA" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tdata"/>
+            <PORTMAP DIR="I" PHYSICAL="m_axis_video_tready"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tvalid"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tlast"/>
+            <PORTMAP DIR="O" PHYSICAL="m_axis_video_tuser"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -1600,25 +1596,22 @@
             <CONNECTION BUSINTERFACE="[XSVI_VIDEO_IN]" INSTANCE="fmc_imageon_hdmi_out_0" PORT="xsvi_active_video_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" MHS_INDEX="4" MPD_INDEX="11" NAME="video_vsync" SIGNAME="__NOC__">
-          <CONNECTIONS/>
-        </PORT>
-        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="13" NAME="video_vblank" SIGNAME="vid_out_vblank">
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="13" NAME="video_vblank" SIGNAME="vid_out_vblank">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[XSVI_VIDEO_IN]" INSTANCE="fmc_imageon_hdmi_out_0" PORT="xsvi_vblank_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="14" NAME="video_hblank" SIGNAME="vid_out_hblank">
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="14" NAME="video_hblank" SIGNAME="vid_out_hblank">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[XSVI_VIDEO_IN]" INSTANCE="fmc_imageon_hdmi_out_0" PORT="xsvi_hblank_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="15" LSB="0" MHS_INDEX="7" MPD_INDEX="15" MSB="15" NAME="video_data" RIGHT="0" SIGNAME="vid_out_data" VECFORMULA="[(VID_OUT_DATA_WIDTH-1):0]">
+        <PORT DIR="O" ENDIAN="LITTLE" IS_INSTANTIATED="TRUE" LEFT="15" LSB="0" MHS_INDEX="6" MPD_INDEX="15" MSB="15" NAME="video_data" RIGHT="0" SIGNAME="vid_out_data" VECFORMULA="[(VID_OUT_DATA_WIDTH-1):0]">
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[XSVI_VIDEO_IN]" INSTANCE="fmc_imageon_hdmi_out_0" PORT="xsvi_video_data_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="8" MPD_INDEX="23" NAME="locked" SIGNAME="vid_out_locked">
+        <PORT DIR="O" IS_INSTANTIATED="TRUE" MHS_INDEX="7" MPD_INDEX="23" NAME="locked" SIGNAME="vid_out_locked">
           <CONNECTIONS/>
         </PORT>
         <PORT DIR="I" MPD_INDEX="1" NAME="rst" SIGNAME="__NOC__">
@@ -1654,6 +1647,9 @@
           <CONNECTIONS>
             <CONNECTION BUSINTERFACE="[M_AXIS_MM2S]" INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_tlast"/>
           </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" MPD_INDEX="11" NAME="video_vsync" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
         <PORT DIR="O" MPD_INDEX="12" NAME="video_hsync" SIGNAME="__NOC__">
           <CONNECTIONS/>
@@ -5256,43 +5252,43 @@
             <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="video_data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" MHS_INDEX="4" MPD_INDEX="4" NAME="audio_spdif" SIGNAME="__NOC__">
-          <CONNECTIONS/>
-        </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="0" NAME="clk" SIGNAME="vid_out_clk">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="4" MPD_INDEX="0" NAME="clk" SIGNAME="vid_out_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clock_generator_1" PORT="CLKOUT0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="1" NAME="reset" SIGNAME="net_gnd">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="5" MPD_INDEX="1" NAME="reset" SIGNAME="net_gnd">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_gnd"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="7" MPD_INDEX="2" NAME="oe" SIGNAME="net_vcc">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="6" MPD_INDEX="2" NAME="oe" SIGNAME="net_vcc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="8" MPD_INDEX="3" NAME="embed_syncs" SIGNAME="net_vcc">
+        <PORT DIR="I" IS_INSTANTIATED="TRUE" MHS_INDEX="7" MPD_INDEX="3" NAME="embed_syncs" SIGNAME="net_vcc">
           <CONNECTIONS>
             <CONNECTION INSTANCE="net_vcc"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" IOS="HDMIO_IO" IS_INSTANTIATED="TRUE" MHS_INDEX="9" MPD_INDEX="9" NAME="io_hdmio_spdif" SIGNAME="fmc_imageon_hdmi_out_0_io_hdmio_spdif">
+        <PORT DIR="O" IOS="HDMIO_IO" IS_INSTANTIATED="TRUE" MHS_INDEX="8" MPD_INDEX="9" NAME="io_hdmio_spdif" SIGNAME="fmc_imageon_hdmi_out_0_io_hdmio_spdif">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="fmc_imageon_hdmi_out_0_io_hdmio_spdif_pin"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" ENDIAN="LITTLE" IOS="HDMIO_IO" IS_INSTANTIATED="TRUE" LEFT="15" LSB="0" MHS_INDEX="10" MPD_INDEX="10" MSB="15" NAME="io_hdmio_video" RIGHT="0" SIGNAME="fmc_imageon_hdmi_out_0_io_hdmio_video" VECFORMULA="[15:0]">
+        <PORT DIR="O" ENDIAN="LITTLE" IOS="HDMIO_IO" IS_INSTANTIATED="TRUE" LEFT="15" LSB="0" MHS_INDEX="9" MPD_INDEX="10" MSB="15" NAME="io_hdmio_video" RIGHT="0" SIGNAME="fmc_imageon_hdmi_out_0_io_hdmio_video" VECFORMULA="[15:0]">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="fmc_imageon_hdmi_out_0_io_hdmio_video_pin"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" IOS="HDMIO_IO" IS_INSTANTIATED="TRUE" MHS_INDEX="11" MPD_INDEX="11" NAME="io_hdmio_clk" SIGNAME="fmc_imageon_hdmi_out_0_io_hdmio_clk">
+        <PORT DIR="O" IOS="HDMIO_IO" IS_INSTANTIATED="TRUE" MHS_INDEX="10" MPD_INDEX="11" NAME="io_hdmio_clk" SIGNAME="fmc_imageon_hdmi_out_0_io_hdmio_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External Ports" PORT="fmc_imageon_hdmi_out_0_io_hdmio_clk_pin"/>
           </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" MPD_INDEX="4" NAME="audio_spdif" SIGNAME="__NOC__">
+          <CONNECTIONS/>
         </PORT>
         <PORT DIR="O" ENDIAN="LITTLE" LEFT="39" LSB="0" MPD_INDEX="12" MSB="39" NAME="debug_o" RIGHT="0" SIGNAME="__NOC__" VECFORMULA="[39:0]">
           <CONNECTIONS/>

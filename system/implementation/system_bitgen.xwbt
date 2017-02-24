@@ -1,7 +1,7 @@
-INFILE=C:\cpre488mp2\system\implementation\system.ncd
-OUTFILE=C:\cpre488mp2\system\implementation\system.bit
+INFILE=U:\Documents\cpre488mp2\system\implementation\system.ncd
+OUTFILE=U:\Documents\cpre488mp2\system\implementation\system.bit
 FAMILY=Zynq
 PART=xc7z020-1clg484
-WORKINGDIR=C:\cpre488mp2\system\implementation
+WORKINGDIR=U:\Documents\cpre488mp2\system\implementation
 LICENSE=ISE
 USER_INFO=174156856_174156857_210589608_946

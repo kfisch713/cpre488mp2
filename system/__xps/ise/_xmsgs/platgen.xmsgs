@@ -18,22 +18,22 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 </arg>
 </msg>
 
-<msg type="warning" file="EDK" num="4092" delta="old" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 86</arg> 
+<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 86</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4092" delta="old" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_0</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 105</arg> 
+<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_0</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 105</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">clock_generator</arg>, INSTANCE: <arg fmt="%s" index="2">clock_generator_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 359</arg> 
+<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">clock_generator</arg>, INSTANCE: <arg fmt="%s" index="2">clock_generator_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 359</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4092" delta="old" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 86</arg> 
+<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 86</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4092" delta="old" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_0</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 105</arg> 
+<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">v_tc</arg>, INSTANCE: <arg fmt="%s" index="2">v_tc_0</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 105</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">clock_generator</arg>, INSTANCE: <arg fmt="%s" index="2">clock_generator_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 359</arg> 
+<msg type="warning" file="EDK" num="4092" delta="new" >IPNAME: <arg fmt="%s" index="1">clock_generator</arg>, INSTANCE: <arg fmt="%s" index="2">clock_generator_1</arg> - <arg fmt="%s" index="3">Pre-Production</arg> version not verified on hardware for architecture &apos;<arg fmt="%s" index="4">zynq</arg>&apos; - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 359</arg> 
 </msg>
 
 <msg type="info" file="EDK" num="4130" delta="old" >IPNAME: <arg fmt="%s" index="1">v_vid_in_axi4s</arg>, INSTANCE:<arg fmt="%s" index="2">v_vid_in_axi4s_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">VID_IN_DATA_WIDTH</arg> value to <arg fmt="%s" index="6">8</arg> - <arg fmt="%s" index="7">C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\v_vid_in_axi4s_v2_01_a\data\v_vid_in_axi4s_v2_1_0.mpd line 79</arg> 
@@ -106,58 +106,58 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 <msg type="info" file="EDK" num="0" delta="new" ><arg fmt="%s" index="1">INFO: You can modify the DDR address range accessed by Programmable Logic through the processing_system7 AXI slave interfaces. If MicroBlaze is a master on processing_system7 AXI slave interfaces, please use the top half of the address range (Base Address = 0x10000000; High Address = 0x1FFFFFFF). For all other master, any subset of the DDR address can be used. See Xilinx Answer 47167 for more information.</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4180" delta="old" >PORT: <arg fmt="%s" index="1">active_chroma_in</arg>, CONNECTOR: <arg fmt="%s" index="2">v_vid_in_axi4s_0_VTIMING_OUT_active_chroma</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">GND</arg> - <arg fmt="%s" index="4">C:\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 134</arg> 
+<msg type="warning" file="EDK" num="4180" delta="new" >PORT: <arg fmt="%s" index="1">active_chroma_in</arg>, CONNECTOR: <arg fmt="%s" index="2">v_vid_in_axi4s_0_VTIMING_OUT_active_chroma</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">GND</arg> - <arg fmt="%s" index="4">U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 134</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4180" delta="old" >PORT: <arg fmt="%s" index="1">resetn</arg>, CONNECTOR: <arg fmt="%s" index="2">v_vid_in_axi4s_0_VTIMING_OUT_net_vcc</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">VCC</arg> - <arg fmt="%s" index="4">C:\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 143</arg> 
+<msg type="warning" file="EDK" num="4180" delta="new" >PORT: <arg fmt="%s" index="1">resetn</arg>, CONNECTOR: <arg fmt="%s" index="2">v_vid_in_axi4s_0_VTIMING_OUT_net_vcc</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">VCC</arg> - <arg fmt="%s" index="4">U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 143</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4180" delta="old" >PORT: <arg fmt="%s" index="1">det_clken</arg>, CONNECTOR: <arg fmt="%s" index="2">v_vid_in_axi4s_0_VTIMING_OUT_net_vcc</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">VCC</arg> - <arg fmt="%s" index="4">C:\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 145</arg> 
+<msg type="warning" file="EDK" num="4180" delta="new" >PORT: <arg fmt="%s" index="1">det_clken</arg>, CONNECTOR: <arg fmt="%s" index="2">v_vid_in_axi4s_0_VTIMING_OUT_net_vcc</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">VCC</arg> - <arg fmt="%s" index="4">U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 145</arg> 
 </msg>
 
 <msg type="warning" file="EDK" num="4180" delta="old" >PORT: <arg fmt="%s" index="1">s_axis_s2mm_tkeep</arg>, CONNECTOR: <arg fmt="%s" index="2">v_cresample_0_M_AXIS_VIDEO_TKEEP</arg> - No driver found. Port will be driven to <arg fmt="%s" index="3">VCC</arg> - <arg fmt="%s" index="4">C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_vdma_v5_04_a\data\axi_vdma_v2_1_0.mpd line 231</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="old" >PORT: <arg fmt="%s" index="1">fmc_imageon_hdmi_in_0_io_hdmii_spdif_pin</arg>, CONNECTOR: <arg fmt="%s" index="2">fmc_imageon_hdmi_in_0_io_hdmii_spdif</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 37</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">fmc_imageon_hdmi_in_0_io_hdmii_spdif_pin</arg>, CONNECTOR: <arg fmt="%s" index="2">fmc_imageon_hdmi_in_0_io_hdmii_spdif</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 37</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">active_chroma_out</arg>, CONNECTOR: <arg fmt="%s" index="2">v_tc_0_VTIMING_OUT_active_chroma</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 140</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">active_chroma_out</arg>, CONNECTOR: <arg fmt="%s" index="2">v_tc_0_VTIMING_OUT_active_chroma</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\v_tc_v5_00_a\data\v_tc_v2_1_0.mpd line 140</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">locked</arg>, CONNECTOR: <arg fmt="%s" index="2">vid_out_locked</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 187</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">locked</arg>, CONNECTOR: <arg fmt="%s" index="2">vid_out_locked</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 187</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">FCLK_CLK2</arg>, CONNECTOR: <arg fmt="%s" index="2">processing_system7_0_FCLK_CLK2</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 284</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">FCLK_CLK2</arg>, CONNECTOR: <arg fmt="%s" index="2">processing_system7_0_FCLK_CLK2</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 284</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">debug_crc_o</arg>, CONNECTOR: <arg fmt="%s" index="2">fmc_imageon_vita_receiver_0_debug_crc_o</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 314</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">debug_crc_o</arg>, CONNECTOR: <arg fmt="%s" index="2">fmc_imageon_vita_receiver_0_debug_crc_o</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 314</arg> 
 </msg>
 
 <msg type="warning" file="EDK" num="4181" delta="old" >PORT: <arg fmt="%s" index="1">m_axis_mm2s_tkeep</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_vdma_0_M_AXIS_MM2S_TKEEP</arg> - floating connection - <arg fmt="%s" index="3">C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_vdma_v5_04_a\data\axi_vdma_v2_1_0.mpd line 208</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">hsync_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_hsync_out</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 414</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">hsync_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_hsync_out</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 414</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">vsync_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_vsync_out</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 415</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">vsync_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_vsync_out</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 415</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">hblank_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_hblank_out</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 416</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">hblank_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_hblank_out</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 416</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">vblank_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_vblank_out</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 417</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">vblank_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_vblank_out</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 417</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">active_video_out</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_tpg_0_active_video_out</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 421</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">active_video_out</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_tpg_0_active_video_out</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 421</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">video_data_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_video_data_out</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 418</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">video_data_out</arg>, CONNECTOR: <arg fmt="%s" index="2">tpg_0_video_data_out</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 418</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">ZP_debug</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_tpg_0_ZP_debug</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 420</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">ZP_debug</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_tpg_0_ZP_debug</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 420</arg> 
 </msg>
 
-<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">TPG_debug</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_tpg_0_TPG_debug</arg> - floating connection - <arg fmt="%s" index="3">C:\cpre488mp2\system\system.mhs line 419</arg> 
+<msg type="warning" file="EDK" num="4181" delta="new" >PORT: <arg fmt="%s" index="1">TPG_debug</arg>, CONNECTOR: <arg fmt="%s" index="2">axi_tpg_0_TPG_debug</arg> - floating connection - <arg fmt="%s" index="3">U:\Documents\cpre488mp2\system\system.mhs line 419</arg> 
 </msg>
 
 <msg type="info" file="EDK" num="4130" delta="old" >IPNAME: <arg fmt="%s" index="1">processing_system7</arg>, INSTANCE:<arg fmt="%s" index="2">processing_system7_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_FCLK_CLK2_BUF</arg> value to <arg fmt="%s" index="6">FALSE</arg> - <arg fmt="%s" index="7">C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v4_03_a\data\processing_system7_v2_1_0.mpd line 352</arg> 
@@ -197,7 +197,7 @@ The license for this core was generated for zambreno on 01/28/2015It is the resp
 </arg>
 </msg>
 
-<msg type="warning" file="EDK" num="4059" delta="new" >INSTANCE: <arg fmt="%s" index="1">v_tc_0</arg>, Overriding connection of PORT: <arg fmt="%s" index="2">gen_clken</arg>, VALUE: <arg fmt="%s" index="3">vtc_gen_clken</arg> - which is part of the connected BUSIF: <arg fmt="%s" index="4">VTIMING_OUT</arg> - <arg fmt="%s" index="5">C:\cpre488mp2\system\system.mhs line 105</arg>
+<msg type="warning" file="EDK" num="4059" delta="new" >INSTANCE: <arg fmt="%s" index="1">v_tc_0</arg>, Overriding connection of PORT: <arg fmt="%s" index="2">gen_clken</arg>, VALUE: <arg fmt="%s" index="3">vtc_gen_clken</arg> - which is part of the connected BUSIF: <arg fmt="%s" index="4">VTIMING_OUT</arg> - <arg fmt="%s" index="5">U:\Documents\cpre488mp2\system\system.mhs line 105</arg>
 </msg>
 
 <msg type="info" file="EDK" num="4211" delta="old" >The following instances are synthesized with <arg fmt="%s" index="1">XST</arg>. The MPD option IMP_NETLIST=TRUE indicates that a NGC file is to be produced using <arg fmt="%s" index="2">XST</arg> synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
