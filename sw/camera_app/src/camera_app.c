@@ -18,23 +18,64 @@
 
 #include "camera_app.h"
 #include <stdint.h>
+#include <xparameters.h>
 
 static uint16_t average_vert(int i, volatile Xuint16 * mem);
 static uint16_t average_hor(int i, volatile Xuint16 * mem);
 static uint16_t average_x(int i, volatile Xuint16 * mem);
+
+/* Added for software pass-through */
 static uint8_t *color_lut;
 static void fill_color_lut();
+static void camera_interface_init();
+static void camera_interface_free();
+static void camera_interface();
+static void clear_circ_park(camera_config_t *);
+static void enable_circ_park(camera_config_t *);
 camera_config_t camera_config;
 
-enum color {
-	RED,
-	GREEN,
-	BLUE
+static int HEIGHT;
+static int WIDTH;
+static int FRAME_LEN;
+
+/* Added for camera_interfaceing */
+#define MAX_RAW_IMAGES 32
+uint16_t *raw_images[MAX_RAW_IMAGES];
+static int NUM_SAVED_IMAGES = -1;
+static curr_image_index = 0;
+
+static Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
+static Xuint32 parkptr;
+
+enum camera_mode{
+    MODE_PASS_THROUGH,
+    MODE_PLAY_BACK
 };
 
-int HEIGHT;
-int WIDTH;
-int FRAME_LEN;
+enum button_val {
+	BTN_U,
+	BTN_R,
+	BTN_D,
+	BTN_C
+};
+
+char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
+char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
+
+int SW(unsigned int x) {
+	return ((*SWs >> x) & 0x01);
+}
+
+int BTN(unsigned int x) {
+	return ((*BTNs >> x) & 0x01);
+}
+
+enum color {
+    RED,
+    GREEN,
+    BLUE
+};
+
 
 // Main function. Initializes the devices and configures VDMA
 int main() {
@@ -43,11 +84,11 @@ int main() {
 
 	camera_config_init(&camera_config);
 	fmc_imageon_enable(&camera_config);
-	camera_loop(&camera_config);
-
+	camera_interface_init();
+	camera_interface(&camera_config);
+	camera_interface_free();
 	return 0;
 }
-
 
 // Initialize the camera configuration data structure
 void camera_config_init(camera_config_t *config) {
@@ -56,9 +97,9 @@ void camera_config_init(camera_config_t *config) {
     config->uBaseAddr_IIC_FmcIpmi = XPAR_IIC_FMC_BASEADDR;
     config->uBaseAddr_IIC_FmcImageon = XPAR_FMC_IMAGEON_IIC_0_BASEADDR;
     config->uBaseAddr_VITA_Receiver = XPAR_FMC_IMAGEON_VITA_RECEIVER_0_BASEADDR;
-//    config->uBaseAddr_CFA = XPAR_CFA_0_BASEADDR;
-//    config->uBaseAddr_CRES = XPAR_CRESAMPLE_0_BASEADDR;
-//    config->uBaseAddr_RGBYCC = XPAR_RGB2YCRCB_0_BASEADDR;
+    config->uBaseAddr_CFA = XPAR_CFA_0_BASEADDR;
+    config->uBaseAddr_CRES = XPAR_CRESAMPLE_0_BASEADDR;
+    config->uBaseAddr_RGBYCC = XPAR_RGB2YCRCB_0_BASEADDR;
     config->uBaseAddr_TPG_PatternGenerator = XPAR_AXI_TPG_0_BASEADDR;
 
     config->uDeviceId_VTC_ipipe = XPAR_V_TC_0_DEVICE_ID;
@@ -71,23 +112,26 @@ void camera_config_init(camera_config_t *config) {
     return;
 }
 
-// Main (SW) processing loop. Recommended to have an explicit exit condition
-void camera_loop(camera_config_t *config) {
-	printf("Made it camera_loop\r\n");
+static void camera_interface_init() {
+	size_t i;
+    /* Zero all of the raw image pixel arrays */
+    for (i = 0; i < MAX_RAW_IMAGES; ++i) {
+        raw_images[i] = malloc(sizeof(uint16_t) * WIDTH * HEIGHT);
+    }
+}
+
+static void camera_interface_free() {
+	size_t i;
+	/* Zero all of the raw image pixel arrays */
+	for (i = 0; i < MAX_RAW_IMAGES; ++i) {
+		free(raw_images[i]);
+	}
+}
+
+static void camera_interface(camera_config_t *config) {
 	WIDTH =  config->hdmio_width;
 	HEIGHT = config->hdmio_height;
 	FRAME_LEN = WIDTH * HEIGHT;
-	color_lut = malloc(FRAME_LEN * sizeof(*color_lut));
-	if (color_lut == NULL)
-		xil_printf("\n\n\n\n\n\nYOU DON F'ED UP!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\n\n\n");
-	fill_color_lut();
-	Xuint32 parkptr;
-	Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
-	int i, j;
-
-
-	xil_printf("Entering main SW processing loop\r\n");
-
 
 	// Grab the DMA parkptr, and update it to ensure that when parked, the S2MM side is on frame 0, and the MM2S side on frame 1
 	parkptr = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET);
@@ -96,165 +140,55 @@ void camera_loop(camera_config_t *config) {
 	parkptr |= 0x1;
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET, parkptr);
 
+	clear_circ_park(config);
+	enable_circ_park(config);
+
+	// Pointers to the S2MM memory frame and M2SS memory frame
+	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
+	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
+
+	int i, j, curr_mode;
+
+	while(!SW(1)) {
+		curr_mode = SW(0);
+		if (curr_mode == MODE_PASS_THROUGH) { // HARDWARE PASS-THROUGH mode
+			// Do nothing for right now.
+			if (BTN(BTN_C)) {
+				if (NUM_SAVED_IMAGES < MAX_RAW_IMAGES) {
+					uint16_t * raw_image = raw_images[curr_image_index];
+
+					for (i = 0; i < FRAME_LEN; ++i) {
+						raw_image[i] = pS2MM_Mem[i];
+					}
+				}
+			}
+		} else { // PLAY BACK mode
+			clear_circ_park(config);
+			while(curr_mode == MODE_PLAY_BACK) {
+				// update curr_mode
+				curr_mode = *SWs;
+
+
+			}
+			enable_circ_park(config);
+		}
+	}
+	return;
+}
+
+static void clear_circ_park(camera_config_t *config) {
 	// Grab the DMA Control Registers, and clear circular park mode.
 	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 
-	// Pointers to the S2MM memory frame and M2SS memory frame
-	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
-	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
+}
 
-	uint16_t R, G, B;
-	uint16_t Y, CB, CR;
-
-	printf("Made it before loop\r\n");
-
-	// Run for 1000 frames before going back to HW mode
-	for (j = 0; j < 1000; j++) {
-		for (i = 0 ; i < WIDTH*HEIGHT; i++) {
-			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i-1] % 255; // made it all very green!
-			//pMM2S_Mem[i] = pS2MM_Mem[1920*1080-i+j-1]; // makes the image slowly shift to the right and wrap around.
-			//pMM2S_Mem[i] = pS2MM_Mem[i];
-
-
-			//This is the software bayer filter. It isn't working. Can't get any color to display. Try setting a constant color. -Kyle
-			/*
-			switch (color_lut[i]) {
-				case RED:
-					R = pS2MM_Mem[i];
-					G = average_vert(i, pS2MM_Mem);
-					B = average_x(i, pS2MM_Mem);
-					break;
-				case GREEN:
-					G = pS2MM_Mem[i];
-					if ( (i+1 < FRAME_LEN) && (color_lut[i+1] == RED)) {
-						R = average_hor(i, pS2MM_Mem);
-						B = average_vert(i, pS2MM_Mem);
-					} else if ( (i-1 > 0) && (color_lut[i-1] == BLUE)){
-						R = average_vert(i, pS2MM_Mem);
-						B = average_hor(i, pS2MM_Mem);
-					}
-					break;
-				case BLUE:
-					R = average_x(i, pS2MM_Mem);
-					G = average_vert(i, pS2MM_Mem);
-					B = pS2MM_Mem[i];
-					break;
-			}
-//			R = 0;
-//			G = 0;
-//			B = 255;
-
-			//printf("R: %d, G: %d, B: %d\r\n", R, G, B);
-
-			Y  = ( 0.183 * R + 0.614 * G + 0.062 * B) + 16;
-			CB = (-0.101 * R - 0.338 * G + 0.439 * B) + 128;
-			CR = ( 0.439 * R - 0.399 * G - 0.040 * B) + 128;
-
-			//printf("Y: %d, Cb: %d, Cr: %d\r\n", Y, CB, CR);
-
-			Y = Y & 0xFF00;
-			CB = CB & 0xF000;
-			CR = CR & 0xF000;
-
-//			pMM2S_Mem[i] = pS2MM_Mem[i];
-			pMM2S_Mem[i] = 0b0100000011111000;// Y | (CB >> 8) | (CR >> 12);
-			*/
-		}
-	}
-
-
+static void enable_circ_park(camera_config_t * config) {
 	// Grab the DMA Control Registers, and re-enable circular park mode.
 	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);
 	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR | XAXIVDMA_CR_TAIL_EN_MASK);
-
-
-	xil_printf("Main SW processing loop complete!\r\n");
-
-
-	return;
-}
-
-static uint16_t average_vert(int i, volatile Xuint16 * mem) {
-	int average = 0;
-	int count = 0;
-	// Not on the top bound
-	if (i > WIDTH){
-		count++;
-		average += mem[i - WIDTH];
-	}
-	// Not on the bottom bound
-	if (i < FRAME_LEN - WIDTH) {
-		count++;
-		average += mem[i + WIDTH];
-	}
-
-	average /= count;
-	return average;
-}
-
-static uint16_t average_hor(int i, volatile Xuint16 * mem) {
-	int average = 0;
-	int count = 0;
-	// Not on the left bound
-	if (i % WIDTH != 0) {
-		count++;
-		average += mem[i - 1];
-	}
-	//Not on the right bound
-	if ((i % WIDTH) != (WIDTH-1)) {
-		count++;
-		average += mem[i + 1];
-	}
-
-	average /= count;
-	return average;
-}
-
-static uint16_t average_x(int i, volatile Xuint16 * mem) {
-	int average = 0;
-	int count = 0;
-
-	// Top Left
-	if (i > WIDTH && ((i % WIDTH) != 0)) {
-		count++;
-		average += mem[i - WIDTH -1];
-	}
-	// Top Right
-	if (i > WIDTH && ((i % WIDTH) != (WIDTH-1))) {
-		count++;
-		average += mem[i - WIDTH +1];
-	}
-	// Bottom Left
-	if (i < FRAME_LEN && ((i % WIDTH) != 0)) {
-		count++;
-		average += mem[i + WIDTH -1];
-	}
-	// Bottom Right
-	if (i < FRAME_LEN && ((i % WIDTH) != (WIDTH-1))) {
-		count++;
-		average += mem[i + WIDTH +1];
-	}
-
-	average /= count;
-	return average;
-}
-
-static void fill_color_lut() {
-	uint32_t y, x;
-	for (y = 0; y < HEIGHT; y++) {
-		for(x = 0; x < WIDTH; x = x+2) {
-			if (y %2) {
-				color_lut[y*HEIGHT + x] = BLUE;
-				color_lut[y*HEIGHT + x+1] = GREEN;
-			} else {
-				color_lut[y*HEIGHT + x] = GREEN;
-				color_lut[y*HEIGHT + x+1] = RED;
-			}
-		}
-	}
 }

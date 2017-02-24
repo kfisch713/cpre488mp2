@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Mon Feb 20 11:11:49 2017
+#Thu Feb 23 18:59:23 2017
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -36,7 +36,7 @@ A14,processing_system7_0_MIO<22>,IOPAD,PS_MIO22_501,,LVCMOS18*,,,,,,,LOCATED,NO,
 A15,,,GND,,,,,,,,,,,,
 A16,,IOB33M,IO_L9P_T1_DQS_AD3P_35,UNUSED,,35,,,,,,,,,
 A17,,IOB33S,IO_L9N_T1_DQS_AD3N_35,UNUSED,,35,,,,,,,,,
-A18,fmc_imageon_hdmi_out_0_io_hdmio_spdif_pin,IOB33,IO_L10P_T1_AD11P_35,TRISTATE,LVCMOS25,35,12,SLOW,,,,LOCATED,YES,NONE,
+A18,fmc_imageon_hdmi_out_0_io_hdmio_spdif_pin,IOB33,IO_L10P_T1_AD11P_35,TRISTATE,LVCMOS25,35,12,SLOW,,,,LOCATED,NO,NONE,
 A19,fmc_imageon_hdmi_in_0_io_hdmii_spdif_pin,IOB33,IO_L10N_T1_AD11N_35,INPUT,LVCMOS25,35,,,,NONE,,LOCATED,NO,NONE,
 A20,,,VCCO_35,,,35,,,,,2.50,,,,
 A21,,IOB33M,IO_L15P_T2_DQS_AD12P_35,UNUSED,,35,,,,,,,,,

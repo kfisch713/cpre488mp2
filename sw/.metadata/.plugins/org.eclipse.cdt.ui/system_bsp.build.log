@@ -1,4 +1,4 @@
-11:20:59 **** Build of project system_bsp ****
+19:04:23 **** Auto Build of project system_bsp ****
 make -k all 
 libgen -hw ../system_hw_platform/system.xml\
 	       -lp C:/cpre488mp2/repository/ProcessorIPLib -lp //my.files.iastate.edu/Users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib\
@@ -72,6 +72,7 @@ arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
 "Compiling fmc_imageon_sw"
 "Compiling fmc_ipmi_sw"
 "Compiling axivdma"
+"Compiling gpio"
 "Compiling iic"
 "Compiling fmc_imageon_vita_receiver"
 fmc_imageon_vita_receiver.c: In function 'fmc_imageon_vita_receiver_set_analog_gain':
@@ -97,10 +98,13 @@ fmc_imageon_vita_receiver.c:683:5: note: expected 'Xuint16 (*)[3]' but argument 
 "Compiling ttcps"
 "Compiling uartps"
 "Compiling usbps"
+"Compiling cfa"
+"Compiling cresample"
+"Compiling rgb2ycrcb"
 "Compiling video timing controller"
 "Compiling cpu_cortexa9"
 Running execs_generate.
 'Finished building libraries'
 
-11:21:16 Build Finished (took 17s.131ms)
+19:04:40 Build Finished (took 17s.270ms)
 

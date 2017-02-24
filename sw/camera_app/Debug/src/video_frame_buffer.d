@@ -18,6 +18,9 @@ src/video_frame_buffer.d: ../src/video_frame_buffer.c ../src/camera_app.h \
  ../../system_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../system_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../system_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
+ ../../system_bsp/ps7_cortexa9_0/include/cfa.h \
+ ../../system_bsp/ps7_cortexa9_0/include/rgb2ycrcb.h \
+ ../../system_bsp/ps7_cortexa9_0/include/cresample.h \
  ../../system_bsp/ps7_cortexa9_0/include/xvtc.h \
  ../../system_bsp/ps7_cortexa9_0/include/xvtc_hw.h \
  ../../system_bsp/ps7_cortexa9_0/include/xaxivdma.h \
@@ -66,6 +69,12 @@ src/video_frame_buffer.d: ../src/video_frame_buffer.c ../src/camera_app.h \
 ../../system_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h:
 
 ../../system_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
+
+../../system_bsp/ps7_cortexa9_0/include/cfa.h:
+
+../../system_bsp/ps7_cortexa9_0/include/rgb2ycrcb.h:
+
+../../system_bsp/ps7_cortexa9_0/include/cresample.h:
 
 ../../system_bsp/ps7_cortexa9_0/include/xvtc.h:
 

@@ -283,18 +283,23 @@ int fmc_imageon_enable_ipipe( camera_config_t *config ) {
 
    xil_printf("Image Processing Pipeline (iPIPE) Initialization ...\n\r" );
 
-//   RGB_Reset(config->uBaseAddr_RGBYCC );
-//   RGB_ClearReset( config->uBaseAddr_RGBYCC );
-//   RGB_Enable( config->uBaseAddr_RGBYCC );
-//   xil_printf("\tRGB2YCrCb done\r\n");
+   RGB_Reset(config->uBaseAddr_RGBYCC );
+   RGB_ClearReset( config->uBaseAddr_RGBYCC );
+   RGB_Enable( config->uBaseAddr_RGBYCC );
+   xil_printf("\tRGB2YCrCb done\r\n");
 
-//   CFA_Reset( config->uBaseAddr_CFA );
-//   CFA_ClearReset( config->uBaseAddr_CFA );
-//   CFA_Enable( config->uBaseAddr_CFA );
-//   CFA_RegUpdateDisable( config->uBaseAddr_CFA );
-//   CFA_WriteReg( config->uBaseAddr_CFA, CFA_BAYER_PHASE, 0 );
-//   CFA_RegUpdateEnable( config->uBaseAddr_CFA );
-//   xil_printf("\tCFA done\r\n");
+   CFA_Reset( config->uBaseAddr_CFA );
+   CFA_ClearReset( config->uBaseAddr_CFA );
+   CFA_Enable( config->uBaseAddr_CFA );
+   CFA_RegUpdateDisable( config->uBaseAddr_CFA );
+   CFA_WriteReg( config->uBaseAddr_CFA, CFA_BAYER_PHASE, 0 );
+   CFA_RegUpdateEnable( config->uBaseAddr_CFA );
+   xil_printf("\tCFA done\r\n");
+
+   CRESAMPLE_Reset( config->uBaseAddr_CRES);
+   CRESAMPLE_ClearReset( config->uBaseAddr_CRES);
+   CRESAMPLE_Enable( config->uBaseAddr_CRES);
+   xil_printf("\tCRESAMPLE done\r\n");
 
 
    return 0;

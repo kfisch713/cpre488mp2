@@ -2,7 +2,7 @@
 // system_v_vid_in_axi4s_0_wrapper.v
 //-----------------------------------------------------------------------------
 
-(* x_core_info = "v_vid_in_axi4s_v2_00_a" *)
+(* x_core_info = "v_vid_in_axi4s_v2_01_a" *)
 module system_v_vid_in_axi4s_0_wrapper
   (
     vid_in_clk,
@@ -14,8 +14,8 @@ module system_v_vid_in_axi4s_0_wrapper
     vid_hsync,
     vid_data,
     aclk,
-    aclken,
     aresetn,
+    aclken,
     m_axis_video_tdata,
     m_axis_video_tvalid,
     m_axis_video_tready,
@@ -37,11 +37,11 @@ module system_v_vid_in_axi4s_0_wrapper
   input vid_hblank;
   input vid_vsync;
   input vid_hsync;
-  input [15:0] vid_data;
+  input [7:0] vid_data;
   input aclk;
-  input aclken;
   input aresetn;
-  output [15:0] m_axis_video_tdata;
+  input aclken;
+  output [7:0] m_axis_video_tdata;
   output m_axis_video_tvalid;
   input m_axis_video_tready;
   output m_axis_video_tuser;
@@ -57,10 +57,10 @@ module system_v_vid_in_axi4s_0_wrapper
 
   v_vid_in_axi4s
     #(
-      .C_M_AXIS_VIDEO_DATA_WIDTH ( 16 ),
+      .C_M_AXIS_VIDEO_DATA_WIDTH ( 8 ),
       .C_M_AXIS_VIDEO_FORMAT ( 12 ),
-      .VID_IN_DATA_WIDTH ( 16 ),
-      .C_M_AXIS_VIDEO_TDATA_WIDTH ( 16 ),
+      .VID_IN_DATA_WIDTH ( 8 ),
+      .C_M_AXIS_VIDEO_TDATA_WIDTH ( 8 ),
       .PADDING_BITS ( 0 ),
       .RAM_ADDR_BITS ( 10 ),
       .HYSTERESIS_LEVEL ( 12 )
@@ -75,8 +75,8 @@ module system_v_vid_in_axi4s_0_wrapper
       .vid_hsync ( vid_hsync ),
       .vid_data ( vid_data ),
       .aclk ( aclk ),
-      .aclken ( aclken ),
       .aresetn ( aresetn ),
+      .aclken ( aclken ),
       .m_axis_video_tdata ( m_axis_video_tdata ),
       .m_axis_video_tvalid ( m_axis_video_tvalid ),
       .m_axis_video_tready ( m_axis_video_tready ),

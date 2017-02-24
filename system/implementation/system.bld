@@ -12,9 +12,6 @@ ngc"...
 Loading design module
 "C:/cpre488mp2/system/implementation/system_processing_system7_0_wrapper.ngc"...
 Loading design module
-"C:/cpre488mp2/system/implementation/system_fmc_imageon_hdmi_out_0_wrapper.ngc".
-..
-Loading design module
 "C:/cpre488mp2/system/implementation/system_clock_generator_1_wrapper.ngc"...
 Loading design module
 "C:/cpre488mp2/system/implementation/system_v_vid_in_axi4s_0_wrapper.ngc"...
@@ -23,9 +20,18 @@ Loading design module
 Loading design module
 "C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ngc"...
 Loading design module
+"C:/cpre488mp2/system/implementation/system_fmc_imageon_hdmi_out_0_wrapper.ngc".
+..
+Loading design module
 "C:/cpre488mp2/system/implementation/system_v_tc_1_wrapper.ngc"...
 Loading design module
 "C:/cpre488mp2/system/implementation/system_v_tc_0_wrapper.ngc"...
+Loading design module
+"C:/cpre488mp2/system/implementation/system_v_rgb2ycrcb_0_wrapper.ngc"...
+Loading design module
+"C:/cpre488mp2/system/implementation/system_v_cresample_0_wrapper.ngc"...
+Loading design module
+"C:/cpre488mp2/system/implementation/system_v_cfa_0_wrapper.ngc"...
 Loading design module
 "C:/cpre488mp2/system/implementation/system_v_axi4s_vid_out_0_wrapper.ngc"...
 Loading design module
@@ -129,7 +135,34 @@ INFO:coreutil - Full license for component <v_tc> allows you to use this
    conditions of the applicable license agreement when using this core.
 
 
-INFO:coreutil - Full license for component <v_tc> allows you to use this
+INFO:coreutil - Full license for component <v_cresample> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cresample> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cfa> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cfa> allows you to use this
    component. This license does not give you access to source code implementing
    this component.
 
@@ -157,6 +190,51 @@ INFO:coreutil - Full license for component <v_tc> allows you to use this
 
 
 INFO:coreutil - Full license for component <v_tc> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cresample> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cresample> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cfa> allows you to use this
+   component. This license does not give you access to source code implementing
+   this component.
+
+   The license for this core was generated for zambreno on 01/28/2015It is the
+   responsibility of the Licensee of this core to adhere to all terms and
+   conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cfa> allows you to use this
    component. This license does not give you access to source code implementing
    this component.
 
@@ -1326,10 +1404,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 287
 
-Total memory usage is 491236 kilobytes
+Total memory usage is 575524 kilobytes
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  58 sec
-Total CPU time to NGDBUILD completion:   57 sec
+Total REAL time to NGDBUILD completion: 1 min  16 sec
+Total CPU time to NGDBUILD completion:  1 min  14 sec
 
 Writing NGDBUILD log file "system.bld"...

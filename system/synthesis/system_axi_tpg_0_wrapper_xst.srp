@@ -1,10 +1,10 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to U:\Documents\cpre488mp2\system\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\cpre488mp2\system\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 TABLE OF CONTENTS
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_axi_tpg_0_wrapper_xst.prj"
-Verilog Include Directory          : {"U:\Documents\cpre488mp2\system\pcores\" "U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\cpre488mp2\system\pcores\" "C:\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc7z020clg484-1
@@ -609,22 +609,22 @@ WARNING:HDLCompiler:443 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pco
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_00_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_00_a
 Parsing entity <axi_lite_ipif>.
 Parsing architecture <rtl> of entity <axi_lite_ipif>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_pkg.vhd" into library axi_tpg_v2_00_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_pkg.vhd" into library axi_tpg_v2_00_a
 Parsing package <ZplateLib>.
 Parsing package body <ZplateLib>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd" into library axi_tpg_v2_00_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd" into library axi_tpg_v2_00_a
 Parsing entity <zplate>.
 Parsing architecture <rtl> of entity <zplate>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" into library axi_tpg_v2_00_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" into library axi_tpg_v2_00_a
 Parsing entity <tpg_core>.
 Parsing architecture <Behavioral> of entity <tpg_core>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd" into library axi_tpg_v2_00_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd" into library axi_tpg_v2_00_a
 Parsing entity <user_logic>.
 Parsing architecture <IMP> of entity <user_logic>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" into library axi_tpg_v2_00_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" into library axi_tpg_v2_00_a
 Parsing entity <axi_tpg>.
 Parsing architecture <IMP> of entity <axi_tpg>.
-Parsing VHDL file "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_axi_tpg_0_wrapper.vhd" into library work
+Parsing VHDL file "C:\cpre488mp2\system\hdl\system_axi_tpg_0_wrapper.vhd" into library work
 Parsing entity <system_axi_tpg_0_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_axi_tpg_0_wrapper>.
 
@@ -635,8 +635,8 @@ Parsing architecture <STRUCTURE> of entity <system_axi_tpg_0_wrapper>.
 Elaborating entity <system_axi_tpg_0_wrapper> (architecture <STRUCTURE>) from library <work>.
 
 Elaborating entity <axi_tpg> (architecture <IMP>) with generics from library <axi_tpg_v2_00_a>.
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" Line 376: Assignment to ipif_bus2ip_addr ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" Line 379: Assignment to ipif_bus2ip_cs ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" Line 376: Assignment to ipif_bus2ip_addr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" Line 379: Assignment to ipif_bus2ip_cs ignored, since the identifier is never used
 
 Elaborating entity <axi_lite_ipif> (architecture <rtl>) with generics from library <axi_lite_ipif_v1_00_a>.
 
@@ -664,29 +664,29 @@ Elaborating entity <pselect_f> (architecture <imp>) with generics from library <
 Elaborating entity <counter_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
 
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <axi_tpg_v2_00_a>.
-WARNING:HDLCompiler:92 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd" Line 385: slv_reg_stat should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd" Line 385: slv_reg_stat should be on the sensitivity list of the process
 
 Elaborating entity <tpg_core> (architecture <Behavioral>) with generics from library <axi_tpg_v2_00_a>.
 
 Elaborating entity <zplate> (architecture <rtl>) with generics from library <axi_tpg_v2_00_a>.
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd" Line 90: Assignment to fe_hsync ignored, since the identifier is never used
-INFO:HDLCompiler:679 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" Line 331. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" Line 336: Assignment to d_red_in ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" Line 453: Assignment to hmin ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd" Line 196: Net <le_slv_reg_stat[7][31]> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd" Line 90: Assignment to fe_hsync ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" Line 331. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" Line 336: Assignment to d_red_in ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd" Line 453: Assignment to hmin ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd" Line 196: Net <le_slv_reg_stat[7][31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system_axi_tpg_0_wrapper>.
-    Related source file is "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_axi_tpg_0_wrapper.vhd".
+    Related source file is "C:\cpre488mp2\system\hdl\system_axi_tpg_0_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_axi_tpg_0_wrapper> synthesized.
 
 Synthesizing Unit <axi_tpg>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
         C_CHROMA_FORMAT = 0
@@ -701,10 +701,10 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:647 - Input <VDMA_video_out_full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 385: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 385: Output port <Bus2IP_CS> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 385: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 439: Output port <blue_out> of the instance <USER_LOGIC_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 385: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 385: Output port <Bus2IP_CS> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 385: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/axi_tpg.vhd" line 439: Output port <blue_out> of the instance <USER_LOGIC_I> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <ipif_Bus2IP_Reset>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -898,7 +898,7 @@ Synthesizing Unit <counter_f>.
 Unit <counter_f> synthesized.
 
 Synthesizing Unit <user_logic>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/user_logic.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
         C_SLV_DWIDTH = 32
@@ -989,7 +989,7 @@ INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal slv_write_ack_syn
 Unit <user_logic> synthesized.
 
 Synthesizing Unit <tpg_core>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/tpg_core.vhd".
         C_FAMILY = "zynq"
         C_Chroma_Format = 0
 WARNING:Xst:647 - Input <CbCrPolarity> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1076,7 +1076,7 @@ WARNING:Xst:647 - Input <CbCrPolarity> is never used. This port will be preserve
 Unit <tpg_core> synthesized.
 
 Synthesizing Unit <zplate>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/axi_tpg_v2_00_a/hdl/vhdl/zplate_top.vhd".
         OutWidth = 8
         DeltaWidth = 16
     Found 1-bit register for signal <d_vsync>.
@@ -1724,12 +1724,12 @@ VDMA_wd_clk    |    2.945|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.16 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.82 secs
  
 --> 
 
-Total memory usage is 488520 kilobytes
+Total memory usage is 488200 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  171 (   0 filtered)

@@ -1,10 +1,10 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to U:\Documents\cpre488mp2\system\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\cpre488mp2\system\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 TABLE OF CONTENTS
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_fmc_imageon_hdmi_out_0_wrapper_xst.prj"
-Verilog Include Directory          : {"U:\Documents\cpre488mp2\system\pcores\" "U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\cpre488mp2\system\pcores\" "C:\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc7z020clg484-1
@@ -62,13 +62,13 @@ Cores Search Directories           : {../implementation}
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" into library fmc_imageon_hdmi_out_v1_05_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" into library fmc_imageon_hdmi_out_v1_05_a
 Parsing entity <fmc_imageon_hdmi_out>.
 Parsing architecture <rtl> of entity <fmc_imageon_hdmi_out>.
-Parsing VHDL file "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/adv7511_embed_syncs.vhd" into library fmc_imageon_hdmi_out_v1_05_a
+Parsing VHDL file "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/adv7511_embed_syncs.vhd" into library fmc_imageon_hdmi_out_v1_05_a
 Parsing entity <adv7511_embed_syncs>.
 Parsing architecture <rtl> of entity <adv7511_embed_syncs>.
-Parsing VHDL file "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_fmc_imageon_hdmi_out_0_wrapper.vhd" into library work
+Parsing VHDL file "C:\cpre488mp2\system\hdl\system_fmc_imageon_hdmi_out_0_wrapper.vhd" into library work
 Parsing entity <system_fmc_imageon_hdmi_out_0_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_fmc_imageon_hdmi_out_0_wrapper>.
 
@@ -81,23 +81,23 @@ Elaborating entity <system_fmc_imageon_hdmi_out_0_wrapper> (architecture <STRUCT
 Elaborating entity <fmc_imageon_hdmi_out> (architecture <rtl>) with generics from library <fmc_imageon_hdmi_out_v1_05_a>.
 
 Elaborating entity <adv7511_embed_syncs> (architecture <rtl>) from library <fmc_imageon_hdmi_out_v1_05_a>.
-WARNING:HDLCompiler:1127 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/adv7511_embed_syncs.vhd" Line 89: Assignment to vblank_df ignored, since the identifier is never used
-WARNING:HDLCompiler:321 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" Line 238: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" Line 272: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" Line 306: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:1127 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/adv7511_embed_syncs.vhd" Line 89: Assignment to vblank_df ignored, since the identifier is never used
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" Line 238: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" Line 272: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd" Line 306: Comparison between arrays of unequal length always returns FALSE.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system_fmc_imageon_hdmi_out_0_wrapper>.
-    Related source file is "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_fmc_imageon_hdmi_out_0_wrapper.vhd".
+    Related source file is "C:\cpre488mp2\system\hdl\system_fmc_imageon_hdmi_out_0_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_fmc_imageon_hdmi_out_0_wrapper> synthesized.
 
 Synthesizing Unit <fmc_imageon_hdmi_out>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/fmc_imageon_hdmi_out.vhd".
         C_DATA_WIDTH = 16
         C_FAMILY = "zynq"
     Set property "IOB = FORCE" for signal <hdmio_video_o>.
@@ -119,7 +119,7 @@ Synthesizing Unit <fmc_imageon_hdmi_out>.
 Unit <fmc_imageon_hdmi_out> synthesized.
 
 Synthesizing Unit <adv7511_embed_syncs>.
-    Related source file is "//my.files.iastate.edu/users/burneykb/Documents/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/adv7511_embed_syncs.vhd".
+    Related source file is "C:/cpre488mp2/repository/ProcessorIPLib/pcores/fmc_imageon_hdmi_out_v1_05_a/hdl/vhdl/adv7511_embed_syncs.vhd".
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <active_video_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 6-bit register for signal <hblank_d>.
@@ -443,12 +443,12 @@ clk            |    1.439|         |         |         |
 WARNING:Xst:615 - Flip flop associated with net fmc_imageon_hdmi_out_0/hdmio_clk_o not found, property IOB not attached.
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.19 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.21 secs
  
 --> 
 
-Total memory usage is 511560 kilobytes
+Total memory usage is 499848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   14 (   0 filtered)

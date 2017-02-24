@@ -2,13 +2,13 @@
 // system_v_axi4s_vid_out_0_wrapper.v
 //-----------------------------------------------------------------------------
 
-(* x_core_info = "v_axi4s_vid_out_v2_00_a" *)
+(* x_core_info = "v_axi4s_vid_out_v2_01_a" *)
 module system_v_axi4s_vid_out_0_wrapper
   (
     aclk,
     rst,
-    aclken,
     aresetn,
+    aclken,
     s_axis_video_tdata,
     s_axis_video_tvalid,
     s_axis_video_tready,
@@ -34,8 +34,8 @@ module system_v_axi4s_vid_out_0_wrapper
   );
   input aclk;
   input rst;
-  input aclken;
   input aresetn;
+  input aclken;
   input [15:0] s_axis_video_tdata;
   input s_axis_video_tvalid;
   output s_axis_video_tready;
@@ -73,8 +73,8 @@ module system_v_axi4s_vid_out_0_wrapper
     v_axi4s_vid_out_0 (
       .aclk ( aclk ),
       .rst ( rst ),
-      .aclken ( aclken ),
       .aresetn ( aresetn ),
+      .aclken ( aclken ),
       .s_axis_video_tdata ( s_axis_video_tdata ),
       .s_axis_video_tvalid ( s_axis_video_tvalid ),
       .s_axis_video_tready ( s_axis_video_tready ),

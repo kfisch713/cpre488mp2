@@ -1,75 +1,41 @@
-WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 105 
-WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
-WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
-WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   C:\cpre488mp2\system\system.mhs line 359 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 105 
-WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
-WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
-WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   C:\cpre488mp2\system\system.mhs line 359 
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not
+   connected to any slave. 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 105 
-WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
-WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
-WARNING:EDK:4088 - IPNAME: v_vid_in_axi4s, INSTANCE: v_vid_in_axi4s_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 66 
+   C:\cpre488mp2\system\system.mhs line 359 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_1 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 86 
 WARNING:EDK:4092 - IPNAME: v_tc, INSTANCE: v_tc_0 - Pre-Production version not
    verified on hardware for architecture 'zynq' -
    C:\cpre488mp2\system\system.mhs line 105 
-WARNING:EDK:4088 - IPNAME: v_axi4s_vid_out, INSTANCE: v_axi4s_vid_out_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 122 
-WARNING:EDK:4088 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
-   Superseded core for architecture 'zynq' - C:\cpre488mp2\system\system.mhs
-   line 140 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\cpre488mp2\system\system.mhs line 310 
+   C:\cpre488mp2\system\system.mhs line 359 
 WARNING:EDK:2486 - The bitwidth 52 of new value 0xc00000000fe81 is greater than
    32
 WARNING:EDK:4131 - IPNAME: ps7_usb_0, PROPERTY: C_INTERCONNECT_M_AXI_BASE_ID -
@@ -298,6 +264,8 @@ WARNING:EDK:4131 - IPNAME: ps7_qspi_0, PROPERTY: SCK - Failure in evaluting
    ISVALID expresion "(C_USE_STARTUP==0)" -
    C:\Xilinx\14.7\ISE_DS\ISE\data\zynqconfig\ps7_internals\pcores\ps7_qspi_v1_00
    _a\data\ps7_qspi_v2_1_0.mpd line 122 
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not
+   connected to any slave. 
 
 Overriding IP level properties ...
 WARNING:EDK:4131 - IPNAME: ps7_usb_0, PROPERTY: C_INTERCONNECT_M_AXI_BASE_ID -
@@ -528,6 +496,8 @@ WARNING:EDK:4131 - IPNAME: ps7_qspi_0, PROPERTY: SCK - Failure in evaluting
    _a\data\ps7_qspi_v2_1_0.mpd line 122 
 
 Computing clock values...
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not
+   connected to any slave. 
 
 Performing IP level DRCs on properties...
 
@@ -544,6 +514,9 @@ Address Map for Processor ps7_cortexa9_0
   (0x51200000-0x5120ffff) axi_tpg_0	ps7_axi_interconnect_0->axi4lite_0
   (0x52100000-0x5210ffff)
 fmc_imageon_vita_receiver_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x52110000-0x5211ffff) v_cfa_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x52120000-0x5212ffff) v_rgb2ycrcb_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x52130000-0x5213ffff) v_cresample_0	ps7_axi_interconnect_0->axi4lite_0
   (0x52200000-0x5220ffff) v_tc_0	ps7_axi_interconnect_0->axi4lite_0
   (0xe0001000-0xe0001fff) ps7_uart_1	ps7_axi_interconnect_0
   (0xe0002000-0xe0002fff) ps7_usb_0	ps7_axi_interconnect_0
@@ -587,6 +560,9 @@ Address Map for Processor ps7_cortexa9_1
   (0x51200000-0x5120ffff) axi_tpg_0	ps7_axi_interconnect_0->axi4lite_0
   (0x52100000-0x5210ffff)
 fmc_imageon_vita_receiver_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x52110000-0x5211ffff) v_cfa_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x52120000-0x5212ffff) v_rgb2ycrcb_0	ps7_axi_interconnect_0->axi4lite_0
+  (0x52130000-0x5213ffff) v_cresample_0	ps7_axi_interconnect_0->axi4lite_0
   (0x52200000-0x5220ffff) v_tc_0	ps7_axi_interconnect_0->axi4lite_0
   (0xe0001000-0xe0001fff) ps7_uart_1	ps7_axi_interconnect_0
   (0xe0002000-0xe0002fff) ps7_usb_0	ps7_axi_interconnect_0

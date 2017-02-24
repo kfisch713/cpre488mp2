@@ -1,10 +1,10 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to U:\Documents\cpre488mp2\system\synthesis\xst_temp_dir\
+--> Parameter TMPDIR set to C:\cpre488mp2\system\synthesis\xst_temp_dir\
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 TABLE OF CONTENTS
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_fmc_imageon_iic_0_wrapper_xst.prj"
-Verilog Include Directory          : {"U:\Documents\cpre488mp2\system\pcores\" "U:\Documents\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\cpre488mp2\system\pcores\" "C:\cpre488mp2\repository\ProcessorIPLib\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc7z020clg484-1
@@ -642,7 +642,7 @@ Parsing architecture <RTL> of entity <iic>.
 Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_iic_v1_02_a/hdl/vhdl/axi_iic.vhd" into library axi_iic_v1_02_a
 Parsing entity <axi_iic>.
 Parsing architecture <RTL> of entity <axi_iic>.
-Parsing VHDL file "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_fmc_imageon_iic_0_wrapper.vhd" into library work
+Parsing VHDL file "C:\cpre488mp2\system\hdl\system_fmc_imageon_iic_0_wrapper.vhd" into library work
 Parsing entity <system_fmc_imageon_iic_0_wrapper>.
 Parsing architecture <STRUCTURE> of entity <system_fmc_imageon_iic_0_wrapper>.
 
@@ -785,7 +785,7 @@ Elaborating entity <SRL_FIFO> (architecture <IMP>) with generics from library <p
 =========================================================================
 
 Synthesizing Unit <system_fmc_imageon_iic_0_wrapper>.
-    Related source file is "\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\hdl\system_fmc_imageon_iic_0_wrapper.vhd".
+    Related source file is "C:\cpre488mp2\system\hdl\system_fmc_imageon_iic_0_wrapper.vhd".
     Summary:
 	no macro.
 Unit <system_fmc_imageon_iic_0_wrapper> synthesized.
@@ -2088,12 +2088,12 @@ S_AXI_ACLK     |    3.778|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.64 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.94 secs
  
 --> 
 
-Total memory usage is 467080 kilobytes
+Total memory usage is 466888 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  106 (   0 filtered)

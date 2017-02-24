@@ -11,11 +11,11 @@
 <msg type="warning" file="ConstraintSystem" num="194" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">axi_interconnect_1_async_clock_conv_FFDEST</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
  </msg>
 
-<msg type="info" file="NgdBuild" num="981" delta="new" >Could not find any associations for the following constraint:
+<msg type="info" file="NgdBuild" num="981" delta="old" >Could not find any associations for the following constraint:
     &apos;<arg fmt="%s" index="1">&lt;INST &quot;axi_interconnect_1/*_converter_bank/*clock_conv_inst/*asyncfifo_*/*mem/*dout_i_???&quot; TNM = &quot;axi_interconnect_1_async_clock_conv_FFDEST&quot;;&gt; [C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ncf(6)]</arg>&apos;
 </msg>
 
-<msg type="info" file="NgdBuild" num="981" delta="new" >Could not find any associations for the following constraint:
+<msg type="info" file="NgdBuild" num="981" delta="old" >Could not find any associations for the following constraint:
     &apos;<arg fmt="%s" index="1">&lt;INST &quot;axi_interconnect_1/*_converter_bank/*clock_conv_inst/*asyncfifo_*/*mem/*dout_i_????&quot; TNM = &quot;axi_interconnect_1_async_clock_conv_FFDEST&quot;;&gt; [C:/cpre488mp2/system/implementation/system_axi_interconnect_1_wrapper.ncf(7)]</arg>&apos;
 </msg>
 
@@ -56,7 +56,28 @@ The license for this core was generated for zambreno on 01/28/2015It is the resp
 </arg>
 </msg>
 
-<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_tc&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cresample&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cresample&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cfa&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cfa&gt; allows you to use this component. This license does not give you access to source code implementing this component.
 
 The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
 
@@ -78,6 +99,41 @@ The license for this core was generated for zambreno on 01/28/2015It is the resp
 </msg>
 
 <msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_tc&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_tc&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cresample&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cresample&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cfa&gt; allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Full license for component &lt;v_cfa&gt; allows you to use this component. This license does not give you access to source code implementing this component.
 
 The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
 

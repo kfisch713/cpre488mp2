@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="enable" key="selection"/>
+		<item value="SW" key="selection"/>
 		<list key="findhistory">
+			<item value="SW"/>
+			<item value="BTN"/>
+			<item value="XPAR_SWS_8BITS_BASEADDR"/>
+			<item value="SWS"/>
+			<item value="SWs"/>
+			<item value="fmc_imageon_enable_ipipe"/>
 			<item value="enable"/>
 			<item value="gp"/>
-			<item value="port"/>
-			<item value="oe"/>
-			<item value="-&gt;enable"/>
-			<item value=".e"/>
-			<item value=".en"/>
-			<item value=".enable"/>
 		</list>
 		<list key="replacehistory">
 		</list>
