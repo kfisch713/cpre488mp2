@@ -16,6 +16,7 @@
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="267,924,200" VERSION="0"/>
     <SET ID="v_vid_in_axi4s_0" IS_EXPANDED="TRUE"/>
     <SET ID="v_tc_1" IS_EXPANDED="TRUE"/>
+<<<<<<< HEAD
     <SET ID="v_tc_0" IS_EXPANDED="TRUE"/>
     <SET ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE"/>
     <SET ID="processing_system7_0" IS_EXPANDED="TRUE"/>
@@ -29,6 +30,7 @@
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="v_vid_in_axi4s_0" IS_EXPANDED="TRUE" ROW_INDEX="17"/>
       <VARIABLE ID="v_tc_1" IS_EXPANDED="TRUE" ROW_INDEX="16"/>
+<<<<<<< HEAD
       <VARIABLE ID="v_tc_0" IS_EXPANDED="TRUE" ROW_INDEX="15"/>
       <VARIABLE ID="v_rgb2ycrcb_0" ROW_INDEX="14"/>
       <VARIABLE ID="v_cresample_0" ROW_INDEX="13"/>
@@ -36,6 +38,15 @@
       <VARIABLE ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
       <VARIABLE ID="processing_system7_0" IS_EXPANDED="TRUE" ROW_INDEX="2"/>
       <VARIABLE ID="fmc_imageon_vita_receiver_0" ROW_INDEX="10"/>
+=======
+      <VARIABLE ID="v_tc_0" ROW_INDEX="15"/>
+      <VARIABLE ID="v_rgb2ycrcb_0" ROW_INDEX="14"/>
+      <VARIABLE ID="v_cresample_0" ROW_INDEX="13"/>
+      <VARIABLE ID="v_cfa_0" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
+      <VARIABLE ID="v_axi4s_vid_out_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
+      <VARIABLE ID="processing_system7_0" IS_EXPANDED="TRUE" ROW_INDEX="2"/>
+      <VARIABLE ID="fmc_imageon_vita_receiver_0" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
+>>>>>>> de6db62d02778591c060903efebacac7cae8145f
       <VARIABLE ID="fmc_imageon_iic_0" IS_EXPANDED="TRUE" ROW_INDEX="6"/>
       <VARIABLE ID="fmc_imageon_hdmi_out_0" IS_EXPANDED="TRUE" ROW_INDEX="9"/>
       <VARIABLE ID="clock_generator_1" ROW_INDEX="18"/>
@@ -43,9 +54,15 @@
       <VARIABLE ID="axi_tpg_0" ROW_INDEX="7"/>
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
       <VARIABLE ID="axi4lite_0" ROW_INDEX="0"/>
+<<<<<<< HEAD
       <VARIABLE ID="SWs_8Bits" ROW_INDEX="4"/>
       <VARIABLE ID="IIC_FMC" IS_EXPANDED="TRUE" ROW_INDEX="5"/>
       <VARIABLE ID="BTNs_5Bits" ROW_INDEX="3"/>
+=======
+      <VARIABLE ID="SWs_8Bits" IS_EXPANDED="TRUE" ROW_INDEX="4"/>
+      <VARIABLE ID="IIC_FMC" ROW_INDEX="5"/>
+      <VARIABLE ID="BTNs_5Bits" IS_EXPANDED="TRUE" ROW_INDEX="3"/>
+>>>>>>> de6db62d02778591c060903efebacac7cae8145f
     </SEQUENCES>
   </SET>
 
@@ -106,21 +123,23 @@
       <VARIABLE COL_INDEX="11" IS_VISIBLE="TRUE" VIEWDISP="IP Classification" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="11" COL_WIDTH="374" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
+<<<<<<< HEAD
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="267,924,200" VERSION="0"/>
     <STATUS>
       <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="FALSE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
-      <VARIABLE ID="v_vid_in_axi4s_0" ROW_INDEX="15"/>
+      <VARIABLE ID="v_vid_in_axi4s_0" IS_EXPANDED="TRUE" ROW_INDEX="15"/>
       <VARIABLE ID="v_tc_1" ROW_INDEX="14"/>
       <VARIABLE ID="v_tc_0" ROW_INDEX="13"/>
       <VARIABLE ID="v_rgb2ycrcb_0" ROW_INDEX="19"/>
       <VARIABLE ID="v_cresample_0" ROW_INDEX="17"/>
+<<<<<<< HEAD
       <VARIABLE ID="v_cfa_0" ROW_INDEX="18"/>
       <VARIABLE ID="v_axi4s_vid_out_0" ROW_INDEX="12"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="3"/>
-      <VARIABLE ID="fmc_imageon_vita_receiver_0" ROW_INDEX="11"/>
+      <VARIABLE ID="fmc_imageon_vita_receiver_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
       <VARIABLE ID="fmc_imageon_iic_0" ROW_INDEX="7"/>
       <VARIABLE ID="fmc_imageon_hdmi_out_0" ROW_INDEX="10"/>
       <VARIABLE ID="clock_generator_1" ROW_INDEX="16"/>
@@ -203,7 +222,11 @@
       <VARIABLE COL_INDEX="3" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="High Address" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="4" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Size" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="5" COL_WIDTH="105" IS_VISIBLE="TRUE" VIEWDISP="Bus Interface(s)" VIEWTYPE="HEADER"/>
+<<<<<<< HEAD
       <VARIABLE COL_INDEX="9" COL_WIDTH="549" IS_VISIBLE="TRUE" VIEWDISP="Bus Name" VIEWTYPE="HEADER"/>
+=======
+      <VARIABLE COL_INDEX="9" COL_WIDTH="654" IS_VISIBLE="TRUE" VIEWDISP="Bus Name" VIEWTYPE="HEADER"/>
+>>>>>>> de6db62d02778591c060903efebacac7cae8145f
       <VARIABLE COL_INDEX="7" IS_VISIBLE="FALSE" VIEWDISP="ICache" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="8" IS_VISIBLE="FALSE" VIEWDISP="DCache" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="10" IS_VISIBLE="FALSE" VIEWDISP="IP Type" VIEWTYPE="HEADER"/>
