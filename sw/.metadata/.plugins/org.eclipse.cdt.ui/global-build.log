@@ -15501,3 +15501,1615 @@ arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
 07:01:14 **** Incremental Build of configuration Debug for project camera_app ****
 make all 
 make: Nothing to be done for `all'.
+17:07:18 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122416	   4200	2122400	2249016	 225138	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:08:14 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122416	   4200	2122400	2249016	 225138	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:08:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:191:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:206:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122400	   4200	2122400	2249000	 225128	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:09:11 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:09:47 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:10:09 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:192:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:207:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122432	   4200	2122400	2249032	 225148	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:10:14 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:12:53 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:193:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:208:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122472	   4200	2122400	2249072	 225170	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:12:57 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:13:33 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:193:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:208:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122472	   4200	2122400	2249072	 225170	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:13:38 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:14:50 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:193:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:208:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122472	   4200	2122400	2249072	 225170	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:14:54 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:16:23 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:191:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:206:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122432	   4200	2122400	2249032	 225148	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:16:34 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:192:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:207:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122432	   4200	2122400	2249032	 225148	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:16:57 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:188:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:203:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122432	   4200	2122400	2249032	 225148	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:17:04 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:18:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:188:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:203:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122432	   4200	2122400	2249032	 225148	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:18:26 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:18:53 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:20:16 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:189:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:204:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122448	   4200	2122400	2249048	 225158	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:20:37 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:21:43 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122464	   4200	2122400	2249064	 225168	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:22:00 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122416	   4200	2122400	2249016	 225138	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:22:18 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122416	   4200	2122400	2249016	 225138	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:22:48 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122480	   4200	2122400	2249080	 225178	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:22:52 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:28:57 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122168	   4200	2122400	2248768	 225040	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:29:29 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122596	   4200	2122400	2249196	 2251ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:29:33 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:30:31 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:32:40 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122636	   4200	2122400	2249236	 225214	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:32:44 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:34:36 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122328	   4200	2122400	2248928	 2250e0	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:34:40 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:35:26 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:42:28 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_loop':
+../src/camera_app.c:226:18: warning: unused variable 'CR' [-Wunused-variable]
+../src/camera_app.c:226:14: warning: unused variable 'CB' [-Wunused-variable]
+../src/camera_app.c:226:11: warning: unused variable 'Y' [-Wunused-variable]
+../src/camera_app.c:225:17: warning: unused variable 'B' [-Wunused-variable]
+../src/camera_app.c:225:14: warning: unused variable 'G' [-Wunused-variable]
+../src/camera_app.c:225:11: warning: unused variable 'R' [-Wunused-variable]
+../src/camera_app.c:223:20: warning: unused variable 'pMM2S_Mem' [-Wunused-variable]
+../src/camera_app.c:222:20: warning: unused variable 'pS2MM_Mem' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:29:13: warning: 'fill_color_lut' used but never defined [enabled by default]
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_loop':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:199: undefined reference to `fill_color_lut'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+17:43:35 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:29:13: warning: 'fill_color_lut' used but never defined [enabled by default]
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_loop':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:199: undefined reference to `fill_color_lut'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+17:43:49 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123112	   4200	2122400	2249712	 2253f0	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:44:00 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123112	   4200	2122400	2249712	 2253f0	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:44:44 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:45:08 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'main':
+../src/camera_app.c:87:14: error: 'config' undeclared (first use in this function)
+../src/camera_app.c:87:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:87:22: error: expected statement before ')' token
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:120:13: warning: 'camera_interface_free' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+17:45:11 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'main':
+../src/camera_app.c:87:14: error: 'config' undeclared (first use in this function)
+../src/camera_app.c:87:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:120:13: warning: 'camera_interface_free' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+17:45:25 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:120:13: warning: 'camera_interface_free' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123120	   4200	2122400	2249720	 2253f8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:45:49 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:128:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123112	   4200	2122400	2249712	 2253f0	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:45:55 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:128:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123112	   4200	2122400	2249712	 2253f0	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:45:58 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+17:49:41 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:128:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123112	   4200	2122400	2249712	 2253f0	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:50:19 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:148:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:128:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:148:13: warning: 'pS2MM_Mem' is used uninitialized in this function [-Wuninitialized]
+../src/camera_app.c:149:13: warning: 'pMM2S_Mem' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123128	   4200	2122400	2249728	 225400	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:51:10 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:148:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:128:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123144	   4200	2122400	2249744	 225410	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:51:51 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:148:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:167:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:168:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:128:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123216	   4200	2122400	2249816	 225458	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:52:10 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:148:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:167:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:168:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123216	   4200	2122400	2249816	 225458	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+17:52:15 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:01:56 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:168:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:169:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123176	   4200	2122400	2249776	 225430	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:02:09 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:03:20 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:172:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:173:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123232	   4200	2122400	2249832	 225468	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:03:33 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:05:10 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:172:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:173:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123232	   4200	2122400	2249832	 225468	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:05:17 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:168:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:169:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123176	   4200	2122400	2249776	 225430	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:05:20 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:08:18 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:166:6: warning: implicit declaration of function 'save_image' [-Wimplicit-function-declaration]
+../src/camera_app.c:169:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:170:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_interface':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:166: undefined reference to `save_image'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+18:09:25 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:166:6: warning: implicit declaration of function 'save_image' [-Wimplicit-function-declaration]
+../src/camera_app.c:169:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:170:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:198:6: warning: conflicting types for 'save_image' [enabled by default]
+../src/camera_app.c:166:6: note: previous implicit declaration of 'save_image' was here
+../src/camera_app.c: In function 'save_image':
+../src/camera_app.c:213:7: error: 'j' undeclared (first use in this function)
+../src/camera_app.c:213:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:214:8: error: 'i' undeclared (first use in this function)
+../src/camera_app.c:207:20: warning: variable 'pMM2S_Mem' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c:206:20: warning: variable 'pS2MM_Mem' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:09:58 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:166:6: warning: implicit declaration of function 'save_image' [-Wimplicit-function-declaration]
+../src/camera_app.c:169:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:170:17: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:198:6: warning: conflicting types for 'save_image' [enabled by default]
+../src/camera_app.c:166:6: note: previous implicit declaration of 'save_image' was here
+../src/camera_app.c: In function 'save_image':
+../src/camera_app.c:212:7: error: 'i' undeclared (first use in this function)
+../src/camera_app.c:212:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:210:13: warning: variable 'raw_image' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c:207:20: warning: variable 'pMM2S_Mem' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c:206:20: warning: variable 'pS2MM_Mem' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:10:28 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:149:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:166:6: warning: implicit declaration of function 'save_image' [-Wimplicit-function-declaration]
+../src/camera_app.c: At top level:
+../src/camera_app.c:182:6: warning: conflicting types for 'save_image' [enabled by default]
+../src/camera_app.c:166:6: note: previous implicit declaration of 'save_image' was here
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:265:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:285:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123432	   4200	2122400	2250032	 225530	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:11:06 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:150:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:151:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:23:17: warning: 'average_vert' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:24:17: warning: 'average_hor' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:25:17: warning: 'average_x' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:17: warning: 'color_lut' defined but not used [-Wunused-variable]
+../src/camera_app.c:29:13: warning: 'fill_color_lut' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:266:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:286:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:35:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123432	   4200	2122400	2250032	 225530	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:11:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:144:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:145:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c: At top level:
+../src/camera_app.c:260:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:280:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123432	   4200	2122400	2250032	 225530	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:11:44 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:129:20: warning: unused variable 'pMM2S_Mem' [-Wunused-variable]
+../src/camera_app.c:128:20: warning: unused variable 'pS2MM_Mem' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:260:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:280:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123072	   4200	2122400	2249672	 2253c8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:12:54 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:260:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:280:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123056	   4200	2122400	2249656	 2253b8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:14:20 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:245:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:265:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123056	   4200	2122400	2249656	 2253b8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:14:48 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:15:48 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:244:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:264:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123056	   4200	2122400	2249656	 2253b8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:17:17 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:244:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:264:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123056	   4200	2122400	2249656	 2253b8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:17:29 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:20:34 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:127:2: error: 'parkptr' undeclared (first use in this function)
+../src/camera_app.c:127:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c: In function 'clear_circ_park':
+../src/camera_app.c:251:2: error: 'vdma_MM2S_DMACR' undeclared (first use in this function)
+../src/camera_app.c:255:2: error: 'vdma_S2MM_DMACR' undeclared (first use in this function)
+../src/camera_app.c: In function 'enable_circ_park':
+../src/camera_app.c:265:2: error: 'vdma_MM2S_DMACR' undeclared (first use in this function)
+../src/camera_app.c:269:2: error: 'vdma_S2MM_DMACR' undeclared (first use in this function)
+../src/camera_app.c: At top level:
+../src/camera_app.c:241:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:261:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:21:04 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:127:2: error: 'parkptr' undeclared (first use in this function)
+../src/camera_app.c:127:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:21:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:127:2: error: 'parkptr' undeclared (first use in this function)
+../src/camera_app.c:127:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:22:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121624	   4200	2122368	2248192	 224e00	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:22:28 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:23:44 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:24:14 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:27:46 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121624	   4200	2122368	2248192	 224e00	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:29:24 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:39:48: error: 'raw_images' undeclared here (not in a function)
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:39:17: warning: 'raw_images' defined but not used [-Wunused-variable]
+make: *** [src/camera_app.o] Error 1
+18:30:06 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:39:17: error: variably modified 'raw_images' at file scope
+../src/camera_app.c: In function 'camera_interface_init':
+../src/camera_app.c:109:23: error: incompatible types when assigning to type 'uint16_t[1]' from type 'void *'
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:30:34 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:39:10: error: variably modified 'raw_images' at file scope
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+18:31:59 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	267543040	267668696	ff44cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:32:03 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	267543040	267668696	ff44cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:32:06 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	267543040	267668696	ff44cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:32:41 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:33:57 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:35:14 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	267543040	267668696	ff44cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:35:39 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:36:54 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	18711040	18836696	11f6cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:36:58 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:38:37 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	33391104	33516760	1ff6cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:38:43 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:28:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:29:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121456	   4200	282223104	282348760	10d44cd8	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+18:38:50 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:39:11 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
