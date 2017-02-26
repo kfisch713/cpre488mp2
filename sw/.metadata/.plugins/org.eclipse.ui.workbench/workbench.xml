@@ -39,7 +39,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" partName="camera_app.c" path="U:/Documents/cpre488mp2/sw/camera_app/src/camera_app.c" title="camera_app.c" tooltip="camera_app/src/camera_app.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camera_app/src/camera_app.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1212" selectionTopPixel="204"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4678" selectionTopPixel="2363"/>
 </editor>
 </editors>
 <views>
@@ -174,7 +174,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@397129d9" ratio="0.6165413" ratioLeft="574" ratioRight="357" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@397129d9" ratio="0.8528464" ratioLeft="794" ratioRight="137" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -197,64 +197,9 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/camera_app/src/fmc_imageon_utils.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" path="/camera_app/src/lscript.ld"/>
 </editors>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5222" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5262" y="15"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="1189" y="15"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="4258" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="4286" y="0"/>
-</item>
-<item historyLabel="xparameters.h" index="1">
-<position info="not_deleted" x="7998" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="1746" y="0"/>
-</item>
-<item historyLabel="xparameters.h" index="1">
-<position info="not_deleted" x="7371" y="23"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="1746" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="4970" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5128" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5143" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5172" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5210" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="5568" y="0"/>
 </item>
@@ -282,7 +227,7 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="6183" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="2">
+<item historyLabel="fmc_imageon_utils.c" index="1">
 <position/>
 </item>
 <item historyLabel="camera_app.c" index="0">
@@ -303,7 +248,7 @@
 <item historyLabel="camera_app.c" index="0">
 <position/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="2">
+<item historyLabel="fmc_imageon_utils.c" index="1">
 <position info="not_deleted" x="1026" y="10"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
@@ -318,7 +263,7 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="4176" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="3"/>
+<item historyLabel="lscript.ld" index="2"/>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="4176" y="0"/>
 </item>
@@ -331,19 +276,73 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="1267" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="3"/>
+<item historyLabel="lscript.ld" index="2"/>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="1267" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="3">
+<item historyLabel="lscript.ld" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="1267" y="0"/>
 </item>
-<item historyLabel="lscript.ld" index="3"/>
-<item active="true" historyLabel="camera_app.c" index="0">
+<item historyLabel="lscript.ld" index="2"/>
+<item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="1267" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="6689" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="6310" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="7705" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="3975" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5255" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="4065" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="5662" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="3967" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="4198" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="4191" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="1480" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="4716" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="6187" y="0"/>
+</item>
+<item active="true" historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="6204" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

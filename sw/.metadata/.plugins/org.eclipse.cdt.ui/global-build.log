@@ -17113,3 +17113,1736 @@ make: Nothing to be done for `all'.
 18:39:11 **** Incremental Build of configuration Debug for project camera_app ****
 make all 
 make: Nothing to be done for `all'.
+18:58:38 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+18:59:06 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:01:11 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:25:13: warning: 'clear_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:26:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121324	   4200	282223104	282348628	10d44c54	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:03:31 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'save_image':
+../src/camera_app.c:157:2: error: 'vdma_MM2S_DMACR' undeclared (first use in this function)
+../src/camera_app.c:157:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:159:2: error: 'vdma_S2MM_DMACR' undeclared (first use in this function)
+../src/camera_app.c: At top level:
+../src/camera_app.c:26:13: warning: 'enable_circ_park' declared 'static' but never defined [-Wunused-function]
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:04:09 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'enable_circ_park':
+../src/camera_app.c:168:1: error: parameter name omitted
+../src/camera_app.c:170:2: error: 'vdma_MM2S_DMACR' undeclared (first use in this function)
+../src/camera_app.c:170:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:170:20: error: 'config' undeclared (first use in this function)
+../src/camera_app.c:172:2: error: 'vdma_S2MM_DMACR' undeclared (first use in this function)
+../src/camera_app.c: At top level:
+../src/camera_app.c:168:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:04:27 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'enable_circ_park':
+../src/camera_app.c:171:2: error: 'vdma_MM2S_DMACR' undeclared (first use in this function)
+../src/camera_app.c:171:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:173:2: error: 'vdma_S2MM_DMACR' undeclared (first use in this function)
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:04:37 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121388	   4200	282223104	282348692	10d44c94	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:05:19 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121396	   4200	282223104	282348700	10d44c9c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:05:27 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121404	   4200	282223104	282348708	10d44ca4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:07:41 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121588	   4200	282223104	282348892	10d44d5c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:08:03 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121604	   4200	282223104	282348908	10d44d6c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:08:44 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:134:3: error: 'image_index' undeclared (first use in this function)
+../src/camera_app.c:134:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:09:04 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:134:12: warning: unused variable 'image_index' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'display_raw_image' declared 'static' but never defined [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121596	   4200	282223104	282348900	10d44d64	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:09:32 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_interface':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:136: undefined reference to `display_raw_image'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+19:12:51 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:137:7: warning: suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]
+../src/camera_app.c: At top level:
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_interface':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:136: undefined reference to `display_raw_image'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+19:13:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_interface':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:136: undefined reference to `display_raw_image'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+19:13:43 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_interface':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:136: undefined reference to `display_raw_image'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+19:14:37 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/camera_app.o: In function `camera_interface':
+U:\Documents\cpre488mp2\sw\camera_app\Debug/../src/camera_app.c:136: undefined reference to `display_raw_image'
+collect2.exe: error: ld returned 1 exit status
+make: *** [camera_app.elf] Error 1
+19:16:39 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:161:18: error: 'pS2MM_Mem' undeclared (first use in this function)
+../src/camera_app.c:161:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:162:3: error: 'pMM2S_Mem' undeclared (first use in this function)
+../src/camera_app.c: At top level:
+../src/camera_app.c:166:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:166:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:16:45 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:161:3: error: 'pMM2S_Mem' undeclared (first use in this function)
+../src/camera_app.c:161:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c: At top level:
+../src/camera_app.c:165:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:165:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:16:55 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:158:43: error: 'config' undeclared (first use in this function)
+../src/camera_app.c:158:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:158:20: warning: unused variable 'pS2MM_Mem' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:168:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:168:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:16:57 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:159:43: error: 'config' undeclared (first use in this function)
+../src/camera_app.c:159:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:159:20: warning: unused variable 'pS2MM_Mem' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:169:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:169:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:17:13 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:155:51: error: unknown type name 'camer_config_t'
+../src/camera_app.c:169:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+../src/camera_app.c:169:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:17:20 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:137:4: error: too many arguments to function 'display_raw_image'
+../src/camera_app.c:27:13: note: declared here
+../src/camera_app.c: At top level:
+../src/camera_app.c:155:51: error: unknown type name 'camer_config_t'
+../src/camera_app.c:169:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+../src/camera_app.c:169:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:17:33 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:155:51: error: unknown type name 'camer_config_t'
+../src/camera_app.c:169:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:27:13: warning: 'display_raw_image' used but never defined [enabled by default]
+../src/camera_app.c:169:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:17:48 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:159:20: warning: unused variable 'pS2MM_Mem' [-Wunused-variable]
+../src/camera_app.c: At top level:
+../src/camera_app.c:169:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:169:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:17:55 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:168:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:28:6: note: previous declaration of 'save_image' was here
+../src/camera_app.c:168:13: warning: 'save_image' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:18:08 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121956	   4200	282223104	282349260	10d44ecc	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:18:27 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'main':
+../src/camera_app.c:71:2: warning: implicit declaration of function 'camera_interface' [-Wimplicit-function-declaration]
+../src/camera_app.c: At top level:
+../src/camera_app.c:97:13: warning: conflicting types for 'camera_interface' [enabled by default]
+../src/camera_app.c:97:13: error: static declaration of 'camera_interface' follows non-static declaration
+../src/camera_app.c:71:2: note: previous implicit declaration of 'camera_interface' was here
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:115:6: warning: implicit declaration of function 'save_image' [-Wimplicit-function-declaration]
+../src/camera_app.c:122:3: warning: implicit declaration of function 'clear_circ_park' [-Wimplicit-function-declaration]
+../src/camera_app.c:132:4: warning: implicit declaration of function 'display_raw_image' [-Wimplicit-function-declaration]
+../src/camera_app.c:144:3: warning: implicit declaration of function 'enable_circ_park' [-Wimplicit-function-declaration]
+../src/camera_app.c: At top level:
+../src/camera_app.c:150:13: warning: conflicting types for 'display_raw_image' [enabled by default]
+../src/camera_app.c:150:13: error: static declaration of 'display_raw_image' follows non-static declaration
+../src/camera_app.c:132:4: note: previous implicit declaration of 'display_raw_image' was here
+../src/camera_app.c:163:13: warning: conflicting types for 'save_image' [enabled by default]
+../src/camera_app.c:163:13: error: static declaration of 'save_image' follows non-static declaration
+../src/camera_app.c:115:6: note: previous implicit declaration of 'save_image' was here
+../src/camera_app.c:185:13: warning: conflicting types for 'clear_circ_park' [enabled by default]
+../src/camera_app.c:185:13: error: static declaration of 'clear_circ_park' follows non-static declaration
+../src/camera_app.c:122:3: note: previous implicit declaration of 'clear_circ_park' was here
+../src/camera_app.c:196:13: warning: conflicting types for 'enable_circ_park' [enabled by default]
+../src/camera_app.c:196:13: error: static declaration of 'enable_circ_park' follows non-static declaration
+../src/camera_app.c:144:3: note: previous implicit declaration of 'enable_circ_park' was here
+../src/camera_app.c:97:13: warning: 'camera_interface' defined but not used [-Wunused-function]
+../src/camera_app.c:150:13: warning: 'display_raw_image' defined but not used [-Wunused-function]
+../src/camera_app.c:163:13: warning: 'save_image' defined but not used [-Wunused-function]
+../src/camera_app.c:185:13: warning: 'clear_circ_park' defined but not used [-Wunused-function]
+../src/camera_app.c:196:13: warning: 'enable_circ_park' defined but not used [-Wunused-function]
+make: *** [src/camera_app.o] Error 1
+19:18:32 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121956	   4200	282223104	282349260	10d44ecc	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:18:43 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:18:53 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:19:32 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:135:37: error: expected ')' before '!' token
+make: *** [src/camera_app.o] Error 1
+19:19:38 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121996	   4200	282223104	282349300	10d44ef4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:19:44 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:22:50 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:40:21: warning: 'curr_image_index' defined but not used [-Wunused-variable]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 121996	   4200	282223104	282349300	10d44ef4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:23:35 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:138:5: error: 'image_index' undeclared (first use in this function)
+../src/camera_app.c:138:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/camera_app.o] Error 1
+19:23:49 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:139:5: error: 'image_index' undeclared (first use in this function)
+../src/camera_app.c:139:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:134:7: warning: unused variable 'tmp_index' [-Wunused-variable]
+make: *** [src/camera_app.o] Error 1
+19:24:00 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:141:5: error: 'image_index' undeclared (first use in this function)
+../src/camera_app.c:141:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/camera_app.o] Error 1
+19:24:17 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:145:4: error: 'image_index' undeclared (first use in this function)
+../src/camera_app.c:145:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/camera_app.o] Error 1
+19:24:35 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:147:4: error: expected ';' before 'curr_mode'
+make: *** [src/camera_app.o] Error 1
+19:24:40 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122028	   4200	282223104	282349332	10d44f14	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:25:08 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122028	   4200	282223104	282349332	10d44f14	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:25:54 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122068	   4200	282223104	282349372	10d44f3c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:26:02 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122068	   4200	282223104	282349372	10d44f3c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:26:05 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:27:49 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:157:13: warning: 'display_error_screen' defined but not used [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122188	   4200	282223104	282349492	10d44fb4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:28:05 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:158:13: warning: 'display_error_screen' defined but not used [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122188	   4200	282223104	282349492	10d44fb4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:28:55 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122196	   4200	282223104	282349500	10d44fbc	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:29:00 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:29:20 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122068	   4200	282223104	282349372	10d44f3c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:29:24 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:30:23 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122100	   4200	282223104	282349404	10d44f5c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:30:28 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122100	   4200	282223104	282349404	10d44f5c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:30:45 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:31:24 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122116	   4200	282223104	282349420	10d44f6c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:31:43 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c:160:13: warning: 'display_error_screen' defined but not used [-Wunused-function]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122188	   4200	282223104	282349492	10d44fb4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:32:14 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:32:32 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:33:01 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'camera_interface':
+../src/camera_app.c:135:4: error: too few arguments to function 'SW'
+../src/camera_app.c:61:5: note: declared here
+../src/camera_app.c:136:5: error: too few arguments to function 'SW'
+../src/camera_app.c:61:5: note: declared here
+../src/camera_app.c:141:4: error: too few arguments to function 'SW'
+../src/camera_app.c:61:5: note: declared here
+../src/camera_app.c:156:5: error: too few arguments to function 'SW'
+../src/camera_app.c:61:5: note: declared here
+make: *** [src/camera_app.o] Error 1
+19:33:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:33:39 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:33:49 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:33:53 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:34:59 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122268	   4200	282223104	282349572	10d45004	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:40:06 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:40:48 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122308	   4200	282223104	282349612	10d4502c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:42:13 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:44:26 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:44:31 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:46:10 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122244	   4200	282223104	282349548	10d44fec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:48:13 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122228	   4200	282223104	282349532	10d44fdc	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:48:27 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122236	   4200	282223104	282349540	10d44fe4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:48:32 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:48:54 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:49:02 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:49:20 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:49:26 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:49:45 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:50:38 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124036	   4200	282223104	282351340	10d456ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:52:18 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124124	   4200	282223104	282351428	10d45744	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:52:23 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124108	   4200	282223104	282351412	10d45734	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+19:52:30 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:53:29 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+19:53:56 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:01:19 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124036	   4200	282223104	282351340	10d456ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:01:31 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124036	   4200	282223104	282351340	10d456ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:01:35 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:03:04 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124036	   4200	282223104	282351340	10d456ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:04:49 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:178:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124036	   4200	282223104	282351340	10d456ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:09:48 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: At top level:
+../src/camera_app.c:44:21: warning: 'zoom_lvl' defined but not used [-Wunused-variable]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124036	   4200	282223104	282351340	10d456ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:10:43 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124060	   4200	282223104	282351364	10d45704	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:11:10 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124068	   4200	282223104	282351372	10d4570c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:11:16 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124068	   4200	282223104	282351372	10d4570c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:11:31 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:194:8: error: expected expression before ')' token
+../src/camera_app.c:194:8: error: expected expression before ')' token
+../src/camera_app.c:195:3: error: expected expression before '}' token
+../src/camera_app.c:183:9: warning: unused variable 'j' [-Wunused-variable]
+make: *** [src/camera_app.o] Error 1
+20:12:34 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124172	   4200	282223104	282351476	10d45774	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:12:38 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124172	   4200	282223104	282351476	10d45774	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:12:45 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:179:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124172	   4200	282223104	282351476	10d45774	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:12:53 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:14:23 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:185:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124252	   4200	282223104	282351556	10d457c4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:14:32 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:185:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124268	   4200	282223104	282351572	10d457d4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:15:00 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:188:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124284	   4200	282223104	282351588	10d457e4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:15:17 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:188:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124300	   4200	282223104	282351604	10d457f4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:15:29 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:188:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124300	   4200	282223104	282351604	10d457f4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:15:35 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:16:59 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:189:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124300	   4200	282223104	282351604	10d457f4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:19:51 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124340	   4200	282223104	282351644	10d4581c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:19:54 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:21:02 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124340	   4200	282223104	282351644	10d4581c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:23:03 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:23:34 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:23:59 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:24:43 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:25:18 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:25:23 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124340	   4200	282223104	282351644	10d4581c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:25:27 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:26:03 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:26:29 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:29:10 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:32:02 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:32:05 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124276	   4200	282223104	282351580	10d457dc	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:32:13 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:33:45 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124292	   4200	282223104	282351596	10d457ec	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:33:55 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:41:42 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:208:16: warning: assignment makes integer from pointer without a cast [enabled by default]
+../src/camera_app.c:199:13: warning: unused variable 'raw_image' [-Wunused-variable]
+../src/camera_app.c:194:9: warning: unused variable 'j' [-Wunused-variable]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124220	   4200	282223104	282351524	10d457a4	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:41:58 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:194:9: warning: unused variable 'j' [-Wunused-variable]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124212	   4200	282223104	282351516	10d4579c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:42:09 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:195:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/camera_app.c:208:7: error: 'i' undeclared (first use in this function)
+../src/camera_app.c:208:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:198:20: warning: variable 'pMM2S_Mem' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c:195:6: warning: unused variable 'j' [-Wunused-variable]
+make: *** [src/camera_app.o] Error 1
+20:42:22 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:198:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'volatile'
+../src/camera_app.c:208:7: error: 'i' undeclared (first use in this function)
+../src/camera_app.c:208:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:200:13: warning: variable 'raw_image' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c:198:20: warning: variable 'pMM2S_Mem' set but not used [-Wunused-but-set-variable]
+make: *** [src/camera_app.o] Error 1
+20:42:33 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+../src/camera_app.c: In function 'display_raw_image':
+../src/camera_app.c:198:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'volatile'
+../src/camera_app.c:208:7: error: 'i' undeclared (first use in this function)
+../src/camera_app.c:208:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/camera_app.c:200:13: warning: variable 'raw_image' set but not used [-Wunused-but-set-variable]
+../src/camera_app.c:198:20: warning: variable 'pMM2S_Mem' set but not used [-Wunused-but-set-variable]
+make: *** [src/camera_app.o] Error 1
+20:42:37 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124212	   4200	282223104	282351516	10d4579c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '
+20:42:43 **** Incremental Build of configuration Debug for project camera_app ****
+make all 
+make: Nothing to be done for `all'.
+20:43:37 **** Auto Build of configuration Debug for project camera_app ****
+make all 
+'Building file: ../src/camera_app.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/camera_app.d" -MT"src/camera_app.d" -o "src/camera_app.o" "../src/camera_app.c"
+../src/camera_app.c: In function 'display_error_screen':
+../src/camera_app.c:190:2: warning: implicit declaration of function 'Xil_DCacheFlush' [-Wimplicit-function-declaration]
+'Finished building: ../src/camera_app.c'
+' '
+'Building target: camera_app.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "camera_app.elf"  ./src/camera_app.o ./src/fmc_imageon_utils.o ./src/video_detector.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/xtpg_app.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: camera_app.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size camera_app.elf  |tee "camera_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124164	   4200	282223104	282351468	10d4576c	camera_app.elf
+'Finished building: camera_app.elf.size'
+' '

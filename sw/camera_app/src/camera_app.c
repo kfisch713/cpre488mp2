@@ -21,25 +21,29 @@
 #include <xparameters.h>
 
 /* Added for software pass-through */
-static void camera_interface_init();
-static void camera_interface_free();
 static void camera_interface();
 static void clear_circ_park(camera_config_t *);
 static void enable_circ_park(camera_config_t *);
-static void display_raw_image(unsigned int index);
-void save_image(camera_config_t *config);
+static void display_raw_image(unsigned int index, camera_config_t * config);
+static void display_error_screen(camera_config_t * config);
+static void save_image(camera_config_t *config);
 camera_config_t camera_config;
 
 /* Added for camera_interfaceing */
 #define MAX_RAW_IMAGES 32
+#define MODE_SWITCH 0
+#define KILL_SWITCH 7
+
+#define MAX_ZOOM_LVL 4
 
 #define HEIGHT 1080
 #define WIDTH 1920
 #define FRAME_LEN (HEIGHT * WIDTH)
 
 static uint16_t raw_images[MAX_RAW_IMAGES][FRAME_LEN * sizeof(uint16_t)];
-static int NUM_SAVED_IMAGES = 0;
-static unsigned int curr_image_index = 0;
+static int NUM_SAVED_IMAGES;
+static unsigned int curr_image_index;
+static unsigned int zoom_lvl;
 
 enum camera_mode{
     MODE_PASS_THROUGH,
@@ -75,10 +79,8 @@ enum color {
 int main() {
 	camera_config_init(&camera_config);
 	fmc_imageon_enable(&camera_config);
-	camera_interface_init();
 	camera_interface(&camera_config);
 //	camera_loop(&camera_config);
-	camera_interface_free();
 	printf("ending software\n");
 	return 0;
 }
@@ -103,22 +105,6 @@ void camera_config_init(camera_config_t *config) {
     return;
 }
 
-static void camera_interface_init() {
-//	size_t i;
-//    /* Zero all of the raw image pixel arrays */
-//    for (i = 0; i < MAX_RAW_IMAGES; ++i) {
-//        raw_images[i] = malloc(sizeof(uint16_t) * WIDTH * HEIGHT);
-//    }
-}
-
-static void camera_interface_free() {
-	size_t i;
-	/* Zero all of the raw image pixel arrays */
-	for (i = 0; i < MAX_RAW_IMAGES; ++i) {
-		free(raw_images[i]);
-	}
-}
-
 static void camera_interface(camera_config_t *config) {
 	Xuint32 parkptr;
 
@@ -130,10 +116,10 @@ static void camera_interface(camera_config_t *config) {
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_PARKPTR_OFFSET, parkptr);
 
 	int curr_mode;
-	curr_mode = SW(1);
+	curr_mode = SW(MODE_SWITCH);
 
-	while(!SW(7)) {
-		while(curr_mode == MODE_PASS_THROUGH) {
+	while(!SW(KILL_SWITCH)) {
+		while(curr_mode == MODE_PASS_THROUGH && !SW(KILL_SWITCH)) {
 			// update curr_mode
 			if (BTN(BTN_C)) {
 				if (NUM_SAVED_IMAGES < MAX_RAW_IMAGES) {
@@ -141,20 +127,112 @@ static void camera_interface(camera_config_t *config) {
 					printf("returning to loop, now with %d saved images\n", NUM_SAVED_IMAGES);
 				}
 			}
-			curr_mode = SW(1);
+			curr_mode = SW(MODE_SWITCH);
 		}
 		printf("Mode : PLAY BACK\n");
-		while(curr_mode == MODE_PLAY_BACK) {
+		clear_circ_park(config);
 
-			curr_mode = SW(1);
+		if (NUM_SAVED_IMAGES == 0) {
+			xil_printf("You don't have any saved images yet.\n");
+			display_error_screen(config);
+			while (curr_mode == MODE_PLAY_BACK && !SW(KILL_SWITCH)) {
+				curr_mode = SW(MODE_SWITCH);
+			}
+		} else {
+			xil_printf("You have %d saved images. Press Left and Right buttons to rotate through them.\n", NUM_SAVED_IMAGES);
+			unsigned int tmp_index = curr_image_index;
+			display_raw_image(curr_image_index, config);
+			while (curr_mode == MODE_PLAY_BACK && !SW(KILL_SWITCH)) {
+				if (curr_image_index != tmp_index) {
+					curr_image_index = tmp_index;
+					xil_printf("Showing Image %d.\n", curr_image_index);
+					display_raw_image(curr_image_index, config);
+				}
+//				xil_printf("Zoom lvl = %d\n", zoom_lvl);
+
+				if (BTN(BTN_L)) {
+					tmp_index--;
+				} else if (BTN(BTN_R)) {
+					tmp_index++;
+				}
+
+				if (BTN(BTN_U)) {
+					zoom_lvl++;
+				} else if (BTN(BTN_D)) {
+					zoom_lvl--;
+				}
+
+				sleep(5); // used for pseudo de-bouncing
+				zoom_lvl = zoom_lvl % MAX_ZOOM_LVL; //takes care of negative numbers because zoom_lvl is unsigned
+
+				// bounds checking
+				tmp_index = tmp_index % NUM_SAVED_IMAGES; //takes care of negative numbers because tmp_index is unsigned
+
+				curr_mode = SW(MODE_SWITCH);
+			}
 		}
+
+		enable_circ_park(config);
 		printf("Mode : PASS THROUGH\n");
 	}
 	return;
 }
 
-void save_image(camera_config_t *config) {
+static void display_error_screen(camera_config_t * config) {
 	int i;
+
+	// Pointers to the S2MM memory frame and M2SS memory frame
+	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
+
+	for (i = 0; i < FRAME_LEN; ++i) {
+		pMM2S_Mem[i] = 0;
+	}
+	Xil_DCacheFlush();
+}
+
+static void display_raw_image(unsigned int index, camera_config_t * config) {
+	int i;
+//	int j;
+
+	// Pointers to the S2MM memory frame and M2SS memory frame
+	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
+
+	uint16_t * raw_image = raw_images[index];
+
+//	for (i = 0; i < FRAME_LEN - zoom_lvl; i = i + zoom_lvl) {
+//		for (j = 0; j < zoom_lvl; ++j) {
+//			pMM2S_Mem[i+j] = raw_image[i];
+//		}
+//	}
+
+	for (i = 0; i < FRAME_LEN; ++i) {
+		pMM2S_Mem[i] = raw_image[i];
+	}
+}
+
+static void save_image(camera_config_t *config) {
+	int i;
+
+	clear_circ_park(config);
+	// Pointers to the S2MM memory frame and M2SS memory frame
+	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
+	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
+
+	xil_printf("Say Cheese!\n");
+	uint16_t * raw_image = raw_images[NUM_SAVED_IMAGES];
+
+	for (i = 0; i < FRAME_LEN; ++i) {
+		raw_image[i] = pS2MM_Mem[i];
+		pMM2S_Mem[i] = raw_image[i];
+	}
+
+	sleep(64 * 2); // Version of sleep() we are using is off by 64X.
+
+	NUM_SAVED_IMAGES++;
+	enable_circ_park(config);
+}
+
+static void clear_circ_park(camera_config_t * config) {
 	Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
 
 	// Grab the DMA Control Registers, and clear circular park mode.
@@ -162,21 +240,10 @@ void save_image(camera_config_t *config) {
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_MM2S_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
 	vdma_S2MM_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET);
 	XAxiVdma_WriteReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_RX_OFFSET+XAXIVDMA_CR_OFFSET, vdma_S2MM_DMACR & ~XAXIVDMA_CR_TAIL_EN_MASK);
+}
 
-	// Pointers to the S2MM memory frame and M2SS memory frame
-	volatile Xuint16 *pS2MM_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_S2MM_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET);
-	volatile Xuint16 *pMM2S_Mem = (Xuint16 *)XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_MM2S_ADDR_OFFSET+XAXIVDMA_START_ADDR_OFFSET+4);
-
-	uint16_t * raw_image = raw_images[curr_image_index];
-
-	for (i = 0; i < FRAME_LEN; ++i) {
-		raw_image[i] = pS2MM_Mem[i];
-		pMM2S_Mem[i] = raw_image[i];
-	}
-
-	sleep(64 * 3); // Version of sleep() we are using is off by 64X.
-
-	NUM_SAVED_IMAGES++;
+static void enable_circ_park(camera_config_t * config) {
+	Xuint32 vdma_S2MM_DMACR, vdma_MM2S_DMACR;
 
 	// Grab the DMA Control Registers, and re-enable circular park mode.
 	vdma_MM2S_DMACR = XAxiVdma_ReadReg(config->vdma_hdmi.BaseAddr, XAXIVDMA_TX_OFFSET+XAXIVDMA_CR_OFFSET);
