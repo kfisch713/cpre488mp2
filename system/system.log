@@ -4064,3 +4064,55 @@ Done writing filter settings to:
 	\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\etc\system.filters
 Done writing Tab View settings to:
 	\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cresample> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cfa> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+WARNING:EDK:4058 - INSTANCE: axi_vdma_0, BUS_INTERFACE: M_AXI_S2MM -  is not connected to any slave. 
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_tc> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cresample> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+INFO:coreutil - Full license for component <v_cfa> allows you to use this component. This license does not give you access to source code implementing this component.
+
+The license for this core was generated for zambreno on 01/28/2015It is the responsibility of the Licensee of this core to adhere to all terms and conditions of the applicable license agreement when using this core.
+
+
+Writing filter settings....
+Done writing filter settings to:
+	\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\etc\system.filters
+Done writing Tab View settings to:
+	\\my.files.iastate.edu\users\burneykb\Documents\cpre488mp2\system\etc\system.gui

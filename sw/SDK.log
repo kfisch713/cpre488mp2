@@ -899,3 +899,30 @@ If this project was a BSP referenced by other C/C++ applications, then those app
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 20:43:49.732 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:38:55.269 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp2/sw/system_hw_platform/system.bit" 
+11:39:15.474 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:39:15.574 INFO  - PS initialization will be done as it is not done before. 
+11:39:15.574 INFO  - Running PS initialization.... 
+11:39:16.371 INFO  - ps7_init is completed. 
+11:39:16.481 INFO  - ps7_post_config is completed. 
+11:39:16.581 INFO  - PS Initialization is complete. 
+11:41:06.109 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:08.205 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:41:28.449 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:29.894 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:41:49.945 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:51.736 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:46:30.015 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:46:58.018 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:47:22.382 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:47:59.933 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:48:23.380 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:48:51.802 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:49:18.426 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:49:45.264 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:50:13.669 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:55:06.136 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+11:55:06.152 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -156,14 +156,14 @@ static void camera_interface(camera_config_t *config) {
 					tmp_index++;
 				}
 
-				if (BTN(BTN_U)) {
-					zoom_lvl++;
-				} else if (BTN(BTN_D)) {
-					zoom_lvl--;
-				}
+//				if (BTN(BTN_U)) {
+//					zoom_lvl++;
+//				} else if (BTN(BTN_D)) {
+//					zoom_lvl--;
+//				}
 
 				sleep(5); // used for pseudo de-bouncing
-				zoom_lvl = zoom_lvl % MAX_ZOOM_LVL; //takes care of negative numbers because zoom_lvl is unsigned
+				//zoom_lvl = zoom_lvl % MAX_ZOOM_LVL; //takes care of negative numbers because zoom_lvl is unsigned
 
 				// bounds checking
 				tmp_index = tmp_index % NUM_SAVED_IMAGES; //takes care of negative numbers because tmp_index is unsigned
