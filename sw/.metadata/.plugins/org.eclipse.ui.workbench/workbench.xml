@@ -39,7 +39,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" partName="camera_app.c" path="U:/Documents/cpre488mp2/sw/camera_app/src/camera_app.c" title="camera_app.c" tooltip="camera_app/src/camera_app.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camera_app/src/camera_app.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4557" selectionTopPixel="1853"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4043" selectionTopPixel="1938"/>
 </editor>
 </editors>
 <views>
@@ -197,12 +197,6 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" path="/camera_app/src/lscript.ld"/>
 </editors>
 <item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5568" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="5571" y="0"/>
-</item>
-<item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="5994" y="0"/>
 </item>
 <item historyLabel="camera_app.c" index="0">
@@ -337,8 +331,14 @@
 <item historyLabel="camera_app.c" index="0">
 <position info="not_deleted" x="6187" y="0"/>
 </item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
 <item active="true" historyLabel="camera_app.c" index="0">
-<position info="not_deleted" x="6204" y="0"/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -360,6 +360,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" tooltip="camera_app/src/camera_app.c">
+<persistable path="/camera_app/src/camera_app.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.lscript.editor" name="lscript.ld" tooltip="camera_app/src/lscript.ld">
 <persistable path="/camera_app/src/lscript.ld"/>
 </file>
@@ -401,9 +404,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xtpg_app.h" tooltip="camera_app/src/xtpg_app.h">
 <persistable path="/camera_app/src/xtpg_app.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xaxivdma_hw.h" tooltip="system_bsp/ps7_cortexa9_0/include/xaxivdma_hw.h">
-<persistable path="/system_bsp/ps7_cortexa9_0/include/xaxivdma_hw.h"/>
 </file>
 </mruList>
 </workbench>

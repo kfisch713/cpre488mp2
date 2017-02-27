@@ -1,6 +1,6 @@
-11:50:11 **** Incremental Build of configuration Debug for project camera_app ****
+13:05:39 **** Incremental Build of configuration Debug for project camera_app ****
 make all 
 make: Nothing to be done for `all'.
 
-11:50:11 Build Finished (took 241ms)
+13:05:40 Build Finished (took 240ms)
 
